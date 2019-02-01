@@ -1,0 +1,10 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/barber.timothy20/Documents/Github/Quartus/First proj/Light diagram.bdf
+source_file = 1, C:/Users/barber.timothy20/Documents/Github/Quartus/First proj/Firstproj.bdf
+source_file = 1, C:/Users/barber.timothy20/Documents/Github/Quartus/First proj/db/Firstproj.cbx.xml
+design_name = Firstproj
+instance = comp, \Light~output , Light~output, Firstproj, 1
+instance = comp, \Switch2~input , Switch2~input, Firstproj, 1
+instance = comp, \Switch1~input , Switch1~input, Firstproj, 1
+instance = comp, \inst3~0 , inst3~0, Firstproj, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, Firstproj, 1

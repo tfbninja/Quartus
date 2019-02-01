@@ -1,0 +1,8 @@
+|Firstproj
+Light <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+Switch1 => NOT2.IN0
+Switch1 => inst.IN0
+Switch2 => inst2.IN1
+Switch2 => NOT.IN0
+
+
