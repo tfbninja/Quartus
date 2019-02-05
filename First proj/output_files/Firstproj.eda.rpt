@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Firstproj
-Fri Feb 01 10:58:21 2019
+Mon Feb 04 10:42:21 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Fri Feb 01 10:58:21 2019 ;
+; EDA Netlist Writer Status ; Successful - Mon Feb 04 10:42:21 2019 ;
 ; Revision Name             ; Firstproj                             ;
 ; Top-level Entity Name     ; Firstproj                             ;
 ; Family                    ; Cyclone V                             ;
@@ -82,15 +82,15 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Fri Feb 01 10:58:20 2019
+    Info: Processing started: Mon Feb 04 10:42:19 2019
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off Firstproj -c Firstproj
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Warning (10905): Generated the EDA functional simulation netlist because it is the only supported netlist type for this device.
 Info (204019): Generated file Firstproj.vo in folder "C:/Users/barber.timothy20/Documents/Github/Quartus/First proj/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 607 megabytes
-    Info: Processing ended: Fri Feb 01 10:58:21 2019
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 606 megabytes
+    Info: Processing ended: Mon Feb 04 10:42:21 2019
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 
