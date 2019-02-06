@@ -62,3 +62,4 @@ set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_
 set_location_assignment PIN_U13 -to Switch1
 set_location_assignment PIN_V13 -to Switch2
 set_location_assignment PIN_AA2 -to Light
+set_global_assignment -name VECTOR_WAVEFORM_FILE Firstproj.vwf

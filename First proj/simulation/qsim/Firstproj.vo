@@ -1,0 +1,148 @@
+// Copyright (C) 2016  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Intel and sold by Intel or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition"
+
+// DATE "02/05/2019 10:42:54"
+
+// 
+// Device: Altera 5CEBA4F23C7 Package FBGA484
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module Firstproj (
+	Light,
+	Switch1,
+	Switch2);
+output 	Light;
+input 	Switch1;
+input 	Switch2;
+
+// Design Ports Information
+// Light	=>  Location: PIN_P17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Switch1	=>  Location: PIN_P19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Switch2	=>  Location: PIN_P16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \~QUARTUS_CREATED_GND~I_combout ;
+wire \Switch2~input_o ;
+wire \Switch1~input_o ;
+wire \inst3~0_combout ;
+
+
+// Location: IOOBUF_X54_Y17_N22
+cyclonev_io_obuf \Light~output (
+	.i(\inst3~0_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(Light),
+	.obar());
+// synopsys translate_off
+defparam \Light~output .bus_hold = "false";
+defparam \Light~output .open_drain_output = "false";
+defparam \Light~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X54_Y17_N4
+cyclonev_io_ibuf \Switch2~input (
+	.i(Switch2),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\Switch2~input_o ));
+// synopsys translate_off
+defparam \Switch2~input .bus_hold = "false";
+defparam \Switch2~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X54_Y17_N38
+cyclonev_io_ibuf \Switch1~input (
+	.i(Switch1),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\Switch1~input_o ));
+// synopsys translate_off
+defparam \Switch1~input .bus_hold = "false";
+defparam \Switch1~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X53_Y17_N0
+cyclonev_lcell_comb \inst3~0 (
+// Equation(s):
+// \inst3~0_combout  = ( !\Switch2~input_o  & ( \Switch1~input_o  ) ) # ( \Switch2~input_o  & ( !\Switch1~input_o  ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(!\Switch2~input_o ),
+	.dataf(!\Switch1~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst3~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst3~0 .extended_lut = "off";
+defparam \inst3~0 .lut_mask = 64'h0000FFFFFFFF0000;
+defparam \inst3~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X7_Y34_N3
+cyclonev_lcell_comb \~QUARTUS_CREATED_GND~I (
+// Equation(s):
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\~QUARTUS_CREATED_GND~I_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \~QUARTUS_CREATED_GND~I .extended_lut = "off";
+defparam \~QUARTUS_CREATED_GND~I .lut_mask = 64'h0000000000000000;
+defparam \~QUARTUS_CREATED_GND~I .shared_arith = "off";
+// synopsys translate_on
+
+endmodule
