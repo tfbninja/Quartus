@@ -1,0 +1,11 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/barber.timothy20/Documents/Github/Quartus/DeMorgans/TopLeft.bdf
+source_file = 1, C:/Users/barber.timothy20/Documents/Github/Quartus/DeMorgans/TopRight.bdf
+source_file = 1, C:/Users/barber.timothy20/Documents/Github/Quartus/DeMorgans/TopLeftWaveform.vwf
+source_file = 1, C:/Users/barber.timothy20/Documents/Github/Quartus/DeMorgans/TopRightWaveform.vwf
+source_file = 1, C:/Users/barber.timothy20/Documents/Github/Quartus/DeMorgans/db/DeMorgans.cbx.xml
+design_name = TopRight
+instance = comp, \Q~output , Q~output, TopRight, 1
+instance = comp, \A~input , A~input, TopRight, 1
+instance = comp, \B~input , B~input, TopRight, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, TopRight, 1

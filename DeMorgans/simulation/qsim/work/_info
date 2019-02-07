@@ -1,0 +1,98 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/barber.timothy20/Documents/Github/Quartus/DeMorgans/simulation/qsim
+vTopLeft
+Z1 !s110 1549560129
+!i10b 1
+!s100 1VOG3:WzUof6_HE9C`T>K0
+Im@=C5W1]`1jHeO8ZPG_l_3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1549560128
+Z3 8DeMorgans.vo
+Z4 FDeMorgans.vo
+Z5 L0 32
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1549560129.000000
+Z8 !s107 DeMorgans.vo|
+Z9 !s90 -work|work|DeMorgans.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+n@top@left
+vTopLeft_vlg_vec_tst
+R1
+!i10b 1
+!s100 3Vj@=]1<D;QQS2UDXF^NU0
+IT8@`C:I9_2hn`n7=9@=[V0
+R2
+R0
+w1549560127
+Z12 8TopRightWaveform.vwf.vt
+Z13 FTopRightWaveform.vwf.vt
+Z14 L0 30
+R6
+r1
+!s85 0
+31
+R7
+!s107 TopRightWaveform.vwf.vt|
+Z15 !s90 -work|work|TopRightWaveform.vwf.vt|
+!i113 1
+R10
+R11
+n@top@left_vlg_vec_tst
+vTopRight
+Z16 !s110 1549560294
+!i10b 1
+!s100 IlVcg]]0>>^aL?iGGnAIO1
+IO0=>Yc_C4VB@5oadjCUkS1
+R2
+R0
+w1549560293
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z17 !s108 1549560294.000000
+R8
+R9
+!i113 1
+R10
+R11
+n@top@right
+vTopRight_vlg_vec_tst
+R16
+!i10b 1
+!s100 `F6`PW@ZI]X=[7W;JK4o22
+ITUM7jk:N`3:lKzL7J?NoW3
+R2
+R0
+w1549560292
+R12
+R13
+R14
+R6
+r1
+!s85 0
+31
+R17
+!s107 TopRightWaveform.vwf.vt|
+R15
+!i113 1
+R10
+R11
+n@top@right_vlg_vec_tst
