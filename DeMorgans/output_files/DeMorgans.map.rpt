@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DeMorgans
-Thu Feb 07 10:23:02 2019
+Wed Feb 13 10:43:03 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Feb 07 10:23:02 2019       ;
+; Analysis & Synthesis Status     ; Successful - Wed Feb 13 10:43:03 2019       ;
 ; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                   ; DeMorgans                                   ;
 ; Top-level Entity Name           ; TopRight                                    ;
@@ -247,7 +247,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -257,7 +257,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Thu Feb 07 10:22:48 2019
+    Info: Processing started: Wed Feb 13 10:42:45 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DeMorgans -c DeMorgans
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -274,9 +274,9 @@ Info (21057): Implemented 4 device resources after synthesis - the final resourc
     Info (21059): Implemented 1 output pins
     Info (21061): Implemented 1 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 687 megabytes
-    Info: Processing ended: Thu Feb 07 10:23:02 2019
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:32
+    Info: Peak virtual memory: 683 megabytes
+    Info: Processing ended: Wed Feb 13 10:43:03 2019
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:38
 
 
