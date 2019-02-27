@@ -1,5 +1,5 @@
 Assembler report for Lab2
-Wed Feb 27 10:47:49 2019
+Wed Feb 27 14:54:15 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Feb 27 10:47:49 2019 ;
+; Assembler Status      ; Successful - Wed Feb 27 14:54:14 2019 ;
 ; Revision Name         ; Lab2                                  ;
 ; Top-level Entity Name ; MainDiagram                           ;
 ; Family                ; Cyclone V                             ;
@@ -68,8 +68,8 @@ agreement for further details.
 ; Option         ; Setting                                                                                ;
 +----------------+----------------------------------------------------------------------------------------+
 ; Device         ; 5CEBA4F23C7                                                                            ;
-; JTAG usercode  ; 0x004DDDB5                                                                             ;
-; Checksum       ; 0x004DDDB5                                                                             ;
+; JTAG usercode  ; 0x004DDD74                                                                             ;
+; Checksum       ; 0x004DDD74                                                                             ;
 +----------------+----------------------------------------------------------------------------------------+
 
 
@@ -79,14 +79,14 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Wed Feb 27 10:47:43 2019
+    Info: Processing started: Wed Feb 27 14:53:54 2019
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Lab2 -c Lab2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 695 megabytes
-    Info: Processing ended: Wed Feb 27 10:47:49 2019
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Processing ended: Wed Feb 27 14:54:15 2019
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:15
 
 
