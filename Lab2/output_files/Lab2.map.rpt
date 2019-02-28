@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab2
-Thu Feb 28 10:59:07 2019
+Thu Feb 28 15:15:41 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -43,14 +43,14 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Feb 28 10:59:07 2019       ;
+; Analysis & Synthesis Status     ; Successful - Thu Feb 28 15:15:41 2019       ;
 ; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                   ; Lab2                                        ;
 ; Top-level Entity Name           ; MainDiagram                                 ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 0                                           ;
-; Total pins                      ; 19                                          ;
+; Total pins                      ; 13                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -191,14 +191,14 @@ agreement for further details.
 ;                                             ;          ;
 ; Dedicated logic registers                   ; 0        ;
 ;                                             ;          ;
-; I/O pins                                    ; 19       ;
+; I/O pins                                    ; 13       ;
 ;                                             ;          ;
 ; Total DSP Blocks                            ; 0        ;
 ;                                             ;          ;
 ; Maximum fan-out node                        ; inst12~0 ;
 ; Maximum fan-out                             ; 1        ;
-; Total fan-out                               ; 30       ;
-; Average fan-out                             ; 0.73     ;
+; Total fan-out                               ; 24       ;
+; Average fan-out                             ; 0.83     ;
 +---------------------------------------------+----------+
 
 
@@ -207,7 +207,7 @@ agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |MainDiagram               ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 19   ; 0            ; |MainDiagram        ; MainDiagram ; work         ;
+; |MainDiagram               ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 13   ; 0            ; |MainDiagram        ; MainDiagram ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -232,16 +232,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 5                           ;
-;     normal            ; 5                           ;
-;         0 data inputs ; 1                           ;
+; arriav_lcell_comb     ; 4                           ;
+;     normal            ; 4                           ;
 ;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 2                           ;
 ;         3 data inputs ; 1                           ;
-; boundary_port         ; 19                          ;
+; boundary_port         ; 13                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.15                        ;
+; Average LUT depth     ; 1.25                        ;
 +-----------------------+-----------------------------+
 
 
@@ -260,32 +259,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Thu Feb 28 10:58:52 2019
+    Info: Processing started: Thu Feb 28 15:15:27 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab2 -c Lab2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file maindiagram.bdf
     Info (12023): Found entity 1: MainDiagram
 Info (12127): Elaborating entity "MainDiagram" for the top level hierarchy
-Warning (275089): Not all bits in bus "LEDR[10..0]" are used
-Warning (275080): Converted elements in bus name "LEDR" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "LEDR[0]" to "LEDR0"
-    Warning (275081): Converted element name(s) from "LEDR[1]" to "LEDR1"
-    Warning (275081): Converted element name(s) from "LEDR[2]" to "LEDR2"
-    Warning (275081): Converted element name(s) from "LEDR[3]" to "LEDR3"
-    Warning (275081): Converted element name(s) from "LEDR[5]" to "LEDR5"
-    Warning (275081): Converted element name(s) from "LEDR[6]" to "LEDR6"
-    Warning (275081): Converted element name(s) from "LEDR[7]" to "LEDR7"
-    Warning (275081): Converted element name(s) from "LEDR[8]" to "LEDR8"
-    Warning (275081): Converted element name(s) from "LEDR[9]" to "LEDR9"
-    Warning (275081): Converted element name(s) from "LEDR[10]" to "LEDR10"
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR5" is stuck at GND
-    Warning (13410): Pin "LEDR6" is stuck at GND
-    Warning (13410): Pin "LEDR7" is stuck at GND
-    Warning (13410): Pin "LEDR8" is stuck at GND
-    Warning (13410): Pin "LEDR9" is stuck at GND
-    Warning (13410): Pin "LEDR10" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Warning (20013): Ignored 24 assignments for entity "DE0_CV" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE0_CV -section_id Top was ignored
@@ -316,14 +296,14 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[2]"
-Info (21057): Implemented 22 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 16 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
-    Info (21059): Implemented 10 output pins
+    Info (21059): Implemented 4 output pins
     Info (21061): Implemented 3 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 47 warnings
-    Info: Peak virtual memory: 683 megabytes
-    Info: Processing ended: Thu Feb 28 10:59:07 2019
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:32
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 685 megabytes
+    Info: Processing ended: Thu Feb 28 15:15:41 2019
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:33
 
 
