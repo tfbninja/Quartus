@@ -1,5 +1,5 @@
 Flow report for Lab2
-Thu Feb 28 15:16:14 2019
+Fri Mar 01 10:46:17 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Thu Feb 28 15:16:07 2019       ;
+; Flow Status                     ; Successful - Fri Mar 01 10:46:02 2019       ;
 ; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                   ; Lab2                                        ;
 ; Top-level Entity Name           ; MainDiagram                                 ;
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/28/2019 15:15:28 ;
+; Start date & time ; 03/01/2019 10:44:47 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Lab2                ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 66325080979140.155139212805572         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 66325080979140.155146228704736         ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; DE0_CV      ; Top        ;
@@ -98,11 +98,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:14     ; 1.0                     ; 674 MB              ; 00:00:32                           ;
-; Fitter                    ; 00:00:20     ; 1.0                     ; 1767 MB             ; 00:00:29                           ;
-; Assembler                 ; 00:00:04     ; 1.0                     ; 700 MB              ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:05     ; 1.0                     ; 913 MB              ; 00:00:05                           ;
-; Total                     ; 00:00:43     ; --                      ; --                  ; 00:01:10                           ;
+; Analysis & Synthesis      ; 00:00:14     ; 1.0                     ; 674 MB              ; 00:00:33                           ;
+; Fitter                    ; 00:00:43     ; 1.0                     ; 1771 MB             ; 00:00:42                           ;
+; Assembler                 ; 00:00:13     ; 1.0                     ; 700 MB              ; 00:00:09                           ;
+; TimeQuest Timing Analyzer ; 00:00:14     ; 1.0                     ; 914 MB              ; 00:00:11                           ;
+; Total                     ; 00:01:24     ; --                      ; --                  ; 00:01:35                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

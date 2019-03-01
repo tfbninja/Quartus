@@ -4,10 +4,6 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "LEDR0",
-					"strict" : false
-				},
-				{
 					"name" : "LEDR[3]",
 					"strict" : false
 				},
@@ -20,11 +16,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[1]",
-					"strict" : false
-				},
-				{
-					"name" : "SW[0]",
+					"name" : "LEDR[0]",
 					"strict" : false
 				},
 				{
@@ -49,6 +41,14 @@
 				},
 				{
 					"name" : "SW[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[0]",
 					"strict" : false
 				}
 			]

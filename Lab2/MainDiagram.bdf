@@ -216,7 +216,7 @@ agreement for further details.
 	(output)
 	(rect 824 112 1000 128)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "LEDR0" (rect 90 0 121 17)(font "Intel Clear" ))
+	(text "LEDR[0]" (rect 90 0 128 17)(font "Intel Clear" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
