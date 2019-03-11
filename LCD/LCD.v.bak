@@ -1,0 +1,7 @@
+module LCD(KEY, HEX0, HEX1, LEDR);
+	input [3:0] KEY;
+	output [6:0] HEX0;
+	output [2:1] HEX1;
+	output [9:0] LEDR;
+	
+	wire a,b,c,d;
