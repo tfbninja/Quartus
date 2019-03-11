@@ -1,0 +1,2 @@
+Name,Core Voltage,ALMs,Total I/Os,GPIOs,GXB Channel PMA,GXB Channel PCS,PCIe Hard IP Blocks,Memory Controllers,Memory Bits,DSP Blocks,Fractional PLLs,DLLs,Global Clocks,HPS CPU Cores
+5CEBA4F23C7,1.1V,18480,224,224,0,0,0,0,3153920,66,4,4,16,0
