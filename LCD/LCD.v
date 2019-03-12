@@ -16,7 +16,7 @@ module LCD(KEY, HEX0, HEX1, LEDR);
 	assign HEX0[3] = ~a and (~c or (b and ~d)) or (~c and (b xor d)) or (a and c and (~b or d);
 	assign HEX0[4] = ~a and (b xor d) or (~c and d);
 	assign HEX0[5] = (~b and (c xor d)) or  (b and ((c and d) or (~a and (c or d))));
-	assign HEX0[6] = 
+	assign HEX0[6] = (c and (~b or ~a or d)) or ((b xor d) and (~b and d or ~c));
 	assign HEX1[1] = d and (b or c);
 	assign HEX1[2] = d and (b or c);
 	
