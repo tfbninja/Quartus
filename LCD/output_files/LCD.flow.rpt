@@ -1,5 +1,5 @@
 Flow report for LCD
-Mon Mar 11 15:08:19 2019
+Tue Mar 12 10:58:33 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
-; Flow Status                 ; Flow Failed - Mon Mar 11 15:08:19 2019      ;
+; Flow Status                 ; Flow Failed - Tue Mar 12 10:58:33 2019      ;
 ; Quartus Prime Version       ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name               ; LCD                                         ;
 ; Top-level Entity Name       ; LCD                                         ;
@@ -63,7 +63,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/11/2019 15:08:07 ;
+; Start date & time ; 03/12/2019 10:58:21 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; LCD                 ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 66325080979140.155233848709816         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 66325080979140.155240990103632         ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; DE0_CV      ; Top        ;

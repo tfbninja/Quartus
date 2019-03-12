@@ -1,5 +1,5 @@
 Analysis & Synthesis report for LCD
-Mon Mar 11 15:08:19 2019
+Tue Mar 12 10:58:33 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Mon Mar 11 15:08:19 2019           ;
+; Analysis & Synthesis Status ; Failed - Tue Mar 12 10:58:33 2019           ;
 ; Quartus Prime Version       ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name               ; LCD                                         ;
 ; Top-level Entity Name       ; LCD                                         ;
@@ -161,24 +161,17 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Mon Mar 11 15:08:07 2019
+    Info: Processing started: Tue Mar 12 10:58:21 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LCD -c LCD
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Error (10170): Verilog HDL syntax error at LCD.v(13) near text: "or";  expecting an operand. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/barber.timothy20/Documents/Github/Quartus/LCD/LCD.v Line: 13
-Error (10170): Verilog HDL syntax error at LCD.v(14) near text: "or";  expecting an operand. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/barber.timothy20/Documents/Github/Quartus/LCD/LCD.v Line: 14
-Error (10170): Verilog HDL syntax error at LCD.v(15) near text: "or";  expecting an operand. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/barber.timothy20/Documents/Github/Quartus/LCD/LCD.v Line: 15
-Error (10170): Verilog HDL syntax error at LCD.v(16) near text: "or";  expecting an operand. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/barber.timothy20/Documents/Github/Quartus/LCD/LCD.v Line: 16
-Error (10170): Verilog HDL syntax error at LCD.v(17) near text: "and";  expecting an operand. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/barber.timothy20/Documents/Github/Quartus/LCD/LCD.v Line: 17
-Error (10170): Verilog HDL syntax error at LCD.v(18) near text: "or";  expecting an operand. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/barber.timothy20/Documents/Github/Quartus/LCD/LCD.v Line: 18
-Error (10170): Verilog HDL syntax error at LCD.v(19) near text: "or";  expecting an operand. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/barber.timothy20/Documents/Github/Quartus/LCD/LCD.v Line: 19
-Error (10170): Verilog HDL syntax error at LCD.v(20) near text: "and";  expecting an operand. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/barber.timothy20/Documents/Github/Quartus/LCD/LCD.v Line: 20
-Error (10170): Verilog HDL syntax error at LCD.v(21) near text: "and";  expecting an operand. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/barber.timothy20/Documents/Github/Quartus/LCD/LCD.v Line: 21
+Error (10170): Verilog HDL syntax error at LCD.v(14) near text: "~|";  expecting ")". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/barber.timothy20/Documents/Github/Quartus/LCD/LCD.v Line: 14
+Error (10170): Verilog HDL syntax error at LCD.v(15) near text: "~|";  expecting ")". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/barber.timothy20/Documents/Github/Quartus/LCD/LCD.v Line: 15
 Error (10112): Ignored design unit "LCD" at LCD.v(1) due to previous errors File: C:/Users/barber.timothy20/Documents/Github/Quartus/LCD/LCD.v Line: 1
 Info (12021): Found 0 design units, including 0 entities, in source file lcd.v
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 10 errors, 1 warning
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 1 warning
     Error: Peak virtual memory: 652 megabytes
-    Error: Processing ended: Mon Mar 11 15:08:19 2019
+    Error: Processing ended: Tue Mar 12 10:58:33 2019
     Error: Elapsed time: 00:00:12
     Error: Total CPU time (on all processors): 00:00:30
 

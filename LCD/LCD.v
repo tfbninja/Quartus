@@ -10,15 +10,15 @@ module LCD(KEY, HEX0, HEX1, LEDR);
 	assign c = KEY[2];
 	assign d = KEY[3];
 	
-	assign HEX0[0] = (a xnor c) or (b xor d);
-	assign HEX0[1] = ~c or (a nor b) or (a and (b xor d));
-	assign HEX0[2] = a or (b and c) or (~c and d) or (b nor d);
-	assign HEX0[3] = ~a and (~c or (b and ~d)) or (~c and (b xor d)) or (a and c and (~b or d);
-	assign HEX0[4] = ~a and (b xor d) or (~c and d);
-	assign HEX0[5] = (~b and (c xor d)) or  (b and ((c and d) or (~a and (c or d))));
-	assign HEX0[6] = (c and (~b or ~a or d)) or ((b xor d) and (~b and d or ~c));
-	assign HEX1[1] = d and (b or c);
-	assign HEX1[2] = d and (b or c);
+	assign HEX0[0] = (a ~^  c) | (b ^ d);
+	assign HEX0[1] = (~c) | ((a ~| b)) | (a & (b ^ d));
+	assign HEX0[2] = a | (b & c) | (~c & d) | ((b ~| d));
+	assign HEX0[3] = ~a & (~c | (b & ~d)) | (~c & (b ^ d)) | (a & c & (~b | d));
+	assign HEX0[4] = ~a & (b ^ d) | (~c & d);
+	assign HEX0[5] = (~b & (c ^ d)) |  (b & ((c & d) | (~a & (c | d))));
+	assign HEX0[6] = (c & (~b | ~a | d)) | ((b ^ d) & (~b & d | ~c));
+	assign HEX1[1] = d & (b | c);
+	assign HEX1[2] = d & (b | c);
 	
 	assign LEDR[0] = a;
 	assign LEDR[1] = b;
