@@ -1,5 +1,5 @@
 Flow report for Lab4
-Mon Mar 11 10:59:29 2019
+Thu Mar 14 10:56:30 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Mon Mar 11 10:59:22 2019       ;
+; Flow Status                     ; Successful - Thu Mar 14 10:56:23 2019       ;
 ; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                   ; Lab4                                        ;
 ; Top-level Entity Name           ; Lab4                                        ;
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/11/2019 10:58:35 ;
+; Start date & time ; 03/14/2019 10:55:43 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Lab4                ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 66325080979140.155232351510760         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 66325080979140.155258254310224         ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; DE0_CV      ; Top        ;
@@ -97,11 +97,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:14     ; 1.0                     ; 679 MB              ; 00:00:32                           ;
-; Fitter                    ; 00:00:25     ; 1.0                     ; 1769 MB             ; 00:00:30                           ;
-; Assembler                 ; 00:00:05     ; 1.0                     ; 700 MB              ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:06     ; 1.0                     ; 915 MB              ; 00:00:05                           ;
-; Total                     ; 00:00:50     ; --                      ; --                  ; 00:01:11                           ;
+; Analysis & Synthesis      ; 00:00:14     ; 1.0                     ; 675 MB              ; 00:00:33                           ;
+; Fitter                    ; 00:00:20     ; 1.0                     ; 1770 MB             ; 00:00:28                           ;
+; Assembler                 ; 00:00:04     ; 1.0                     ; 700 MB              ; 00:00:04                           ;
+; TimeQuest Timing Analyzer ; 00:00:06     ; 1.0                     ; 913 MB              ; 00:00:05                           ;
+; Total                     ; 00:00:44     ; --                      ; --                  ; 00:01:10                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -120,10 +120,10 @@ agreement for further details.
 ------------
 ; Flow Log ;
 ------------
-quartus_map --read_settings_files=on --write_settings_files=off Lab4 -c Lab4
-quartus_fit --read_settings_files=off --write_settings_files=off Lab4 -c Lab4
-quartus_asm --read_settings_files=off --write_settings_files=off Lab4 -c Lab4
-quartus_sta Lab4 -c Lab4
+quartus_map --read_settings_files=on --write_settings_files=off Lab4P2 -c Lab4
+quartus_fit --read_settings_files=off --write_settings_files=off Lab4P2 -c Lab4
+quartus_asm --read_settings_files=off --write_settings_files=off Lab4P2 -c Lab4
+quartus_sta Lab4P2 -c Lab4
 
 
 

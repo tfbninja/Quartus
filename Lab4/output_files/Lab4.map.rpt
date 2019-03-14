@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab4
-Mon Mar 11 10:58:49 2019
+Thu Mar 14 10:55:57 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Mar 11 10:58:49 2019       ;
+; Analysis & Synthesis Status     ; Successful - Thu Mar 14 10:55:57 2019       ;
 ; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                   ; Lab4                                        ;
 ; Top-level Entity Name           ; Lab4                                        ;
@@ -258,19 +258,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Mon Mar 11 10:58:35 2019
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab4 -c Lab4
+    Info: Processing started: Thu Mar 14 10:55:43 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab4P2 -c Lab4
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file lab4.v
     Info (12023): Found entity 1: Lab4 File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab4/Lab4.v Line: 1
 Info (12127): Elaborating entity "Lab4" for the top level hierarchy
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab4/Lab4.v Line: 3
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab4/Lab4.v Line: 3
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab4/Lab4.v Line: 3
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab4/Lab4.v Line: 3
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab4/Lab4.v Line: 3
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab4/Lab4.v Line: 4
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab4/Lab4.v Line: 4
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab4/Lab4.v Line: 4
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab4/Lab4.v Line: 4
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab4/Lab4.v Line: 4
 Info (286030): Timing-Driven Synthesis is running
 Warning (20013): Ignored 86 assignments for entity "DE0_CV" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[0] -entity DE0_CV was ignored
@@ -362,15 +362,15 @@ Warning (20013): Ignored 86 assignments for entity "DE0_CV" -- entity does not e
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab4/Lab4.v Line: 2
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab4/Lab4.v Line: 3
 Info (21057): Implemented 24 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 10 output pins
     Info (21061): Implemented 4 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 96 warnings
-    Info: Peak virtual memory: 691 megabytes
-    Info: Processing ended: Mon Mar 11 10:58:49 2019
+    Info: Peak virtual memory: 685 megabytes
+    Info: Processing ended: Thu Mar 14 10:55:57 2019
     Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:32
+    Info: Total CPU time (on all processors): 00:00:33
 
 
