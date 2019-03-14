@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for LCD
-Thu Mar 14 11:00:02 2019
+Thu Mar 14 15:11:15 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -103,7 +103,7 @@ agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.8%      ;
+;     Processor 2            ;   1.7%      ;
 +----------------------------+-------------+
 
 
@@ -311,10 +311,10 @@ No synchronizer chains to report.
 +--------+--------------+-----------------+-----------------+
 ; Pin    ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +--------+--------------+-----------------+-----------------+
-; KEY[1] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; KEY[3] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; KEY[0] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; KEY[2] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; KEY[1] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; KEY[3] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 +--------+--------------+-----------------+-----------------+
 
 
@@ -506,7 +506,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Thu Mar 14 10:59:57 2019
+    Info: Processing started: Thu Mar 14 15:11:10 2019
 Info: Command: quartus_sta LCD -c LCD
 Info: qsta_default_script.tcl version: #1
 Warning (20013): Ignored 24 assignments for entity "DE0_CV" -- entity does not exist in design
@@ -591,8 +591,8 @@ Info (332140): No Minimum Pulse Width paths to report
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 31 warnings
-    Info: Peak virtual memory: 914 megabytes
-    Info: Processing ended: Thu Mar 14 11:00:02 2019
+    Info: Peak virtual memory: 913 megabytes
+    Info: Processing ended: Thu Mar 14 15:11:15 2019
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:05
 

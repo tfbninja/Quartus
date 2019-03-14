@@ -5,10 +5,10 @@ module LCD(KEY, HEX0, HEX1, LEDR);
 	output [3:0] LEDR;
 	
 	wire a,b,c,d;
-	assign a = KEY[0];
-	assign b = KEY[1];
-	assign c = KEY[2];
-	assign d = KEY[3];
+	assign d = ~KEY[0];
+	assign c = ~KEY[1];
+	assign b = ~KEY[2];
+	assign a = ~KEY[3];
 	wire A,B,C,D,E,F,G,H,I,J,K,L,M,N,O, Z;
 	assign A = ~a & ~b & ~c & ~d;
 	assign B = ~a & ~b & ~c & d;
@@ -26,7 +26,6 @@ module LCD(KEY, HEX0, HEX1, LEDR);
 	assign N = a & b & ~c & d;
 	assign O = a & b & c & ~d;
 	assign P = a & b & c & d;
-	assign Z = a & ~a;
 	// 0 A
 	// 1 B
 	// 2 C
@@ -44,19 +43,19 @@ module LCD(KEY, HEX0, HEX1, LEDR);
 	//14 O
 	//15 P
 	
-	assign HEX0[0] = ~(A | B | E | L | O);
-	assign HEX0[1] = ~(A | F | G | P);
-	assign HEX0[2] = ~(A | C | M);
-	assign HEX0[3] = ~(A | B | E | H | J | L | O | P);
-	assign HEX0[4] =  (C | G | I | J | K | O | P);
-	assign HEX0[5] =  (E | F | G | I | J | K | O | P);
-	assign HEX0[6] = ~(A | B | H | K | L);
-	assign HEX1[1] = d & (b | c);
-	assign HEX1[2] = d & (b | c);
+	assign HEX0[0] = (A | B | E | L | O);
+	assign HEX0[1] = (A | F | G | P);
+	assign HEX0[2] = (A | C | M);
+	assign HEX0[3] = (A | B | E | H | L | P);
+	assign HEX0[4] = ~(C | G | I | J | K | M | P);
+	assign HEX0[5] = ~(E | F | G | I | J | K | O | P);
+	assign HEX0[6] = (A | B | H | K | L);
+	assign HEX1[1] = ~(a & (b | c));
+	assign HEX1[2] = ~(a & (b | c));
 	
-	assign LEDR[0] = ~a;
-	assign LEDR[1] = ~b;
-	assign LEDR[2] = ~c;
-	assign LEDR[3] = ~d;
+	assign LEDR[0] = d;
+	assign LEDR[1] = c;
+	assign LEDR[2] = b;
+	assign LEDR[3] = a;
 
 endmodule

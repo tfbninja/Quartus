@@ -1,5 +1,5 @@
 Fitter report for LCD
-Thu Mar 14 10:59:50 2019
+Thu Mar 14 15:11:03 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -58,7 +58,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Thu Mar 14 10:59:50 2019       ;
+; Fitter Status                   ; Successful - Thu Mar 14 15:11:03 2019       ;
 ; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                   ; LCD                                         ;
 ; Top-level Entity Name           ; LCD                                         ;
@@ -918,10 +918,10 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; LEDR[1]  ; Incomplete set of assignments ;
 ; LEDR[2]  ; Incomplete set of assignments ;
 ; LEDR[3]  ; Incomplete set of assignments ;
-; KEY[1]   ; Incomplete set of assignments ;
-; KEY[3]   ; Incomplete set of assignments ;
 ; KEY[0]   ; Incomplete set of assignments ;
 ; KEY[2]   ; Incomplete set of assignments ;
+; KEY[1]   ; Incomplete set of assignments ;
+; KEY[3]   ; Incomplete set of assignments ;
 +----------+-------------------------------+
 
 
@@ -953,10 +953,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LEDR[1] ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; LEDR[2] ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; LEDR[3] ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
-; KEY[1]  ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; KEY[3]  ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; KEY[0]  ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; KEY[2]  ; Input    ; -- ; (0)  ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; KEY[1]  ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; KEY[3]  ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +---------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
 
@@ -965,6 +965,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-------------------+---------+
 ; Source Pin / Fanout   ; Pad To Core Index ; Setting ;
 +-----------------------+-------------------+---------+
+; KEY[0]                ;                   ;         ;
+;      - HEX0~0         ; 0                 ; 0       ;
+;      - HEX0~1         ; 0                 ; 0       ;
+;      - HEX0~2         ; 0                 ; 0       ;
+;      - HEX0~3         ; 0                 ; 0       ;
+;      - HEX0~4         ; 0                 ; 0       ;
+;      - HEX0~5         ; 0                 ; 0       ;
+;      - HEX0~6         ; 0                 ; 0       ;
+;      - LEDR[0]~output ; 0                 ; 0       ;
+; KEY[2]                ;                   ;         ;
+;      - HEX0~0         ; 0                 ; 0       ;
+;      - HEX0~1         ; 0                 ; 0       ;
+;      - HEX0~2         ; 0                 ; 0       ;
+;      - HEX0~3         ; 0                 ; 0       ;
+;      - HEX0~4         ; 0                 ; 0       ;
+;      - HEX0~5         ; 0                 ; 0       ;
+;      - HEX0~6         ; 0                 ; 0       ;
+;      - HEX1~0         ; 0                 ; 0       ;
+;      - LEDR[2]~output ; 1                 ; 0       ;
 ; KEY[1]                ;                   ;         ;
 ;      - HEX0~0         ; 1                 ; 0       ;
 ;      - HEX0~1         ; 1                 ; 0       ;
@@ -985,25 +1004,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - HEX0~6         ; 0                 ; 0       ;
 ;      - HEX1~0         ; 0                 ; 0       ;
 ;      - LEDR[3]~output ; 0                 ; 0       ;
-; KEY[0]                ;                   ;         ;
-;      - HEX0~0         ; 0                 ; 0       ;
-;      - HEX0~1         ; 0                 ; 0       ;
-;      - HEX0~2         ; 0                 ; 0       ;
-;      - HEX0~3         ; 0                 ; 0       ;
-;      - HEX0~4         ; 0                 ; 0       ;
-;      - HEX0~5         ; 0                 ; 0       ;
-;      - HEX0~6         ; 0                 ; 0       ;
-;      - LEDR[0]~output ; 0                 ; 0       ;
-; KEY[2]                ;                   ;         ;
-;      - HEX0~0         ; 0                 ; 0       ;
-;      - HEX0~1         ; 0                 ; 0       ;
-;      - HEX0~2         ; 0                 ; 0       ;
-;      - HEX0~3         ; 0                 ; 0       ;
-;      - HEX0~4         ; 0                 ; 0       ;
-;      - HEX0~5         ; 0                 ; 0       ;
-;      - HEX0~6         ; 0                 ; 0       ;
-;      - HEX1~0         ; 0                 ; 0       ;
-;      - LEDR[2]~output ; 1                 ; 0       ;
 +-----------------------+-------------------+---------+
 
 
@@ -1104,10 +1104,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LEDR[1]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; LEDR[2]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; LEDR[3]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; KEY[1]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; KEY[3]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; KEY[0]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; KEY[2]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; KEY[1]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; KEY[3]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
 
 
@@ -1199,8 +1199,8 @@ Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:03
 Info (144001): Generated suppressed messages file C:/Users/barber.timothy20/Documents/Github/Quartus/LCD/output_files/LCD.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 1769 megabytes
-    Info: Processing ended: Thu Mar 14 10:59:51 2019
+    Info: Peak virtual memory: 1771 megabytes
+    Info: Processing ended: Thu Mar 14 15:11:04 2019
     Info: Elapsed time: 00:00:20
     Info: Total CPU time (on all processors): 00:00:27
 
