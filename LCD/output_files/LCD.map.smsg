@@ -1,4 +1,4 @@
-Info (10281): Verilog HDL Declaration information at LCD.v(7): object "a" differs only in case from object "A" in the same scope File: C:/Users/barber.timothy20/Documents/Github/Quartus/LCD/LCD.v Line: 7
-Info (10281): Verilog HDL Declaration information at LCD.v(7): object "b" differs only in case from object "B" in the same scope File: C:/Users/barber.timothy20/Documents/Github/Quartus/LCD/LCD.v Line: 7
-Info (10281): Verilog HDL Declaration information at LCD.v(7): object "c" differs only in case from object "C" in the same scope File: C:/Users/barber.timothy20/Documents/Github/Quartus/LCD/LCD.v Line: 7
-Info (10281): Verilog HDL Declaration information at LCD.v(7): object "d" differs only in case from object "D" in the same scope File: C:/Users/barber.timothy20/Documents/Github/Quartus/LCD/LCD.v Line: 7
+Info (10281): Verilog HDL Declaration information at LCD.v(8): object "a" differs only in case from object "A" in the same scope File: C:/Users/barber.timothy20/Documents/Github/Quartus/LCD/LCD.v Line: 8
+Info (10281): Verilog HDL Declaration information at LCD.v(8): object "b" differs only in case from object "B" in the same scope File: C:/Users/barber.timothy20/Documents/Github/Quartus/LCD/LCD.v Line: 8
+Info (10281): Verilog HDL Declaration information at LCD.v(8): object "c" differs only in case from object "C" in the same scope File: C:/Users/barber.timothy20/Documents/Github/Quartus/LCD/LCD.v Line: 8
+Info (10281): Verilog HDL Declaration information at LCD.v(8): object "d" differs only in case from object "D" in the same scope File: C:/Users/barber.timothy20/Documents/Github/Quartus/LCD/LCD.v Line: 8
