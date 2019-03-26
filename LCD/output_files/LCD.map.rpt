@@ -1,5 +1,5 @@
 Analysis & Synthesis report for LCD
-Fri Mar 15 10:57:25 2019
+Mon Mar 25 22:12:09 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -44,7 +44,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Mar 15 10:57:25 2019       ;
+; Analysis & Synthesis Status     ; Successful - Mon Mar 25 22:12:09 2019       ;
 ; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                   ; LCD                                         ;
 ; Top-level Entity Name           ; LCD                                         ;
@@ -156,8 +156,8 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -167,13 +167,13 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                               ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                 ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
-; LCD.v                            ; yes             ; User Verilog HDL File  ; C:/Users/barber.timothy20/Documents/Github/Quartus/LCD/LCD.v ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                    ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                      ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------+---------+
+; LCD.v                            ; yes             ; User Verilog HDL File  ; C:/Users/tfbni/Documents/GitHub/Quartus/LCD/LCD.v ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------+---------+
 
 
 +------------------------------------------------------------+
@@ -196,7 +196,7 @@ agreement for further details.
 ;                                             ;              ;
 ; Total DSP Blocks                            ; 0            ;
 ;                                             ;              ;
-; Maximum fan-out node                        ; KEY[2]~input ;
+; Maximum fan-out node                        ; KEY[1]~input ;
 ; Maximum fan-out                             ; 16           ;
 ; Total fan-out                               ; 103          ;
 ; Average fan-out                             ; 1.63         ;
@@ -233,15 +233,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 23                          ;
-;     normal            ; 23                          ;
-;         1 data inputs ; 8                           ;
+; arriav_lcell_comb     ; 30                          ;
+;     normal            ; 30                          ;
+;         1 data inputs ; 15                          ;
 ;         3 data inputs ; 1                           ;
 ;         4 data inputs ; 14                          ;
 ; boundary_port         ; 24                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.44                        ;
+; Average LUT depth     ; 1.76                        ;
 +-----------------------+-----------------------------+
 
 
@@ -250,7 +250,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -260,12 +260,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Fri Mar 15 10:57:12 2019
+    Info: Processing started: Mon Mar 25 22:11:40 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LCD -c LCD
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file lcd.v
-    Info (12023): Found entity 1: LCD File: C:/Users/barber.timothy20/Documents/Github/Quartus/LCD/LCD.v Line: 1
+    Info (12023): Found entity 1: LCD File: C:/Users/tfbni/Documents/GitHub/Quartus/LCD/LCD.v Line: 1
 Info (12127): Elaborating entity "LCD" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
 Warning (20013): Ignored 24 assignments for entity "DE0_CV" -- entity does not exist in design
@@ -293,7 +293,7 @@ Warning (20013): Ignored 24 assignments for entity "DE0_CV" -- entity does not e
     Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity DE0_CV -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity DE0_CV -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity DE0_CV -section_id Top was ignored
-Info (144001): Generated suppressed messages file C:/Users/barber.timothy20/Documents/Github/Quartus/LCD/output_files/LCD.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/tfbni/Documents/GitHub/Quartus/LCD/output_files/LCD.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 39 device resources after synthesis - the final resource count might be different
@@ -301,15 +301,15 @@ Info (21057): Implemented 39 device resources after synthesis - the final resour
     Info (21059): Implemented 20 output pins
     Info (21061): Implemented 15 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
-    Info: Peak virtual memory: 682 megabytes
-    Info: Processing ended: Fri Mar 15 10:57:25 2019
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:31
+    Info: Peak virtual memory: 4833 megabytes
+    Info: Processing ended: Mon Mar 25 22:12:09 2019
+    Info: Elapsed time: 00:00:29
+    Info: Total CPU time (on all processors): 00:01:09
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/barber.timothy20/Documents/Github/Quartus/LCD/output_files/LCD.map.smsg.
+The suppressed messages can be found in C:/Users/tfbni/Documents/GitHub/Quartus/LCD/output_files/LCD.map.smsg.
 
 

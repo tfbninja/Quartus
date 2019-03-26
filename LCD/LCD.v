@@ -54,13 +54,13 @@ module LCD(KEY, HEX0, HEX1, HEX3, LEDR);
 	assign HEX1[1] = ~(a & (b | c));
 	assign HEX1[2] = ~(a & (b | c));
 	
-	assign HEX3[0] = (C | D | F | G | H | I | J | K | M | O | P);
-	assign HEX3[1] = (B | C | D | E | H | I | J | K);
-	assign HEX3[2] = (C | D | E | F | G | H | I | J | K | L | N);
-	assign HEX3[3] = (C | D | F | G | I | J | L | M | N | O);
-	assign HEX3[4] = (C | G | I | K | L | M | N | O | P);
-	assign HEX3[5] = (E | F | G | I | J | K | L | M | O | P);
-	assign HEX3[6] = (C | D | E | F | G | I | J | K | L | N | O | P);
+	assign HEX3[0] = ~(C | D | F | G | H | I | J | K | M | O | P);
+	assign HEX3[1] = ~(B | C | D | E | H | I | J | K | N);
+	assign HEX3[2] = ~(B | D | E | F | G | H | I | J | K | L | N);
+	assign HEX3[3] = ~(C | D | F | G | I | J | L | M | N | O);
+	assign HEX3[4] = ~(C | G | I | K | L | M | N | O | P);
+	assign HEX3[5] = ~(E | F | G | I | J | K | L | M | O | P);
+	assign HEX3[6] = ~(C | D | E | F | G | I | J | K | L | N | O | P);
 	
 	assign LEDR[0] = d;
 	assign LEDR[1] = c;

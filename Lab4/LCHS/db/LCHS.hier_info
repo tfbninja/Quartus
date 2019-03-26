@@ -1,0 +1,31 @@
+|LCHS
+HEX0[0] <= <GND>
+HEX0[1] <= <VCC>
+HEX0[2] <= <GND>
+HEX0[3] <= <GND>
+HEX0[4] <= <VCC>
+HEX0[5] <= <GND>
+HEX0[6] <= <GND>
+HEX1[0] <= <VCC>
+HEX1[1] <= <GND>
+HEX1[2] <= <GND>
+HEX1[3] <= <VCC>
+HEX1[4] <= <GND>
+HEX1[5] <= <GND>
+HEX1[6] <= <GND>
+HEX2[0] <= <GND>
+HEX2[1] <= <VCC>
+HEX2[2] <= <VCC>
+HEX2[3] <= <GND>
+HEX2[4] <= <GND>
+HEX2[5] <= <GND>
+HEX2[6] <= <VCC>
+HEX3[0] <= <VCC>
+HEX3[1] <= <VCC>
+HEX3[2] <= <VCC>
+HEX3[3] <= <GND>
+HEX3[4] <= <GND>
+HEX3[5] <= <GND>
+HEX3[6] <= <VCC>
+
+

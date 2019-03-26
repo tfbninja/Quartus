@@ -12,6 +12,7 @@ module L4_P5(
 	output [6:0]HEX3,
 	output [6:0]HEX4,
 	output [6:0]HEX5,
+	output [6:0]HEX6
 );
 
 //=======================================================
@@ -19,14 +20,61 @@ module L4_P5(
 //=======================================================
 
 	wire on, off;
-	assign on = 8'b0;
-	assign off = 5'b0;
+	assign on = 5'b0; // backwards because the 7-seg displays are weird...idk
+	assign off = !on;
 
 
 //=======================================================
 //  Structural coding
 //=======================================================
-	assign HEX2[0] = 
+	// Displays a crude "dE0-CV"
+	assign HEX5[0] = off;
+	assign HEX5[1] = on;
+	assign HEX5[2] = on;
+	assign HEX5[3] = on;
+	assign HEX5[4] = on;
+	assign HEX5[5] = off;
+	assign HEX5[6] = on;
+	
+	assign HEX4[0] = on;
+	assign HEX4[1] = off;
+	assign HEX4[2] = off;
+	assign HEX4[3] = on;
+	assign HEX4[4] = on;
+	assign HEX4[5] = on;
+	assign HEX4[6] = on;
+	
+	assign HEX3[0] = on;
+	assign HEX3[1] = on;
+	assign HEX3[2] = on;
+	assign HEX3[3] = on;
+	assign HEX3[4] = on;
+	assign HEX3[5] = on;
+	assign HEX3[6] = off;
+	
+	assign HEX2[0] = off;
+	assign HEX2[1] = off;
+	assign HEX2[2] = off;
+	assign HEX2[3] = off;
+	assign HEX2[4] = off;
+	assign HEX2[5] = off;
+	assign HEX2[6] = on;
+	
+	assign HEX1[0] = on;
+	assign HEX1[1] = off;
+	assign HEX1[2] = off;
+	assign HEX1[3] = on;
+	assign HEX1[4] = on;
+	assign HEX1[5] = on;
+	assign HEX1[6] = off;
+	
+	assign HEX0[0] = off;
+	assign HEX0[1] = on;
+	assign HEX0[2] = on;
+	assign HEX0[3] = on;
+	assign HEX0[4] = on;
+	assign HEX0[5] = on;
+	assign HEX0[6] = off;
 
 
 endmodule
