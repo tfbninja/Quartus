@@ -9,7 +9,9 @@ module LCHS(
 	output		     [6:0]		HEX0,
 	output		     [6:0]		HEX1,
 	output		     [6:0]		HEX2,
-	output		     [6:0]		HEX3
+	output		     [6:0]		HEX3,
+	output				  [9:0] 		LEDR,
+	input 			  [9:0] 		SW
 );
 
 
@@ -19,43 +21,51 @@ module LCHS(
 //=======================================================
 
 	wire on, off;
+	wire [6:0] l, c, h, s;
 	assign on = 5'b0; // backwards because the 7-seg displays are weird...idk
 	assign off = !on;
+	assign l[0] = off;
+	assign l[1] = off;
+	assign l[2] = off;
+	assign l[3] = on;
+	assign l[4] = on;
+	assign l[5] = on;
+	assign l[6] = off;
+	
+	assign c[0] = on;
+	assign c[1] = off;
+	assign c[2] = off;
+	assign c[3] = on;
+	assign c[4] = on;
+	assign c[5] = on;
+	assign c[6] = off;
+	
+	assign h[0] = off;
+	assign h[1] = on;
+	assign h[2] = on;
+	assign h[3] = off;
+	assign h[4] = on;
+	assign h[5] = on;
+	assign h[6] = on;
+	
+	assign s[0] = on;
+	assign s[1] = off;
+	assign s[2] = on;
+	assign s[3] = on;
+	assign s[4] = off;
+	assign s[5] = on;
+	assign s[6] = on;
 
 //=======================================================
 //  Structural coding
 //=======================================================
-
-	assign HEX3[0] = off;
-	assign HEX3[1] = off;
-	assign HEX3[2] = off;
-	assign HEX3[3] = on;
-	assign HEX3[4] = on;
-	assign HEX3[5] = on;
-	assign HEX3[6] = off;
 	
-	assign HEX2[0] = on;
-	assign HEX2[1] = off;
-	assign HEX2[2] = off;
-	assign HEX2[3] = on;
-	assign HEX2[4] = on;
-	assign HEX2[5] = on;
-	assign HEX2[6] = off;
+	assign HEX3[6:0] = SW[7] ? (SW[6] ? s : h) : (SW[6] ? c : l);
+	assign HEX2[6:0] = SW[5] ? (SW[4] ? s : h) : (SW[4] ? c : l);
+	assign HEX1[6:0] = SW[3] ? (SW[2] ? s : h) : (SW[2] ? c : l);
+	assign HEX0[6:0] = SW[1] ? (SW[0] ? s : h) : (SW[0] ? c : l);
 	
-	assign HEX1[0] = off;
-	assign HEX1[1] = on;
-	assign HEX1[2] = on;
-	assign HEX1[3] = off;
-	assign HEX1[4] = on;
-	assign HEX1[5] = on;
-	assign HEX1[6] = on;
+	assign LEDR[9:0] = SW[9:0];
 	
-	assign HEX0[0] = on;
-	assign HEX0[1] = off;
-	assign HEX0[2] = on;
-	assign HEX0[3] = on;
-	assign HEX0[4] = off;
-	assign HEX0[5] = on;
-	assign HEX0[6] = on;
 
 endmodule
