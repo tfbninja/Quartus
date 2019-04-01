@@ -1,0 +1,83 @@
+|Lab5_P1_7Decoder
+CLOCK_50 => CLOCK_50.IN2
+CLOCK2_50 => ~NO_FANOUT~
+CLOCK3_50 => ~NO_FANOUT~
+CLOCK4_50 <> <UNC>
+HEX0[0] <= decoder_7_seg:comb_3.port2
+HEX0[1] <= decoder_7_seg:comb_3.port2
+HEX0[2] <= decoder_7_seg:comb_3.port2
+HEX0[3] <= decoder_7_seg:comb_3.port2
+HEX0[4] <= decoder_7_seg:comb_3.port2
+HEX0[5] <= decoder_7_seg:comb_3.port2
+HEX0[6] <= decoder_7_seg:comb_3.port2
+HEX1[0] <= decoder_7_seg:comb_4.port2
+HEX1[1] <= decoder_7_seg:comb_4.port2
+HEX1[2] <= decoder_7_seg:comb_4.port2
+HEX1[3] <= decoder_7_seg:comb_4.port2
+HEX1[4] <= decoder_7_seg:comb_4.port2
+HEX1[5] <= decoder_7_seg:comb_4.port2
+HEX1[6] <= decoder_7_seg:comb_4.port2
+SD_CLK <= <GND>
+SD_CMD <> <UNC>
+SD_DATA[0] <> <UNC>
+SD_DATA[1] <> <UNC>
+SD_DATA[2] <> <UNC>
+SD_DATA[3] <> <UNC>
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => SW[3].IN1
+SW[4] => SW[4].IN1
+SW[5] => SW[5].IN1
+SW[6] => SW[6].IN1
+SW[7] => SW[7].IN1
+SW[8] => ~NO_FANOUT~
+SW[9] => ~NO_FANOUT~
+
+
+|Lab5_P1_7Decoder|decoder_7_seg:comb_3
+CLK => SEG[0]~reg0.CLK
+CLK => SEG[1]~reg0.CLK
+CLK => SEG[2]~reg0.CLK
+CLK => SEG[3]~reg0.CLK
+CLK => SEG[4]~reg0.CLK
+CLK => SEG[5]~reg0.CLK
+CLK => SEG[6]~reg0.CLK
+CLK => SEG[7]~reg0.CLK
+D[0] => Decoder0.IN3
+D[1] => Decoder0.IN2
+D[2] => Decoder0.IN1
+D[3] => Decoder0.IN0
+SEG[0] <= SEG[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SEG[1] <= SEG[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SEG[2] <= SEG[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SEG[3] <= SEG[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SEG[4] <= SEG[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SEG[5] <= SEG[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SEG[6] <= SEG[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SEG[7] <= SEG[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5_P1_7Decoder|decoder_7_seg:comb_4
+CLK => SEG[0]~reg0.CLK
+CLK => SEG[1]~reg0.CLK
+CLK => SEG[2]~reg0.CLK
+CLK => SEG[3]~reg0.CLK
+CLK => SEG[4]~reg0.CLK
+CLK => SEG[5]~reg0.CLK
+CLK => SEG[6]~reg0.CLK
+CLK => SEG[7]~reg0.CLK
+D[0] => Decoder0.IN3
+D[1] => Decoder0.IN2
+D[2] => Decoder0.IN1
+D[3] => Decoder0.IN0
+SEG[0] <= SEG[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SEG[1] <= SEG[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SEG[2] <= SEG[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SEG[3] <= SEG[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SEG[4] <= SEG[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SEG[5] <= SEG[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SEG[6] <= SEG[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SEG[7] <= SEG[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
