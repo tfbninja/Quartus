@@ -24,7 +24,7 @@ SW[9] => ~NO_FANOUT~
 |Lab8|full_adder:comb_3
 x => x.IN1
 y => y.IN1
-cin => ~NO_FANOUT~
+cin => cin.IN1
 S <= half_adder:comb_4.port3
 C <= C.DB_MAX_OUTPUT_PORT_TYPE
 

@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Lab8
-Mon Apr 01 10:55:36 2019
+Tue Apr 02 10:23:00 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -104,7 +104,7 @@ agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.1%      ;
+;     Processor 2            ;   1.3%      ;
 +----------------------------+-------------+
 
 
@@ -113,7 +113,7 @@ agreement for further details.
 +---------------+--------+--------------------------+
 ; SDC File Path ; Status ; Read at                  ;
 +---------------+--------+--------------------------+
-; Lab8.SDC      ; OK     ; Mon Apr 01 10:55:32 2019 ;
+; Lab8.SDC      ; OK     ; Tue Apr 02 10:22:56 2019 ;
 +---------------+--------+--------------------------+
 
 
@@ -318,7 +318,6 @@ No synchronizer chains to report.
 +-------+--------------+-----------------+-----------------+
 ; Pin   ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +-------+--------------+-----------------+-----------------+
-; SW[0] ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[3] ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[4] ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[5] ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
@@ -328,6 +327,7 @@ No synchronizer chains to report.
 ; SW[9] ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[1] ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[2] ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[0] ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 +-------+--------------+-----------------+-----------------+
 
 
@@ -428,10 +428,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 2     ; 2    ;
-; Unconstrained Input Port Paths  ; 4     ; 4    ;
+; Unconstrained Input Ports       ; 3     ; 3    ;
+; Unconstrained Input Port Paths  ; 6     ; 6    ;
 ; Unconstrained Output Ports      ; 2     ; 2    ;
-; Unconstrained Output Port Paths ; 4     ; 4    ;
+; Unconstrained Output Port Paths ; 6     ; 6    ;
 +---------------------------------+-------+------+
 
 
@@ -440,6 +440,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------+--------------------------------------------------------------------------------------+
 ; Input Port ; Comment                                                                              ;
 +------------+--------------------------------------------------------------------------------------+
+; SW[0]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[1]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[2]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
@@ -460,6 +461,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------+--------------------------------------------------------------------------------------+
 ; Input Port ; Comment                                                                              ;
 +------------+--------------------------------------------------------------------------------------+
+; SW[0]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[1]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[2]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
@@ -481,7 +483,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Mon Apr 01 10:55:30 2019
+    Info: Processing started: Tue Apr 02 10:22:55 2019
 Info: Command: quartus_sta Lab8 -c Lab8
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -541,9 +543,9 @@ Info (332140): No Minimum Pulse Width paths to report
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 913 megabytes
-    Info: Processing ended: Mon Apr 01 10:55:36 2019
-    Info: Elapsed time: 00:00:06
+    Info: Peak virtual memory: 915 megabytes
+    Info: Processing ended: Tue Apr 02 10:23:00 2019
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:05
 
 

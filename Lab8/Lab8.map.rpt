@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab8
-Mon Apr 01 10:54:59 2019
+Tue Apr 02 10:22:28 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Apr 01 10:54:59 2019       ;
+; Analysis & Synthesis Status     ; Successful - Tue Apr 02 10:22:28 2019       ;
 ; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                   ; Lab8                                        ;
 ; Top-level Entity Name           ; Lab8                                        ;
@@ -199,8 +199,8 @@ agreement for further details.
 ;                                             ;             ;
 ; Maximum fan-out node                        ; SW[1]~input ;
 ; Maximum fan-out                             ; 2           ;
-; Total fan-out                               ; 26          ;
-; Average fan-out                             ; 0.62        ;
+; Total fan-out                               ; 28          ;
+; Average fan-out                             ; 0.67        ;
 +---------------------------------------------+-------------+
 
 
@@ -210,8 +210,7 @@ agreement for further details.
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                       ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------+-------------+--------------+
 ; |Lab8                      ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 20   ; 0            ; |Lab8                                     ; Lab8        ; work         ;
-;    |full_adder:comb_3|     ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Lab8|full_adder:comb_3                   ; full_adder  ; work         ;
-;       |half_adder:comb_3|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Lab8|full_adder:comb_3|half_adder:comb_3 ; half_adder  ; work         ;
+;    |full_adder:comb_3|     ; 2 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Lab8|full_adder:comb_3                   ; full_adder  ; work         ;
 ;       |half_adder:comb_4|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Lab8|full_adder:comb_3|half_adder:comb_4 ; half_adder  ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -240,11 +239,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; arriav_lcell_comb     ; 3                           ;
 ;     normal            ; 3                           ;
 ;         0 data inputs ; 1                           ;
-;         2 data inputs ; 2                           ;
+;         3 data inputs ; 2                           ;
 ; boundary_port         ; 20                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.80                        ;
+; Average LUT depth     ; 0.83                        ;
 +-----------------------+-----------------------------+
 
 
@@ -263,7 +262,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Mon Apr 01 10:54:44 2019
+    Info: Processing started: Tue Apr 02 10:22:15 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab8 -c Lab8
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -292,8 +291,7 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 8 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab8/lab8.v Line: 13
+Warning (21074): Design contains 7 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab8/lab8.v Line: 13
     Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab8/lab8.v Line: 13
     Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab8/lab8.v Line: 13
@@ -305,10 +303,10 @@ Info (21057): Implemented 22 device resources after synthesis - the final resour
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 10 output pins
     Info (21061): Implemented 2 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 24 warnings
-    Info: Peak virtual memory: 686 megabytes
-    Info: Processing ended: Mon Apr 01 10:54:59 2019
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:33
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 23 warnings
+    Info: Peak virtual memory: 684 megabytes
+    Info: Processing ended: Tue Apr 02 10:22:28 2019
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:31
 
 
