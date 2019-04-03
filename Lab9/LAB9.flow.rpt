@@ -1,5 +1,5 @@
 Flow report for LAB9
-Tue Apr 02 10:57:51 2019
+Wed Apr 03 10:54:41 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
-; Flow Status                 ; Flow Failed - Tue Apr 02 10:57:51 2019      ;
+; Flow Status                 ; Flow Failed - Wed Apr 03 10:54:41 2019      ;
 ; Quartus Prime Version       ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name               ; LAB9                                        ;
 ; Top-level Entity Name       ; LAB9                                        ;
@@ -63,7 +63,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/02/2019 10:57:39 ;
+; Start date & time ; 04/03/2019 10:54:09 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; LAB9                ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 66325080979140.155422425900116         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 66325080979140.155431044924828         ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -86,8 +86,8 @@ agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 657 MB              ; 00:00:30                           ;
-; Total                ; 00:00:13     ; --                      ; --                  ; 00:00:30                           ;
+; Analysis & Synthesis ; 00:00:33     ; 1.0                     ; 667 MB              ; 00:00:29                           ;
+; Total                ; 00:00:33     ; --                      ; --                  ; 00:00:29                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -36,8 +36,8 @@ module LAB9(
 
 	decoder_7_seg(CLOCK_50, SW[9:6], HEX5[6:0]);
 	decoder_7_seg(CLOCK_50, SW[3:0], HEX3[6:0]);
-	assign HEX5[6:0] = 7'b1111111;
-	assign HEX3[6:0] = 7'b1111111;
+	//assign HEX5[6:0] = 7'b1111111;
+	//assign HEX3[6:0] = 7'b1111111;
 	assign A[3:0] = SW[9:6];
 	assign B[3:0] = SW[3:0];
 	
