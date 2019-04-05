@@ -1,5 +1,5 @@
 Analysis & Synthesis report for LAB9
-Wed Apr 03 10:54:41 2019
+Fri Apr 05 10:29:24 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -10,11 +10,17 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Port Connectivity Checks: "binary_to_bcd:comb_21|add3:m6"
-  6. Port Connectivity Checks: "binary_to_bcd:comb_21|add3:m1"
-  7. Port Connectivity Checks: "binary_to_bcd:comb_21"
-  8. Port Connectivity Checks: "full_adder:comb_13"
-  9. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Port Connectivity Checks: "binary_to_bcd:comb_21|add3:m6"
+ 11. Port Connectivity Checks: "binary_to_bcd:comb_21|add3:m1"
+ 12. Port Connectivity Checks: "binary_to_bcd:comb_21"
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -38,22 +44,27 @@ agreement for further details.
 
 
 
-+---------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                              ;
-+-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Wed Apr 03 10:54:41 2019           ;
-; Quartus Prime Version       ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
-; Revision Name               ; LAB9                                        ;
-; Top-level Entity Name       ; LAB9                                        ;
-; Family                      ; Cyclone V                                   ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Fri Apr 05 10:29:24 2019       ;
+; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
+; Revision Name                   ; LAB9                                        ;
+; Top-level Entity Name           ; LAB9                                        ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 27                                          ;
+; Total pins                      ; 42                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -159,6 +170,97 @@ agreement for further details.
 +----------------------------+-------------+
 
 
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                            ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+---------+
+; add3.v                           ; yes             ; User Verilog HDL File        ; C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/add3.v          ;         ;
+; binary_to_bcd.v                  ; yes             ; User Verilog HDL File        ; C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/binary_to_bcd.v ;         ;
+; decoder_7_seg.v                  ; yes             ; User Verilog HDL File        ; C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/decoder_7_seg.v ;         ;
+; full_adder.v                     ; yes             ; User Verilog HDL File        ; C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/full_adder.v    ;         ;
+; half_adder.v                     ; yes             ; User Verilog HDL File        ; C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/half_adder.v    ;         ;
+; lab9.v                           ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v          ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 19             ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 36             ;
+;     -- 7 input functions                    ; 0              ;
+;     -- 6 input functions                    ; 1              ;
+;     -- 5 input functions                    ; 2              ;
+;     -- 4 input functions                    ; 31             ;
+;     -- <=3 input functions                  ; 2              ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 27             ;
+;                                             ;                ;
+; I/O pins                                    ; 42             ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 27             ;
+; Total fan-out                               ; 269            ;
+; Average fan-out                             ; 1.82           ;
++---------------------------------------------+----------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                             ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------+---------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                        ; Entity Name   ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------+---------------+--------------+
+; |LAB9                      ; 36 (0)              ; 27 (0)                    ; 0                 ; 0          ; 42   ; 0            ; |LAB9                                      ; LAB9          ; work         ;
+;    |binary_to_bcd:comb_21| ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |LAB9|binary_to_bcd:comb_21                ; binary_to_bcd ; work         ;
+;       |add3:m4|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |LAB9|binary_to_bcd:comb_21|add3:m4        ; add3          ; work         ;
+;       |add3:m5|            ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |LAB9|binary_to_bcd:comb_21|add3:m5        ; add3          ; work         ;
+;    |decoder_7_seg:comb_24| ; 3 (3)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |LAB9|decoder_7_seg:comb_24                ; decoder_7_seg ; work         ;
+;    |decoder_7_seg:comb_25| ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |LAB9|decoder_7_seg:comb_25                ; decoder_7_seg ; work         ;
+;    |decoder_7_seg:comb_3|  ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |LAB9|decoder_7_seg:comb_3                 ; decoder_7_seg ; work         ;
+;    |decoder_7_seg:comb_4|  ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |LAB9|decoder_7_seg:comb_4                 ; decoder_7_seg ; work         ;
+;    |full_adder:comb_13|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |LAB9|full_adder:comb_13                   ; full_adder    ; work         ;
+;       |half_adder:comb_3|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |LAB9|full_adder:comb_13|half_adder:comb_3 ; half_adder    ; work         ;
+;    |full_adder:comb_14|    ; 2 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |LAB9|full_adder:comb_14                   ; full_adder    ; work         ;
+;       |half_adder:comb_4|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |LAB9|full_adder:comb_14|half_adder:comb_4 ; half_adder    ; work         ;
+;    |full_adder:comb_15|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |LAB9|full_adder:comb_15                   ; full_adder    ; work         ;
+;       |half_adder:comb_4|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |LAB9|full_adder:comb_15|half_adder:comb_4 ; half_adder    ; work         ;
+;    |full_adder:comb_16|    ; 2 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |LAB9|full_adder:comb_16                   ; full_adder    ; work         ;
+;       |half_adder:comb_4|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |LAB9|full_adder:comb_16|half_adder:comb_4 ; half_adder    ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------+---------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; decoder_7_seg:comb_24|SEG[1]          ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 1 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 27    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
 +-----------------------------------------------------------+
 ; Port Connectivity Checks: "binary_to_bcd:comb_21|add3:m6" ;
 +-------+-------+----------+--------------------------------+
@@ -187,13 +289,36 @@ agreement for further details.
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "full_adder:comb_13"                                                                 ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; C    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 27                          ;
+;     plain             ; 27                          ;
+; arriav_io_obuf        ; 1                           ;
+; arriav_lcell_comb     ; 37                          ;
+;     normal            ; 37                          ;
+;         0 data inputs ; 1                           ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 31                          ;
+;         5 data inputs ; 2                           ;
+;         6 data inputs ; 1                           ;
+; boundary_port         ; 42                          ;
+;                       ;                             ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 1.69                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -202,7 +327,7 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Wed Apr 03 10:54:08 2019
+    Info: Processing started: Fri Apr 05 10:28:46 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LAB9 -c LAB9
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -235,52 +360,27 @@ Info (12128): Elaborating entity "full_adder" for hierarchy "full_adder:comb_13"
 Info (12128): Elaborating entity "half_adder" for hierarchy "full_adder:comb_13|half_adder:comb_3" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/full_adder.v Line: 7
 Info (12128): Elaborating entity "binary_to_bcd" for hierarchy "binary_to_bcd:comb_21" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 52
 Info (12128): Elaborating entity "add3" for hierarchy "binary_to_bcd:comb_21|add3:m1" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/binary_to_bcd.v Line: 16
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "SUM[4]" is missing source, defaulting to GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 30
-    Warning (12110): Net "SUM[3]" is missing source, defaulting to GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 30
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "SUM[4]" is missing source, defaulting to GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 30
-    Warning (12110): Net "SUM[3]" is missing source, defaulting to GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 30
-    Warning (12110): Net "SUM[2]" is missing source, defaulting to GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 30
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "SUM[4]" is missing source, defaulting to GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 30
-    Warning (12110): Net "SUM[3]" is missing source, defaulting to GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 30
-    Warning (12110): Net "SUM[2]" is missing source, defaulting to GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 30
-    Warning (12110): Net "SUM[1]" is missing source, defaulting to GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 30
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "SUM[4]" is missing source, defaulting to GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 30
-    Warning (12110): Net "SUM[3]" is missing source, defaulting to GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 30
-    Warning (12110): Net "SUM[2]" is missing source, defaulting to GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 30
-    Warning (12110): Net "SUM[1]" is missing source, defaulting to GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 30
-    Warning (12110): Net "SUM[0]" is missing source, defaulting to GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 30
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "SUM[4]" is missing source, defaulting to GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 30
-    Warning (12110): Net "SUM[3]" is missing source, defaulting to GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 30
-    Warning (12110): Net "SUM[2]" is missing source, defaulting to GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 30
-    Warning (12110): Net "SUM[1]" is missing source, defaulting to GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 30
-    Warning (12110): Net "SUM[0]" is missing source, defaulting to GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 30
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "SUM[4]" is missing source, defaulting to GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 30
-    Warning (12110): Net "SUM[3]" is missing source, defaulting to GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 30
-    Warning (12110): Net "SUM[2]" is missing source, defaulting to GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 30
-    Warning (12110): Net "SUM[1]" is missing source, defaulting to GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 30
-    Warning (12110): Net "SUM[0]" is missing source, defaulting to GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 30
-Error (12014): Net "B[3]", which fans out to "decoder_7_seg:comb_4|D[3]", cannot be assigned more than one value File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 31
-    Error (12015): Net is fed by "full_adder:comb_16|S" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/full_adder.v Line: 3
-    Error (12015): Net is fed by "SW[3]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 22
-Error (12014): Net "B[2]", which fans out to "decoder_7_seg:comb_4|D[2]", cannot be assigned more than one value File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 31
-    Error (12015): Net is fed by "full_adder:comb_15|S" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/full_adder.v Line: 3
-    Error (12015): Net is fed by "SW[2]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 22
-Error (12014): Net "B[1]", which fans out to "decoder_7_seg:comb_4|D[1]", cannot be assigned more than one value File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 31
-    Error (12015): Net is fed by "full_adder:comb_14|S" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/full_adder.v Line: 3
-    Error (12015): Net is fed by "SW[1]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 22
-Error (12014): Net "B[0]", which fans out to "decoder_7_seg:comb_4|D[0]", cannot be assigned more than one value File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 31
-    Error (12015): Net is fed by "full_adder:comb_13|S" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/full_adder.v Line: 3
-    Error (12015): Net is fed by "SW[0]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 22
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 12 errors, 43 warnings
-    Error: Peak virtual memory: 667 megabytes
-    Error: Processing ended: Wed Apr 03 10:54:41 2019
-    Error: Elapsed time: 00:00:33
-    Error: Total CPU time (on all processors): 00:00:29
+Warning (13039): The following bidirectional pins have no drivers
+    Warning (13040): bidirectional pin "CLOCK4_50" has no driver File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 12
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 16
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 4 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLOCK2_50" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 10
+    Warning (15610): No output dependent on input pin "CLOCK3_50" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 11
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 22
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab9/lab9.v Line: 22
+Info (21057): Implemented 80 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 28 output pins
+    Info (21060): Implemented 1 bidirectional pins
+    Info (21061): Implemented 38 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 22 warnings
+    Info: Peak virtual memory: 696 megabytes
+    Info: Processing ended: Fri Apr 05 10:29:24 2019
+    Info: Elapsed time: 00:00:38
+    Info: Total CPU time (on all processors): 00:00:34
 
 
