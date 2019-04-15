@@ -1,0 +1,6 @@
+DATE = "10:40:56 April 15, 2019"
+QUARTUS_VERSION = "14.0"
+
+# Revisions
+
+PROJECT_REVISION = "gated_sr_latch_test"

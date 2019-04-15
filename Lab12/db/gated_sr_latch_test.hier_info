@@ -1,0 +1,32 @@
+|gated_sr_latch_test
+LEDR[0] <= gated_sr_latch:comb_3.port4
+LEDR[1] <= gated_sr_latch:comb_3.port3
+LEDR[2] <= <GND>
+LEDR[3] <= <GND>
+LEDR[4] <= <GND>
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => ~NO_FANOUT~
+SW[4] => ~NO_FANOUT~
+SW[5] => ~NO_FANOUT~
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => ~NO_FANOUT~
+SW[9] => ~NO_FANOUT~
+
+
+|gated_sr_latch_test|gated_sr_latch:comb_3
+Enable => internal_R.IN0
+Enable => internal_S.IN0
+S => internal_S.IN1
+R => internal_R.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Qbar <= Qbar.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,37 @@
+|SRLatch
+LEDR[0] <= sr_latch_with_dataflow:comb_8.port3
+LEDR[1] <= sr_latch_with_dataflow:comb_8.port2
+LEDR[2] <= sr_latch_with_gates:comb_7.port3
+LEDR[3] <= sr_latch_with_gates:comb_7.port2
+LEDR[4] <= <GND>
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
+SW[0] => R2.IN1
+SW[1] => S2.IN1
+SW[2] => R1.IN1
+SW[3] => S1.IN1
+SW[4] => ~NO_FANOUT~
+SW[5] => ~NO_FANOUT~
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => ~NO_FANOUT~
+SW[9] => ~NO_FANOUT~
+
+
+|SRLatch|sr_latch_with_gates:comb_7
+S => comb.IN0
+R => comb.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Qbar <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SRLatch|sr_latch_with_dataflow:comb_8
+S => Qbar.IN0
+R => Q.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Qbar <= Qbar.DB_MAX_OUTPUT_PORT_TYPE
+
+
