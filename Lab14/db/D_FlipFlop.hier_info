@@ -1,0 +1,42 @@
+|D_FlipFlop
+CLOCK_50 => CLOCK_50.IN1
+CLOCK2_50 => ~NO_FANOUT~
+CLOCK3_50 => ~NO_FANOUT~
+CLOCK4_50 <> <UNC>
+LEDR[0] <= D_latch_behaviour:comb_5.port2
+LEDR[1] <= D_latch_behaviour:comb_5.port3
+LEDR[2] <= D_ff_behavior:comb_6.port2
+LEDR[3] <= <GND>
+LEDR[4] <= <GND>
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
+SW[0] => D.IN2
+SW[1] => Enable.IN1
+SW[2] => ~NO_FANOUT~
+SW[3] => ~NO_FANOUT~
+SW[4] => ~NO_FANOUT~
+SW[5] => ~NO_FANOUT~
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => ~NO_FANOUT~
+SW[9] => ~NO_FANOUT~
+
+
+|D_FlipFlop|D_latch_behaviour:comb_5
+D => Q$latch.DATAIN
+D => Qbar$latch.DATAIN
+Enable => Qbar$latch.LATCH_ENABLE
+Enable => Q$latch.LATCH_ENABLE
+Q <= Q$latch.DB_MAX_OUTPUT_PORT_TYPE
+Qbar <= Qbar$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|D_FlipFlop|D_ff_behavior:comb_6
+D => Q~reg0.DATAIN
+Clk => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
