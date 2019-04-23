@@ -1,5 +1,5 @@
 Analysis & Synthesis report for D_FlipFlop
-Mon Apr 22 10:57:02 2019
+Tue Apr 23 11:00:16 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -15,9 +15,10 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. User-Specified and Inferred Latches
   9. General Register Statistics
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+ 10. Port Connectivity Checks: "D_latch_behaviour:comb_6"
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -44,13 +45,13 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Apr 22 10:57:02 2019       ;
+; Analysis & Synthesis Status     ; Successful - Tue Apr 23 11:00:16 2019       ;
 ; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                   ; D_FlipFlop                                  ;
 ; Top-level Entity Name           ; D_FlipFlop                                  ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 1                                           ;
+; Total registers                 ; 2                                           ;
 ; Total pins                      ; 24                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -167,15 +168,16 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                     ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                 ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
-; D_ff_behavior.v                  ; yes             ; User Verilog HDL File        ; C:/Users/barber.timothy20/Documents/Github/Quartus/Lab14/D_ff_behavior.v     ;         ;
-; D_latch_behaviour.v              ; yes             ; User Verilog HDL File        ; C:/Users/barber.timothy20/Documents/Github/Quartus/Lab14/D_latch_behaviour.v ;         ;
-; d_flipflop.v                     ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/barber.timothy20/Documents/Github/Quartus/Lab14/d_flipflop.v        ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                      ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                  ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+---------+
+; D_latch_behaviour.v              ; yes             ; User Verilog HDL File        ; C:/Users/barber.timothy20/Documents/Github/Quartus/Lab14/D_latch_behaviour.v  ;         ;
+; D_flipflop_falling.v             ; yes             ; User Verilog HDL File        ; C:/Users/barber.timothy20/Documents/Github/Quartus/Lab14/D_flipflop_falling.v ;         ;
+; D_flipflop_rising.v              ; yes             ; User Verilog HDL File        ; C:/Users/barber.timothy20/Documents/Github/Quartus/Lab14/D_flipflop_rising.v  ;         ;
+; d_flipflop.v                     ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/barber.timothy20/Documents/Github/Quartus/Lab14/d_flipflop.v         ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -185,14 +187,14 @@ agreement for further details.
 +---------------------------------------------+-------------+
 ; Estimate of Logic utilization (ALMs needed) ; 2           ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 2           ;
+; Combinational ALUT usage for logic          ; 1           ;
 ;     -- 7 input functions                    ; 0           ;
 ;     -- 6 input functions                    ; 0           ;
 ;     -- 5 input functions                    ; 0           ;
 ;     -- 4 input functions                    ; 0           ;
-;     -- <=3 input functions                  ; 2           ;
+;     -- <=3 input functions                  ; 1           ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 1           ;
+; Dedicated logic registers                   ; 2           ;
 ;                                             ;             ;
 ; I/O pins                                    ; 24          ;
 ;                                             ;             ;
@@ -200,20 +202,21 @@ agreement for further details.
 ;                                             ;             ;
 ; Maximum fan-out node                        ; SW[0]~input ;
 ; Maximum fan-out                             ; 3           ;
-; Total fan-out                               ; 36          ;
-; Average fan-out                             ; 0.69        ;
+; Total fan-out                               ; 35          ;
+; Average fan-out                             ; 0.67        ;
 +---------------------------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                              ;
-+-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------+-------------------+--------------+
-; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                  ; Entity Name       ; Library Name ;
-+-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------+-------------------+--------------+
-; |D_FlipFlop                   ; 2 (0)               ; 1 (0)                     ; 0                 ; 0          ; 24   ; 0            ; |D_FlipFlop                          ; D_FlipFlop        ; work         ;
-;    |D_ff_behavior:comb_6|     ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |D_FlipFlop|D_ff_behavior:comb_6     ; D_ff_behavior     ; work         ;
-;    |D_latch_behaviour:comb_5| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |D_FlipFlop|D_latch_behaviour:comb_5 ; D_latch_behaviour ; work         ;
-+-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------+-------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                 ;
++--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node     ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                   ; Entity Name        ; Library Name ;
++--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------+--------------------+--------------+
+; |D_FlipFlop                    ; 1 (0)               ; 2 (0)                     ; 0                 ; 0          ; 24   ; 0            ; |D_FlipFlop                           ; D_FlipFlop         ; work         ;
+;    |D_flipflop_falling:comb_8| ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |D_FlipFlop|D_flipflop_falling:comb_8 ; D_flipflop_falling ; work         ;
+;    |D_flipflop_rising:comb_7|  ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |D_FlipFlop|D_flipflop_rising:comb_7  ; D_flipflop_rising  ; work         ;
+;    |D_latch_behaviour:comb_6|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |D_FlipFlop|D_latch_behaviour:comb_6  ; D_latch_behaviour  ; work         ;
++--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -222,9 +225,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------+---------------------+------------------------+
 ; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
 +----------------------------------------------------+---------------------+------------------------+
-; D_latch_behaviour:comb_5|Q                         ; SW[1]               ; yes                    ;
-; D_latch_behaviour:comb_5|Qbar                      ; SW[1]               ; yes                    ;
-; Number of user-specified and inferred latches = 2  ;                     ;                        ;
+; D_latch_behaviour:comb_6|Q                         ; SW[1]               ; yes                    ;
+; Number of user-specified and inferred latches = 1  ;                     ;                        ;
 +----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -234,7 +236,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1     ;
+; Total registers                              ; 2     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -244,22 +246,31 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 
 
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "D_latch_behaviour:comb_6"                                                           ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 1                           ;
-;     plain             ; 1                           ;
+; arriav_ff             ; 2                           ;
+;     plain             ; 2                           ;
 ; arriav_io_obuf        ; 1                           ;
-; arriav_lcell_comb     ; 3                           ;
-;     normal            ; 3                           ;
+; arriav_lcell_comb     ; 2                           ;
+;     normal            ; 2                           ;
 ;         0 data inputs ; 1                           ;
-;         3 data inputs ; 2                           ;
+;         3 data inputs ; 1                           ;
 ; boundary_port         ; 24                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.60                        ;
+; Average LUT depth     ; 0.50                        ;
 +-----------------------+-----------------------------+
 
 
@@ -278,26 +289,30 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Mon Apr 22 10:56:49 2019
+    Info: Processing started: Tue Apr 23 11:00:02 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off D_FlipFlop -c D_FlipFlop
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file d_ff_behavior.v
-    Info (12023): Found entity 1: D_ff_behavior File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab14/D_ff_behavior.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file d_latch_behaviour.v
     Info (12023): Found entity 1: D_latch_behaviour File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab14/D_latch_behaviour.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file d_flipflop_falling.v
+    Info (12023): Found entity 1: D_flipflop_falling File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab14/D_flipflop_falling.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file d_flipflop_rising.v
+    Info (12023): Found entity 1: D_flipflop_rising File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab14/D_flipflop_rising.v Line: 1
 Warning (12125): Using design file d_flipflop.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: D_FlipFlop File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab14/d_flipflop.v Line: 6
-Critical Warning (10846): Verilog HDL Instantiation warning at d_flipflop.v(30): instance has no name File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab14/d_flipflop.v Line: 30
-Critical Warning (10846): Verilog HDL Instantiation warning at d_flipflop.v(31): instance has no name File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab14/d_flipflop.v Line: 31
+Critical Warning (10846): Verilog HDL Instantiation warning at d_flipflop.v(35): instance has no name File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab14/d_flipflop.v Line: 35
+Critical Warning (10846): Verilog HDL Instantiation warning at d_flipflop.v(36): instance has no name File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab14/d_flipflop.v Line: 36
+Critical Warning (10846): Verilog HDL Instantiation warning at d_flipflop.v(37): instance has no name File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab14/d_flipflop.v Line: 37
 Info (12127): Elaborating entity "D_FlipFlop" for the top level hierarchy
 Warning (10034): Output port "LEDR[9..3]" at d_flipflop.v(15) has no driver File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab14/d_flipflop.v Line: 15
-Info (12128): Elaborating entity "D_latch_behaviour" for hierarchy "D_latch_behaviour:comb_5" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab14/d_flipflop.v Line: 30
+Info (12128): Elaborating entity "D_latch_behaviour" for hierarchy "D_latch_behaviour:comb_6" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab14/d_flipflop.v Line: 35
 Warning (10240): Verilog HDL Always Construct warning at D_latch_behaviour.v(2): inferring latch(es) for variable "Q", which holds its previous value in one or more paths through the always construct File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab14/D_latch_behaviour.v Line: 2
 Warning (10240): Verilog HDL Always Construct warning at D_latch_behaviour.v(2): inferring latch(es) for variable "Qbar", which holds its previous value in one or more paths through the always construct File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab14/D_latch_behaviour.v Line: 2
 Info (10041): Inferred latch for "Qbar" at D_latch_behaviour.v(2) File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab14/D_latch_behaviour.v Line: 2
 Info (10041): Inferred latch for "Q" at D_latch_behaviour.v(2) File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab14/D_latch_behaviour.v Line: 2
-Info (12128): Elaborating entity "D_ff_behavior" for hierarchy "D_ff_behavior:comb_6" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab14/d_flipflop.v Line: 31
+Info (12128): Elaborating entity "D_flipflop_rising" for hierarchy "D_flipflop_rising:comb_7" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab14/d_flipflop.v Line: 36
+Info (12128): Elaborating entity "D_flipflop_falling" for hierarchy "D_flipflop_falling:comb_8" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab14/d_flipflop.v Line: 37
 Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "CLOCK4_50" has no driver File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab14/d_flipflop.v Line: 12
 Warning (13024): Output pins are stuck at VCC or GND
@@ -311,7 +326,8 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 10 input pin(s) that do not drive logic
+Warning (21074): Design contains 11 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLOCK_50" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab14/d_flipflop.v Line: 9
     Warning (15610): No output dependent on input pin "CLOCK2_50" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab14/d_flipflop.v Line: 10
     Warning (15610): No output dependent on input pin "CLOCK3_50" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab14/d_flipflop.v Line: 11
     Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Lab14/d_flipflop.v Line: 19
@@ -327,10 +343,10 @@ Info (21057): Implemented 27 device resources after synthesis - the final resour
     Info (21059): Implemented 10 output pins
     Info (21060): Implemented 1 bidirectional pins
     Info (21061): Implemented 3 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
-    Info: Peak virtual memory: 685 megabytes
-    Info: Processing ended: Mon Apr 22 10:57:02 2019
-    Info: Elapsed time: 00:00:13
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 30 warnings
+    Info: Peak virtual memory: 683 megabytes
+    Info: Processing ended: Tue Apr 23 11:00:16 2019
+    Info: Elapsed time: 00:00:14
     Info: Total CPU time (on all processors): 00:00:30
 
 

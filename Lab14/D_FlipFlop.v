@@ -18,24 +18,22 @@ module D_FlipFlop(
 	input 		     [9:0]		SW
 );
 
+	//=======================================================
+	//  REG/WIRE declarations
+	//=======================================================
 
+	wire Qa, Qabar, Qb, Qc;
 
-//=======================================================
-//  REG/WIRE declarations
-//=======================================================
+	//=======================================================
+	//  Structural coding
+	//=======================================================
 
-wire D, Enable, Q, Qbar, QClk;
-assign D = SW[0];
-assign Enable = SW[1];
-D_latch_behaviour(D, Enable, Q, Qbar);
-D_ff_behavior(D, CLOCK_50, QClk);
+	assign LEDR[0] = Qc;
+	assign LEDR[1] = Qb;
+	assign LEDR[2] = Qa;
 
-//=======================================================
-//  Structural coding
-//=======================================================
-
-assign LEDR[0] = Q;
-assign LEDR[1] = Qbar;
-assign LEDR[2] = QClk;
+	D_latch_behaviour(SW[0], SW[1], Qa, Qabar);
+	D_flipflop_rising(SW[0], SW[1], Qb);
+	D_flipflop_falling(SW[0], SW[1], Qc);
 
 endmodule

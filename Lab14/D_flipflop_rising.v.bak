@@ -1,0 +1,6 @@
+module D_flipflop_falling(input D, input Clk, output reg Q);
+	always @(posedge Clk)
+		begin
+			Q <= D;
+		end
+endmodule
