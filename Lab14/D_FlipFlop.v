@@ -15,25 +15,31 @@ module D_FlipFlop(
 	output		     [9:0]		LEDR,
 
 	//////////// SW //////////
-	input 		     [9:0]		SW
+	input 		     [9:0]		SW,
+	
+	/////////// KEY ///////////
+	input					[1:0]		KEY
 );
 
 	//=======================================================
 	//  REG/WIRE declarations
 	//=======================================================
 
-	wire Qa, Qabar, Qb, Qc;
+	wire Qa, Qabar, Qb, Qc, Clk;
 
 	//=======================================================
 	//  Structural coding
 	//=======================================================
 
+	assign Clk = ~KEY[0];
+	
 	assign LEDR[0] = Qc;
 	assign LEDR[1] = Qb;
 	assign LEDR[2] = Qa;
+	assign LEDR[9] = Clk;
 
-	D_latch_behaviour(SW[0], SW[1], Qa, Qabar);
-	D_flipflop_rising(SW[0], SW[1], Qb);
-	D_flipflop_falling(SW[0], SW[1], Qc);
+	D_latch_behaviour(SW[0], Clk, Qa, Qabar);
+	D_flipflop_rising(SW[0], Clk, Qb);
+	D_flipflop_falling(SW[0], Clk, Qc);
 
 endmodule

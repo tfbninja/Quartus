@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "04/23/2019 10:54:14"
+// Generated on "04/25/2019 09:41:50"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          D_FlipFlop
 // 
@@ -34,6 +34,7 @@ reg CLOCK2_50;
 reg CLOCK3_50;
 reg treg_CLOCK4_50;
 reg CLOCK_50;
+reg [1:0] KEY;
 reg [9:0] SW;
 // wires                                               
 wire CLOCK4_50;
@@ -47,6 +48,7 @@ D_FlipFlop i1 (
 	.CLOCK3_50(CLOCK3_50),
 	.CLOCK4_50(CLOCK4_50),
 	.CLOCK_50(CLOCK_50),
+	.KEY(KEY),
 	.LEDR(LEDR),
 	.SW(SW)
 );
@@ -55,14 +57,14 @@ begin
 #250000 $finish;
 end 
 
-// SW[1]
+// KEY[0]
 initial
 begin
-	SW[1] = 1'b0;
-	SW[1] = #50000 1'b1;
-	SW[1] = #50000 1'b0;
-	SW[1] = #50000 1'b1;
-	SW[1] = #50000 1'b0;
+	KEY[0] = 1'b1;
+	KEY[0] = #50000 1'b0;
+	KEY[0] = #50000 1'b1;
+	KEY[0] = #50000 1'b0;
+	KEY[0] = #50000 1'b1;
 end 
 
 // SW[0]
@@ -73,14 +75,14 @@ begin
 	SW[0] = #20000 1'b0;
 	SW[0] = #10000 1'b1;
 	SW[0] = #20000 1'b0;
-	SW[0] = #10000 1'b1;
+	SW[0] = #20000 1'b1;
 	SW[0] = #10000 1'b0;
 	SW[0] = #10000 1'b1;
 	SW[0] = #10000 1'b0;
 	SW[0] = #20000 1'b1;
 	SW[0] = #10000 1'b0;
 	SW[0] = #10000 1'b1;
-	SW[0] = #40000 1'b0;
+	SW[0] = #30000 1'b0;
 end 
 endmodule
 

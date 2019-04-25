@@ -1,4 +1,4 @@
-Fitter Status : Successful - Tue Apr 23 11:00:46 2019
+Fitter Status : Successful - Thu Apr 25 09:33:46 2019
 Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 Revision Name : D_FlipFlop
 Top-level Entity Name : D_FlipFlop
@@ -7,7 +7,7 @@ Device : 5CEBA4F23C7
 Timing Models : Final
 Logic utilization (in ALMs) : 1 / 18,480 ( < 1 % )
 Total registers : 2
-Total pins : 24 / 224 ( 11 % )
+Total pins : 26 / 224 ( 12 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 3,153,920 ( 0 % )
 Total RAM Blocks : 0 / 308 ( 0 % )

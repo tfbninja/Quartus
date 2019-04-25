@@ -20,6 +20,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -38,6 +39,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 </modelsim_script_timing>
 <hdl_lang>verilog</hdl_lang>
 </simulation_settings>*/
@@ -86,7 +88,17 @@ SIGNAL("SW[0]")
 	PARENT = "";
 }
 
-SIGNAL("SW[1]")
+SIGNAL("LEDR[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("KEY[0]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -96,7 +108,7 @@ SIGNAL("SW[1]")
 	PARENT = "";
 }
 
-SIGNAL("LEDR[2]")
+SIGNAL("LEDR[9]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -116,7 +128,7 @@ SIGNAL("LEDR[1]")
 	PARENT = "";
 }
 
-SIGNAL("LEDR[0]")
+SIGNAL("LEDR[2]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -135,46 +147,15 @@ TRANSITION_LIST("SW[0]")
 		LEVEL 1 FOR 20.0;
 		LEVEL 0 FOR 10.0;
 		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 10.0;
+		LEVEL 0 FOR 20.0;
 		LEVEL 1 FOR 10.0;
 		LEVEL 0 FOR 10.0;
 		LEVEL 1 FOR 10.0;
 		LEVEL 0 FOR 20.0;
 		LEVEL 1 FOR 10.0;
 		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 40.0;
+		LEVEL 1 FOR 30.0;
 		LEVEL 0 FOR 40.0;
-	}
-}
-
-TRANSITION_LIST("SW[1]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 50.0;
-		LEVEL 1 FOR 50.0;
-		LEVEL 0 FOR 50.0;
-		LEVEL 1 FOR 50.0;
-		LEVEL 0 FOR 50.0;
-	}
-}
-
-TRANSITION_LIST("LEDR[2]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 250.0;
-	}
-}
-
-TRANSITION_LIST("LEDR[1]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 250.0;
 	}
 }
 
@@ -187,9 +168,53 @@ TRANSITION_LIST("LEDR[0]")
 	}
 }
 
+TRANSITION_LIST("KEY[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 50.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 50.0;
+		LEVEL 1 FOR 50.0;
+	}
+}
+
+TRANSITION_LIST("LEDR[9]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 50.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 50.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 50.0;
+	}
+}
+
+TRANSITION_LIST("LEDR[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 250.0;
+	}
+}
+
+TRANSITION_LIST("LEDR[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 250.0;
+	}
+}
+
 DISPLAY_LINE
 {
-	CHANNEL = "SW[1]";
+	CHANNEL = "KEY[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 0;
@@ -198,7 +223,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "SW[0]";
+	CHANNEL = "LEDR[9]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 1;
@@ -207,7 +232,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "LEDR[2]";
+	CHANNEL = "SW[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 2;
@@ -216,7 +241,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "LEDR[1]";
+	CHANNEL = "LEDR[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 3;
@@ -225,10 +250,19 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "LEDR[0]";
+	CHANNEL = "LEDR[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 4;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "LEDR[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 5;
 	TREE_LEVEL = 0;
 }
 

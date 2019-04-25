@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dC:/Users/barber.timothy20/Documents/Github/Quartus/Lab14/simulation/qsim
 vD_FlipFlop
-Z1 !s110 1556038458
+Z1 !s110 1556206912
 !i10b 1
-!s100 F_C<VjI?m9O`mQbH;P]z=2
-Ig:dGf>_oXo?LFA225e9Tn0
+!s100 HG:El_kTZG1ccTICcPEHR0
+IM1dmm6d9z8RhBoW=90UlD0
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1556038455
+w1556206911
 8D_FlipFlop.vo
 FD_FlipFlop.vo
 L0 32
@@ -23,21 +23,21 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1556038457.000000
+Z4 !s108 1556206912.000000
 !s107 D_FlipFlop.vo|
 !s90 -work|work|D_FlipFlop.vo|
 !i113 1
-Z4 o-work work
-Z5 tCvgOpt 0
+Z5 o-work work
+Z6 tCvgOpt 0
 n@d_@flip@flop
 vD_FlipFlop_vlg_vec_tst
 R1
 !i10b 1
-!s100 S_4ST:2nZLB@z?ZURV36`2
-ISLSc6@jlXbEPcn]:c1fV82
+!s100 a5`NJSS6J>kmad<MNHeUI2
+IKLO2Cz`XNe^S6P5G_9M5O2
 R2
 R0
-w1556038454
+w1556206910
 8DFlipFlop.vwf.vt
 FDFlipFlop.vwf.vt
 L0 30
@@ -45,10 +45,10 @@ R3
 r1
 !s85 0
 31
-!s108 1556038458.000000
+R4
 !s107 DFlipFlop.vwf.vt|
 !s90 -work|work|DFlipFlop.vwf.vt|
 !i113 1
-R4
 R5
+R6
 n@d_@flip@flop_vlg_vec_tst
