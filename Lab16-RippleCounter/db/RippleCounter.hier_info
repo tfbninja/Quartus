@@ -1,0 +1,80 @@
+|RippleCounter
+KEY[0] => COUNT.IN1
+KEY[1] => ~NO_FANOUT~
+KEY[2] => ~NO_FANOUT~
+KEY[3] => RESET.IN9
+LEDR[0] <= A0.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= A1.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= A2.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[3] <= A3.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[4] <= A4.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[5] <= A5.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[6] <= A6.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[7] <= A7.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[8] <= T_FlipFlop:comb_14.port3
+LEDR[9] <= <GND>
+
+
+|RippleCounter|T_FlipFlop:comb_6
+T => Q.OUTPUTSELECT
+Clock => Q~reg0.CLK
+Resetn => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RippleCounter|T_FlipFlop:comb_7
+T => Q.OUTPUTSELECT
+Clock => Q~reg0.CLK
+Resetn => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RippleCounter|T_FlipFlop:comb_8
+T => Q.OUTPUTSELECT
+Clock => Q~reg0.CLK
+Resetn => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RippleCounter|T_FlipFlop:comb_9
+T => Q.OUTPUTSELECT
+Clock => Q~reg0.CLK
+Resetn => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RippleCounter|T_FlipFlop:comb_10
+T => Q.OUTPUTSELECT
+Clock => Q~reg0.CLK
+Resetn => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RippleCounter|T_FlipFlop:comb_11
+T => Q.OUTPUTSELECT
+Clock => Q~reg0.CLK
+Resetn => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RippleCounter|T_FlipFlop:comb_12
+T => Q.OUTPUTSELECT
+Clock => Q~reg0.CLK
+Resetn => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RippleCounter|T_FlipFlop:comb_13
+T => Q.OUTPUTSELECT
+Clock => Q~reg0.CLK
+Resetn => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RippleCounter|T_FlipFlop:comb_14
+T => Q.OUTPUTSELECT
+Clock => Q~reg0.CLK
+Resetn => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
