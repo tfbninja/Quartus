@@ -1,5 +1,5 @@
 |TextScroller
-CLOCK_50 => ~NO_FANOUT~
+CLOCK_50 => COUNT.IN1
 CLOCK2_50 => ~NO_FANOUT~
 CLOCK3_50 => ~NO_FANOUT~
 CLOCK4_50 <> <UNC>
@@ -48,8 +48,18 @@ HEX5[6] <= <GND>
 KEY[0] => ~NO_FANOUT~
 KEY[1] => ~NO_FANOUT~
 KEY[2] => ~NO_FANOUT~
-KEY[3] => ~NO_FANOUT~
+KEY[3] => RESET.IN17
 RESET_N => ~NO_FANOUT~
+LEDR[0] <= A8.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= <GND>
+LEDR[2] <= <GND>
+LEDR[3] <= <GND>
+LEDR[4] <= <GND>
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
 SW[0] => ~NO_FANOUT~
 SW[1] => ~NO_FANOUT~
 SW[2] => ~NO_FANOUT~
@@ -60,5 +70,124 @@ SW[6] => ~NO_FANOUT~
 SW[7] => ~NO_FANOUT~
 SW[8] => ~NO_FANOUT~
 SW[9] => ~NO_FANOUT~
+
+
+|TextScroller|T_FlipFlop:comb_6
+T => Q.OUTPUTSELECT
+Clock => Q~reg0.CLK
+Resetn => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TextScroller|T_FlipFlop:comb_7
+T => Q.OUTPUTSELECT
+Clock => Q~reg0.CLK
+Resetn => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TextScroller|T_FlipFlop:comb_8
+T => Q.OUTPUTSELECT
+Clock => Q~reg0.CLK
+Resetn => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TextScroller|T_FlipFlop:comb_9
+T => Q.OUTPUTSELECT
+Clock => Q~reg0.CLK
+Resetn => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TextScroller|T_FlipFlop:comb_10
+T => Q.OUTPUTSELECT
+Clock => Q~reg0.CLK
+Resetn => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TextScroller|T_FlipFlop:comb_11
+T => Q.OUTPUTSELECT
+Clock => Q~reg0.CLK
+Resetn => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TextScroller|T_FlipFlop:comb_12
+T => Q.OUTPUTSELECT
+Clock => Q~reg0.CLK
+Resetn => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TextScroller|T_FlipFlop:comb_13
+T => Q.OUTPUTSELECT
+Clock => Q~reg0.CLK
+Resetn => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TextScroller|T_FlipFlop:comb_14
+T => Q.OUTPUTSELECT
+Clock => Q~reg0.CLK
+Resetn => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TextScroller|T_FlipFlop:comb_15
+T => Q.OUTPUTSELECT
+Clock => Q~reg0.CLK
+Resetn => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TextScroller|T_FlipFlop:comb_16
+T => Q.OUTPUTSELECT
+Clock => Q~reg0.CLK
+Resetn => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TextScroller|T_FlipFlop:comb_17
+T => Q.OUTPUTSELECT
+Clock => Q~reg0.CLK
+Resetn => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TextScroller|T_FlipFlop:comb_18
+T => Q.OUTPUTSELECT
+Clock => Q~reg0.CLK
+Resetn => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TextScroller|T_FlipFlop:comb_19
+T => Q.OUTPUTSELECT
+Clock => Q~reg0.CLK
+Resetn => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TextScroller|T_FlipFlop:comb_20
+T => Q.OUTPUTSELECT
+Clock => Q~reg0.CLK
+Resetn => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TextScroller|T_FlipFlop:comb_21
+T => Q.OUTPUTSELECT
+Clock => Q~reg0.CLK
+Resetn => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TextScroller|T_FlipFlop:comb_22
+T => Q.OUTPUTSELECT
+Clock => Q~reg0.CLK
+Resetn => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
