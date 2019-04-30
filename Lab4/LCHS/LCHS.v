@@ -22,7 +22,7 @@ module LCHS(
 
 	wire on, off;
 	wire [6:0] l, c, h, s;
-	assign on = 5'b0; // backwards because the 7-seg displays are weird...idk
+	assign on = 1'b0; // backwards because the 7-seg displays are weird...idk
 	assign off = !on;
 	assign l[0] = off;
 	assign l[1] = off;
@@ -67,5 +67,4 @@ module LCHS(
 	
 	assign LEDR[9:0] = SW[9:0];
 	
-
 endmodule

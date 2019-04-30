@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(5CEBA4F23) Path("C:/Users/barber.timothy20/Documents/Github/Quartus/Lab4/LCHS/") File("LCHS.sof") MfrSpec(OpMask(1));
+		Device PartName(5CEBA4F23) Path("C:/Users/tfbni/Documents/GitHub/Quartus/Lab4/LCHS/") File("LCHS.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
