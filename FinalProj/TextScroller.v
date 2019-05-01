@@ -26,33 +26,24 @@ module TextScroller(
 );
 
 //=======================================================
-//  REG/WIRE declarations
+//  Registers, wires, and constant assignments
 //=======================================================
 
+	reg [2:0] clickcount; //register to hold the count up to 7.
 	wire click, RESET, dir, fastmode;
-	wire [6:0] S, C, R, O, L, SP;
-	wire [2:0] ONE, TWO;
-	wire UP, DOWN;
-	assign ONE = 2'b01;
-	assign TWO = 2'b10;
-	assign UP = 1'b1;
-	assign DOWN = 1'b0;
-	assign S = 7'b0010010; // S
-	assign C = 7'b0100111; // c
-	assign R = 7'b0101111; // r
-	assign O = 7'b0100011; // o
-	assign L = 7'b1000111; // L
-	assign SP = 7'b1111111; // ' '
+	reg [28:0] ticker; //to hold a count of 50M
 	
-	reg [6:0] a, b, c, d, e, f;
+	assign click = ((ticker == (fastmode ? 9000000 : 20000000))?1'b1:1'b0);
 	assign RESET = ~KEY[3];
 	assign dir = ~SW[9];
 	assign fastmode = SW[8];
-	reg [28:0] ticker; //to hold a count of 50M
-	reg [2:0] clickcount; //register to hold the count up to 7.
-
+	assign LEDR[0] = RESET;
+	assign LEDR[9] = ~dir;
+	assign LEDR[8] = fastmode;
+	assign LEDR[7:1] = 7'b0000000;
 	
-	assign click = ((ticker == (fastmode ? 9000000 : 20000000))?1'b1:1'b0);
+	
+	reg [6:0] a, b, c, d, e, f;
 	
 	assign HEX5[6:0] = a;
 	assign HEX4[6:0] = b;
@@ -61,6 +52,20 @@ module TextScroller(
 	assign HEX1[6:0] = e;
 	assign HEX0[6:0] = f;
 	
+	
+	wire [6:0] S, C, R, O, L, SP;
+	
+	assign S = 7'b0010010; // S
+	assign C = 7'b0100111; // c
+	assign R = 7'b0101111; // r
+	assign O = 7'b0100011; // o
+	assign L = 7'b1000111; // L
+	assign SP = 7'b1111111; // ' '	
+
+	
+//=======================================================
+//  Clock loop to increment counter
+//=======================================================
 	always @ (posedge CLOCK_50 or posedge RESET)
 		begin
 			if(RESET)
@@ -71,6 +76,10 @@ module TextScroller(
 				ticker <= ticker + 1;
 		end
 
+			
+//=======================================================
+//  Timed delay loop
+//=======================================================
 	always @ (posedge click or posedge RESET)
 		begin
 			if(RESET)
@@ -81,9 +90,12 @@ module TextScroller(
 				clickcount <= clickcount + 1;
 		end
 
-	assign LEDR[0] = RESET;
-	assign LEDR[8:1] = 8'b00000000;
 	
+	
+	
+//=======================================================
+//  Character placement loop
+//=======================================================
 	always @ (*)
 		begin
 			 case(clickcount)
