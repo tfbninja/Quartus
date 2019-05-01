@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(5CEBA4F23) Path("C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/") File("Dinosaur_Game.sof") MfrSpec(OpMask(1));
+		Device PartName(5CEBA4F23) Path("C:/Users/barber.timothy20/Documents/Github/Quartus/Slide/") File("Slide.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

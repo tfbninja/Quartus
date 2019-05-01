@@ -38,24 +38,26 @@ module Dinosaur_Game(
 //  REG/WIRE declarations
 //=======================================================
 
-	wire [6:0] player_bottom, player_top, off;
+	wire [6:0] player_bottom, player_top, off, cactus, bird, player_b_;
 	assign player_bottom = 7'b0100011;
 	assign player_top = 7'b0011100;
 	assign off = 7'b1111111;
+	assign cactus = 7'b1110111;
+	assign bird = 7'b1111110;
+	wire [99:0] score;
+	
 	wire [100:0] random;
 	assign random = 101'b01011001000001111111100000111101100001111101010010011001110011001111101101001001101000100011110010010;
 	
+	wire a, b, c, d, e, f;
 	wire jump = ~KEY[3];
 	assign LEDR[0] = jump;
 	assign LEDR[1] = jump;
 	assign LEDR[2] = jump;
 	assign LEDR[9] = GPIO_0[0];
 	assign HEX5[6:0] = jump ? player_top : player_bottom;
-	assign HEX4[6:0] = off;
-	assign HEX3[6:0] = off;
-	assign HEX2[6:0] = off;
-	assign HEX1[6:0] = off;
-	assign HEX0[6:0] = off;
+	
+	
 
 //=======================================================
 //  Structural coding
