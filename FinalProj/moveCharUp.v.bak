@@ -1,0 +1,49 @@
+module moveCharUp(input [6:0] char, input [2:0] amt, input up, output [6:0] newChar);
+	always @ (*)
+		begin
+		// b 0  1  0  0  1  0  1
+		//   0  1  2  3  4  5  6
+		// ----------------------
+		//   m        b        t
+		//   i        o        o
+		//   d        t        p
+			 case(amt)
+			 0: assign newChar[6:0] = char[6:0];			 
+			 1:
+			 begin
+				if (up)
+					begin
+					assign newChar[6] = char[0]; // make mid top
+					assign newChar[0] = char[3]; // make bot mid
+					assign newChar[4:2] = 3'b111; // make new bot off
+					assign newChar[5] = char[4];
+					assign newChar[1] = char[2];
+					end
+				else
+					begin
+					assign newChar[1] = 1'b1;
+					assign newChar[6:5] = 2'b11;
+					assign newChar[0] = char[6]; // make top mid
+					assign newChar[3] = char[0]; // make mid bot
+					assign newChar[4] = char[5];
+					assign newChar[2] = char[1];
+					end
+			end
+			2:
+			 begin
+				if (up)
+					begin
+					assign newChar[6] = char[3]; // make bot top
+					assign newChar[5:0] = 6'b111111; // turn off others
+					end
+				else
+					begin
+					assign newChar[3] = char[6]; // make top bot
+					assign newChar[2:0] = 3'b111;
+					assign newChar[6:4] = 3'b111;
+					end
+			end
+			3:	assign newChar[6:0] = char[6:0];
+  endcase
+ endmodule
+ 

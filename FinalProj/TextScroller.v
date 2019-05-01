@@ -29,41 +29,207 @@ module TextScroller(
 //  REG/WIRE declarations
 //=======================================================
 
-	wire A0, A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14, A15, A16, ONE, COUNT, RESET;
+	wire click, RESET, dir, fastmode;
+	wire [6:0] S, C, R, O, L, SP;
+	wire [2:0] ONE, TWO;
+	wire UP, DOWN;
+	assign ONE = 2'b01;
+	assign TWO = 2'b10;
+	assign UP = 1'b1;
+	assign DOWN = 1'b0;
+	assign S = 7'b0010010; // S
+	assign C = 7'b0100111; // c
+	assign R = 7'b0101111; // r
+	assign O = 7'b0100011; // o
+	assign L = 7'b1000111; // L
+	assign SP = 7'b1111111; // ' '
 	
-	assign ONE = 1'b1;
-	assign COUNT = CLOCK_50;
-	assign RESET = KEY[3];
+	reg [6:0] a, b, c, d, e, f;
+	assign RESET = ~KEY[3];
+	assign dir = ~SW[9];
+	assign fastmode = ~SW[8];
+	reg [28:0] ticker; //to hold a count of 50M
+	reg [2:0] clickcount; //register to hold the count up to 7.
 
-	T_FlipFlop(ONE, COUNT, RESET, A0);
-	T_FlipFlop(ONE, A0, RESET, A1);
-	T_FlipFlop(ONE, A1, RESET, A2);
-	T_FlipFlop(ONE, A2, RESET, A3);
-	T_FlipFlop(ONE, A3, RESET, A4);
-	T_FlipFlop(ONE, A4, RESET, A5);
-	T_FlipFlop(ONE, A5, RESET, A6);
-	T_FlipFlop(ONE, A6, RESET, A7);
-	T_FlipFlop(ONE, A7, RESET, A8);
-	T_FlipFlop(ONE, A8, RESET, A9);
-	T_FlipFlop(ONE, A9, RESET, A10);
-	T_FlipFlop(ONE, A10, RESET, A11);
-	T_FlipFlop(ONE, A11, RESET, A12);
-	T_FlipFlop(ONE, A12, RESET, A13);
-	T_FlipFlop(ONE, A13, RESET, A14);
-	T_FlipFlop(ONE, A14, RESET, A15);
-	T_FlipFlop(ONE, A15, RESET, A16);
-	assign LEDR[0] = ~A8;
-	assign LEDR[9:1] = 8'b00000000;
+	
+	assign click = ((ticker == (fastmode ? 10000000 : 20000000))?1'b1:1'b0); //click every second
+	
+	assign HEX5[6:0] = a;
+	assign HEX4[6:0] = b;
+	assign HEX3[6:0] = c;
+	assign HEX2[6:0] = d;
+	assign HEX1[6:0] = e;
+	assign HEX0[6:0] = f;
+	
+	always @ (posedge CLOCK_50 or posedge RESET)
+		begin
+			if(RESET)
+				ticker <= 0;
+			else if(ticker == (fastmode ? 10000000 : 20000000)) //reset after 1 second
+				ticker <= 0;
+			else
+				ticker <= ticker + 1;
+		end
 
-//=======================================================
-//  Structural coding
-//=======================================================
+	always @ (posedge click or posedge RESET)
+		begin
+			if(RESET)
+				clickcount <= 0;
+			else if(clickcount == 6)
+				clickcount <= 0;
+			else 
+				clickcount <= clickcount + 1;
+		end
 
-	assign HEX5[6:0] = 7'b10010010; // S
-	assign HEX4[6:0] = 7'b10100111; // c
-	assign HEX3[6:0] = 7'b10101111; // r
-	assign HEX2[6:0] = 7'b10100011; // o
-	assign HEX1[6:0] = 7'b11000111; // L
-	assign HEX0[6:0] = 7'b11000111; // L
+	assign LEDR[0] = RESET;
+	assign LEDR[8:1] = 8'b00000000;
+	
+	always @ (*)
+		begin
+			 case(clickcount)
+			 0:
+			 begin
+				a <= S;
+				b <= C;
+				c <= R;
+				d <= O;
+				e <= L;
+				f <= L;
+			 end
+			 
+			 1:
+			 begin
+			 
+			 if (dir)
+			 begin
+				a <= C;
+				b <= R;
+				c <= O;
+				d <= L;
+				e <= L;
+				f <= SP;
+			end
+			else
+			begin
+				a <= 7'b0111100; // S
+				b <= 7'b0011110; // c
+				c <= 7'b1011110; // r
+				d <= 7'b0011100; // o
+				e <= 7'b0011111; // L
+				f <= 7'b0011111; // L
+			end
+			end
+			 
+			 2:
+			 begin
+			 if (dir)
+			 begin
+				a <= R;
+				b <= O;
+				c <= L;
+				d <= L;
+				e <= SP;
+				f <= S;
+			end
+			else
+			begin
+				a <= 7'b1111110; // S
+				b <= 7'b1111110; // c
+				c <= 7'b1111111; // r
+				d <= 7'b1111110; // o
+				e <= 7'b1111110; // L
+				f <= 7'b1111110; // L
+			end
+			end
+			 
+			 3:
+			 begin
+			 if (dir)
+			 begin
+				a <= O;
+				b <= L;
+				c <= L;
+				d <= SP;
+				e <= S;
+				f <= C;
+			end
+			else
+			begin
+				a <= SP;
+				b <= SP;
+				c <= SP;
+				d <= SP;
+				e <= SP;
+				f <= SP;
+			end
+			 end
+			 
+			 4:
+			 begin
+			 if (dir)
+			 begin
+				a <= L;
+				b <= L;
+				c <= SP;
+				d <= S;
+				e <= C;
+				f <= R;
+			end
+			else
+			begin
+				a <= SP;
+				b <= SP;
+				c <= SP;
+				d <= SP;
+				e <= SP;
+				f <= SP;
+			end
+			end
+			 
+			 5:
+			 begin
+			 if (dir)
+			 begin
+				a <= L;
+				b <= SP;
+				c <= S;
+				d <= C;
+				e <= R;
+				f <= O;
+			end
+			else
+			begin
+				a <= 7'b1110111; // S
+				b <= 7'b1111111; // c
+				c <= 7'b1111111; // r
+				d <= 7'b1111111; // o
+				e <= 7'b1111111; // L
+				f <= 7'b1111111; // L
+			end
+			end
+			 
+			 6:
+			 begin
+			 if (dir)
+			 begin
+				a <= SP;
+				b <= S;
+				c <= C;
+				d <= R;
+				e <= O;
+				f <= L;
+			end
+			else
+			begin
+				a <= 7'b0100111; // S
+				b <= 7'b1110111; // c
+				c <= 7'b1110111; // r
+				d <= 7'b1110111; // o
+				e <= 7'b1101111; // L
+				f <= 7'b1101111; // L
+			end
+			end
+  endcase
+end
 
 endmodule

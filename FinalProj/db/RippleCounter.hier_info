@@ -1,56 +1,116 @@
 |TextScroller
-CLOCK_50 => COUNT.IN1
+CLOCK_50 => ticker[0].CLK
+CLOCK_50 => ticker[1].CLK
+CLOCK_50 => ticker[2].CLK
+CLOCK_50 => ticker[3].CLK
+CLOCK_50 => ticker[4].CLK
+CLOCK_50 => ticker[5].CLK
+CLOCK_50 => ticker[6].CLK
+CLOCK_50 => ticker[7].CLK
+CLOCK_50 => ticker[8].CLK
+CLOCK_50 => ticker[9].CLK
+CLOCK_50 => ticker[10].CLK
+CLOCK_50 => ticker[11].CLK
+CLOCK_50 => ticker[12].CLK
+CLOCK_50 => ticker[13].CLK
+CLOCK_50 => ticker[14].CLK
+CLOCK_50 => ticker[15].CLK
+CLOCK_50 => ticker[16].CLK
+CLOCK_50 => ticker[17].CLK
+CLOCK_50 => ticker[18].CLK
+CLOCK_50 => ticker[19].CLK
+CLOCK_50 => ticker[20].CLK
+CLOCK_50 => ticker[21].CLK
+CLOCK_50 => ticker[22].CLK
+CLOCK_50 => ticker[23].CLK
+CLOCK_50 => ticker[24].CLK
+CLOCK_50 => ticker[25].CLK
+CLOCK_50 => ticker[26].CLK
+CLOCK_50 => ticker[27].CLK
+CLOCK_50 => ticker[28].CLK
 CLOCK2_50 => ~NO_FANOUT~
 CLOCK3_50 => ~NO_FANOUT~
 CLOCK4_50 <> <UNC>
-HEX0[0] <= <VCC>
-HEX0[1] <= <VCC>
-HEX0[2] <= <VCC>
-HEX0[3] <= <GND>
-HEX0[4] <= <GND>
-HEX0[5] <= <GND>
-HEX0[6] <= <VCC>
-HEX1[0] <= <VCC>
-HEX1[1] <= <VCC>
-HEX1[2] <= <VCC>
-HEX1[3] <= <GND>
-HEX1[4] <= <GND>
-HEX1[5] <= <GND>
-HEX1[6] <= <VCC>
-HEX2[0] <= <VCC>
-HEX2[1] <= <VCC>
-HEX2[2] <= <GND>
-HEX2[3] <= <GND>
-HEX2[4] <= <GND>
-HEX2[5] <= <VCC>
-HEX2[6] <= <GND>
-HEX3[0] <= <VCC>
-HEX3[1] <= <VCC>
-HEX3[2] <= <VCC>
-HEX3[3] <= <VCC>
-HEX3[4] <= <GND>
-HEX3[5] <= <VCC>
-HEX3[6] <= <GND>
-HEX4[0] <= <VCC>
-HEX4[1] <= <VCC>
-HEX4[2] <= <VCC>
-HEX4[3] <= <GND>
-HEX4[4] <= <GND>
-HEX4[5] <= <VCC>
-HEX4[6] <= <GND>
-HEX5[0] <= <GND>
-HEX5[1] <= <VCC>
-HEX5[2] <= <GND>
-HEX5[3] <= <GND>
-HEX5[4] <= <VCC>
-HEX5[5] <= <GND>
-HEX5[6] <= <GND>
+HEX0[0] <= f[0].DB_MAX_OUTPUT_PORT_TYPE
+HEX0[1] <= f[1].DB_MAX_OUTPUT_PORT_TYPE
+HEX0[2] <= f[2].DB_MAX_OUTPUT_PORT_TYPE
+HEX0[3] <= f[3].DB_MAX_OUTPUT_PORT_TYPE
+HEX0[4] <= f[4].DB_MAX_OUTPUT_PORT_TYPE
+HEX0[5] <= f[5].DB_MAX_OUTPUT_PORT_TYPE
+HEX0[6] <= f[6].DB_MAX_OUTPUT_PORT_TYPE
+HEX1[0] <= e[0].DB_MAX_OUTPUT_PORT_TYPE
+HEX1[1] <= e[1].DB_MAX_OUTPUT_PORT_TYPE
+HEX1[2] <= e[2].DB_MAX_OUTPUT_PORT_TYPE
+HEX1[3] <= e[3].DB_MAX_OUTPUT_PORT_TYPE
+HEX1[4] <= e[4].DB_MAX_OUTPUT_PORT_TYPE
+HEX1[5] <= e[5].DB_MAX_OUTPUT_PORT_TYPE
+HEX1[6] <= e[6].DB_MAX_OUTPUT_PORT_TYPE
+HEX2[0] <= d[0].DB_MAX_OUTPUT_PORT_TYPE
+HEX2[1] <= d[1].DB_MAX_OUTPUT_PORT_TYPE
+HEX2[2] <= d[2].DB_MAX_OUTPUT_PORT_TYPE
+HEX2[3] <= d[3].DB_MAX_OUTPUT_PORT_TYPE
+HEX2[4] <= d[4].DB_MAX_OUTPUT_PORT_TYPE
+HEX2[5] <= d[5].DB_MAX_OUTPUT_PORT_TYPE
+HEX2[6] <= d[6].DB_MAX_OUTPUT_PORT_TYPE
+HEX3[0] <= c[0].DB_MAX_OUTPUT_PORT_TYPE
+HEX3[1] <= c[1].DB_MAX_OUTPUT_PORT_TYPE
+HEX3[2] <= c[2].DB_MAX_OUTPUT_PORT_TYPE
+HEX3[3] <= c[3].DB_MAX_OUTPUT_PORT_TYPE
+HEX3[4] <= c[4].DB_MAX_OUTPUT_PORT_TYPE
+HEX3[5] <= c[5].DB_MAX_OUTPUT_PORT_TYPE
+HEX3[6] <= c[6].DB_MAX_OUTPUT_PORT_TYPE
+HEX4[0] <= b[0].DB_MAX_OUTPUT_PORT_TYPE
+HEX4[1] <= b[1].DB_MAX_OUTPUT_PORT_TYPE
+HEX4[2] <= b[2].DB_MAX_OUTPUT_PORT_TYPE
+HEX4[3] <= b[3].DB_MAX_OUTPUT_PORT_TYPE
+HEX4[4] <= b[4].DB_MAX_OUTPUT_PORT_TYPE
+HEX4[5] <= b[5].DB_MAX_OUTPUT_PORT_TYPE
+HEX4[6] <= b[6].DB_MAX_OUTPUT_PORT_TYPE
+HEX5[0] <= a[0].DB_MAX_OUTPUT_PORT_TYPE
+HEX5[1] <= a[1].DB_MAX_OUTPUT_PORT_TYPE
+HEX5[2] <= a[2].DB_MAX_OUTPUT_PORT_TYPE
+HEX5[3] <= a[3].DB_MAX_OUTPUT_PORT_TYPE
+HEX5[4] <= a[4].DB_MAX_OUTPUT_PORT_TYPE
+HEX5[5] <= a[5].DB_MAX_OUTPUT_PORT_TYPE
+HEX5[6] <= a[6].DB_MAX_OUTPUT_PORT_TYPE
 KEY[0] => ~NO_FANOUT~
 KEY[1] => ~NO_FANOUT~
 KEY[2] => ~NO_FANOUT~
-KEY[3] => RESET.IN17
+KEY[3] => clickcount[0].ACLR
+KEY[3] => clickcount[1].ACLR
+KEY[3] => clickcount[2].ACLR
+KEY[3] => ticker[0].ACLR
+KEY[3] => ticker[1].ACLR
+KEY[3] => ticker[2].ACLR
+KEY[3] => ticker[3].ACLR
+KEY[3] => ticker[4].ACLR
+KEY[3] => ticker[5].ACLR
+KEY[3] => ticker[6].ACLR
+KEY[3] => ticker[7].ACLR
+KEY[3] => ticker[8].ACLR
+KEY[3] => ticker[9].ACLR
+KEY[3] => ticker[10].ACLR
+KEY[3] => ticker[11].ACLR
+KEY[3] => ticker[12].ACLR
+KEY[3] => ticker[13].ACLR
+KEY[3] => ticker[14].ACLR
+KEY[3] => ticker[15].ACLR
+KEY[3] => ticker[16].ACLR
+KEY[3] => ticker[17].ACLR
+KEY[3] => ticker[18].ACLR
+KEY[3] => ticker[19].ACLR
+KEY[3] => ticker[20].ACLR
+KEY[3] => ticker[21].ACLR
+KEY[3] => ticker[22].ACLR
+KEY[3] => ticker[23].ACLR
+KEY[3] => ticker[24].ACLR
+KEY[3] => ticker[25].ACLR
+KEY[3] => ticker[26].ACLR
+KEY[3] => ticker[27].ACLR
+KEY[3] => ticker[28].ACLR
+KEY[3] => LEDR[0].DATAIN
 RESET_N => ~NO_FANOUT~
-LEDR[0] <= A8.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[0] <= KEY[3].DB_MAX_OUTPUT_PORT_TYPE
 LEDR[1] <= <GND>
 LEDR[2] <= <GND>
 LEDR[3] <= <GND>
@@ -68,126 +128,126 @@ SW[4] => ~NO_FANOUT~
 SW[5] => ~NO_FANOUT~
 SW[6] => ~NO_FANOUT~
 SW[7] => ~NO_FANOUT~
-SW[8] => ~NO_FANOUT~
-SW[9] => ~NO_FANOUT~
-
-
-|TextScroller|T_FlipFlop:comb_6
-T => Q.OUTPUTSELECT
-Clock => Q~reg0.CLK
-Resetn => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|TextScroller|T_FlipFlop:comb_7
-T => Q.OUTPUTSELECT
-Clock => Q~reg0.CLK
-Resetn => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|TextScroller|T_FlipFlop:comb_8
-T => Q.OUTPUTSELECT
-Clock => Q~reg0.CLK
-Resetn => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|TextScroller|T_FlipFlop:comb_9
-T => Q.OUTPUTSELECT
-Clock => Q~reg0.CLK
-Resetn => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|TextScroller|T_FlipFlop:comb_10
-T => Q.OUTPUTSELECT
-Clock => Q~reg0.CLK
-Resetn => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|TextScroller|T_FlipFlop:comb_11
-T => Q.OUTPUTSELECT
-Clock => Q~reg0.CLK
-Resetn => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|TextScroller|T_FlipFlop:comb_12
-T => Q.OUTPUTSELECT
-Clock => Q~reg0.CLK
-Resetn => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|TextScroller|T_FlipFlop:comb_13
-T => Q.OUTPUTSELECT
-Clock => Q~reg0.CLK
-Resetn => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|TextScroller|T_FlipFlop:comb_14
-T => Q.OUTPUTSELECT
-Clock => Q~reg0.CLK
-Resetn => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|TextScroller|T_FlipFlop:comb_15
-T => Q.OUTPUTSELECT
-Clock => Q~reg0.CLK
-Resetn => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|TextScroller|T_FlipFlop:comb_16
-T => Q.OUTPUTSELECT
-Clock => Q~reg0.CLK
-Resetn => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|TextScroller|T_FlipFlop:comb_17
-T => Q.OUTPUTSELECT
-Clock => Q~reg0.CLK
-Resetn => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|TextScroller|T_FlipFlop:comb_18
-T => Q.OUTPUTSELECT
-Clock => Q~reg0.CLK
-Resetn => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|TextScroller|T_FlipFlop:comb_19
-T => Q.OUTPUTSELECT
-Clock => Q~reg0.CLK
-Resetn => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|TextScroller|T_FlipFlop:comb_20
-T => Q.OUTPUTSELECT
-Clock => Q~reg0.CLK
-Resetn => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|TextScroller|T_FlipFlop:comb_21
-T => Q.OUTPUTSELECT
-Clock => Q~reg0.CLK
-Resetn => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|TextScroller|T_FlipFlop:comb_22
-T => Q.OUTPUTSELECT
-Clock => Q~reg0.CLK
-Resetn => Q.OUTPUTSELECT
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SW[8] => Equal0.IN23
+SW[8] => Equal0.IN24
+SW[8] => Equal0.IN25
+SW[8] => Equal0.IN26
+SW[8] => Equal0.IN27
+SW[8] => Equal0.IN28
+SW[8] => Equal0.IN29
+SW[8] => Equal0.IN30
+SW[8] => Equal0.IN31
+SW[8] => Equal0.IN32
+SW[8] => Equal0.IN33
+SW[8] => Equal0.IN34
+SW[9] => Mux37.IN2
+SW[9] => Mux36.IN4
+SW[9] => Mux31.IN4
+SW[9] => Mux27.IN5
+SW[9] => Mux25.IN4
+SW[9] => Mux24.IN4
+SW[9] => Mux23.IN6
+SW[9] => Mux19.IN4
+SW[9] => Mux18.IN3
+SW[9] => Mux12.IN5
+SW[9] => Mux11.IN4
+SW[9] => Mux39.IN5
+SW[9] => Mux37.IN3
+SW[9] => Mux33.IN6
+SW[9] => Mux31.IN5
+SW[9] => Mux30.IN5
+SW[9] => Mux29.IN6
+SW[9] => Mux26.IN4
+SW[9] => Mux25.IN5
+SW[9] => Mux24.IN5
+SW[9] => Mux20.IN6
+SW[9] => Mux19.IN5
+SW[9] => Mux18.IN4
+SW[9] => Mux0.IN3
+SW[9] => Mux2.IN5
+SW[9] => Mux4.IN4
+SW[9] => Mux5.IN6
+SW[9] => Mux39.IN6
+SW[9] => Mux37.IN4
+SW[9] => Mux36.IN5
+SW[9] => Mux35.IN7
+SW[9] => Mux32.IN4
+SW[9] => Mux31.IN6
+SW[9] => Mux30.IN6
+SW[9] => Mux26.IN5
+SW[9] => Mux25.IN6
+SW[9] => Mux24.IN6
+SW[9] => Mux14.IN3
+SW[9] => Mux13.IN7
+SW[9] => Mux11.IN5
+SW[9] => Mux10.IN6
+SW[9] => Mux9.IN6
+SW[9] => Mux0.IN4
+SW[9] => Mux3.IN5
+SW[9] => Mux4.IN5
+SW[9] => Mux38.IN6
+SW[9] => Mux37.IN5
+SW[9] => Mux36.IN6
+SW[9] => Mux32.IN5
+SW[9] => Mux31.IN7
+SW[9] => Mux30.IN7
+SW[9] => Mux21.IN4
+SW[9] => Mux20.IN7
+SW[9] => Mux18.IN5
+SW[9] => Mux17.IN7
+SW[9] => Mux15.IN5
+SW[9] => Mux14.IN4
+SW[9] => Mux12.IN6
+SW[9] => Mux11.IN6
+SW[9] => Mux0.IN5
+SW[9] => Mux3.IN6
+SW[9] => Mux38.IN7
+SW[9] => Mux37.IN6
+SW[9] => Mux27.IN6
+SW[9] => Mux26.IN6
+SW[9] => Mux24.IN7
+SW[9] => Mux23.IN7
+SW[9] => Mux22.IN6
+SW[9] => Mux21.IN5
+SW[9] => Mux19.IN6
+SW[9] => Mux18.IN6
+SW[9] => Mux14.IN5
+SW[9] => Mux12.IN7
+SW[9] => Mux0.IN6
+SW[9] => Mux3.IN7
+SW[9] => Mux4.IN6
+SW[9] => Mux5.IN7
+SW[9] => Mux33.IN7
+SW[9] => Mux32.IN6
+SW[9] => Mux29.IN7
+SW[9] => Mux28.IN5
+SW[9] => Mux27.IN7
+SW[9] => Mux25.IN7
+SW[9] => Mux21.IN6
+SW[9] => Mux19.IN7
+SW[9] => Mux14.IN6
+SW[9] => Mux11.IN7
+SW[9] => Mux10.IN7
+SW[9] => Mux2.IN6
+SW[9] => Mux4.IN7
+SW[9] => Mux34.IN6
+SW[9] => Mux32.IN7
+SW[9] => Mux28.IN6
+SW[9] => Mux26.IN7
+SW[9] => Mux22.IN7
+SW[9] => Mux21.IN7
+SW[9] => Mux16.IN7
+SW[9] => Mux15.IN6
+SW[9] => Mux14.IN7
+SW[9] => Mux0.IN7
+SW[9] => Mux2.IN7
+SW[9] => Mux34.IN7
+SW[9] => Mux28.IN7
+SW[9] => Mux15.IN7
+SW[9] => Mux9.IN7
+SW[9] => Mux39.IN7
+SW[9] => Mux37.IN7
+SW[9] => Mux36.IN7
+SW[9] => Mux18.IN7
 
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RippleCounter
-Tue Apr 30 10:59:26 2019
+Tue Apr 30 22:07:58 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -13,12 +13,13 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Port Connectivity Checks: "T_FlipFlop:comb_22"
- 10. Port Connectivity Checks: "T_FlipFlop:comb_6"
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
  11. Post-Synthesis Netlist Statistics for Top Partition
  12. Elapsed Time Per Partition
  13. Analysis & Synthesis Messages
+ 14. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -45,13 +46,13 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Apr 30 10:59:26 2019       ;
+; Analysis & Synthesis Status     ; Successful - Tue Apr 30 22:07:58 2019       ;
 ; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                   ; RippleCounter                               ;
 ; Top-level Entity Name           ; TextScroller                                ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 9                                           ;
+; Total registers                 ; 32                                          ;
 ; Total pins                      ; 71                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -157,72 +158,110 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                              ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                ; Library ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------+---------+
-; TextScroller.v                   ; yes             ; User Verilog HDL File  ; C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v ;         ;
-; T_FlipFlop.v                     ; yes             ; User Verilog HDL File  ; C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/T_FlipFlop.v   ;         ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                   ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                     ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------+---------+
+; TextScroller.v                   ; yes             ; User Verilog HDL File  ; C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                ;
-+---------------------------------------------+--------------+
-; Resource                                    ; Usage        ;
-+---------------------------------------------+--------------+
-; Estimate of Logic utilization (ALMs needed) ; 5            ;
-;                                             ;              ;
-; Combinational ALUT usage for logic          ; 9            ;
-;     -- 7 input functions                    ; 0            ;
-;     -- 6 input functions                    ; 0            ;
-;     -- 5 input functions                    ; 0            ;
-;     -- 4 input functions                    ; 0            ;
-;     -- <=3 input functions                  ; 9            ;
-;                                             ;              ;
-; Dedicated logic registers                   ; 9            ;
-;                                             ;              ;
-; I/O pins                                    ; 71           ;
-;                                             ;              ;
-; Total DSP Blocks                            ; 0            ;
-;                                             ;              ;
-; Maximum fan-out node                        ; KEY[3]~input ;
-; Maximum fan-out                             ; 9            ;
-; Total fan-out                               ; 109          ;
-; Average fan-out                             ; 0.68         ;
-+---------------------------------------------+--------------+
++-------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                 ;
++---------------------------------------------+---------------+
+; Resource                                    ; Usage         ;
++---------------------------------------------+---------------+
+; Estimate of Logic utilization (ALMs needed) ; 60            ;
+;                                             ;               ;
+; Combinational ALUT usage for logic          ; 115           ;
+;     -- 7 input functions                    ; 0             ;
+;     -- 6 input functions                    ; 5             ;
+;     -- 5 input functions                    ; 1             ;
+;     -- 4 input functions                    ; 34            ;
+;     -- <=3 input functions                  ; 75            ;
+;                                             ;               ;
+; Dedicated logic registers                   ; 32            ;
+;                                             ;               ;
+; I/O pins                                    ; 71            ;
+;                                             ;               ;
+; Total DSP Blocks                            ; 0             ;
+;                                             ;               ;
+; Maximum fan-out node                        ; clickcount[1] ;
+; Maximum fan-out                             ; 42            ;
+; Total fan-out                               ; 601           ;
+; Average fan-out                             ; 2.07          ;
++---------------------------------------------+---------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                  ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------+--------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name              ; Entity Name  ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------+--------------+--------------+
-; |TextScroller              ; 9 (0)               ; 9 (0)                     ; 0                 ; 0          ; 71   ; 0            ; |TextScroller                    ; TextScroller ; work         ;
-;    |T_FlipFlop:comb_10|    ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TextScroller|T_FlipFlop:comb_10 ; T_FlipFlop   ; work         ;
-;    |T_FlipFlop:comb_11|    ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TextScroller|T_FlipFlop:comb_11 ; T_FlipFlop   ; work         ;
-;    |T_FlipFlop:comb_12|    ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TextScroller|T_FlipFlop:comb_12 ; T_FlipFlop   ; work         ;
-;    |T_FlipFlop:comb_13|    ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TextScroller|T_FlipFlop:comb_13 ; T_FlipFlop   ; work         ;
-;    |T_FlipFlop:comb_14|    ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TextScroller|T_FlipFlop:comb_14 ; T_FlipFlop   ; work         ;
-;    |T_FlipFlop:comb_6|     ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TextScroller|T_FlipFlop:comb_6  ; T_FlipFlop   ; work         ;
-;    |T_FlipFlop:comb_7|     ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TextScroller|T_FlipFlop:comb_7  ; T_FlipFlop   ; work         ;
-;    |T_FlipFlop:comb_8|     ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TextScroller|T_FlipFlop:comb_8  ; T_FlipFlop   ; work         ;
-;    |T_FlipFlop:comb_9|     ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TextScroller|T_FlipFlop:comb_9  ; T_FlipFlop   ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------+--------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                     ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name  ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------+--------------+
+; |TextScroller              ; 115 (115)           ; 32 (32)                   ; 0                 ; 0          ; 71   ; 0            ; |TextScroller       ; TextScroller ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; f[0]                                                ; Mux1                ; yes                    ;
+; f[2]                                                ; Mux1                ; yes                    ;
+; f[3]                                                ; Mux1                ; yes                    ;
+; f[4]                                                ; Mux1                ; yes                    ;
+; f[5]                                                ; Mux1                ; yes                    ;
+; f[6]                                                ; Mux1                ; yes                    ;
+; e[0]                                                ; Mux1                ; yes                    ;
+; e[2]                                                ; Mux1                ; yes                    ;
+; e[3]                                                ; Mux1                ; yes                    ;
+; e[4]                                                ; Mux1                ; yes                    ;
+; e[5]                                                ; Mux1                ; yes                    ;
+; e[6]                                                ; Mux1                ; yes                    ;
+; d[0]                                                ; Mux1                ; yes                    ;
+; d[1]                                                ; Mux1                ; yes                    ;
+; d[2]                                                ; Mux1                ; yes                    ;
+; d[3]                                                ; Mux1                ; yes                    ;
+; d[4]                                                ; Mux1                ; yes                    ;
+; d[5]                                                ; Mux1                ; yes                    ;
+; d[6]                                                ; Mux1                ; yes                    ;
+; c[0]                                                ; Mux1                ; yes                    ;
+; c[2]                                                ; Mux1                ; yes                    ;
+; c[3]                                                ; Mux1                ; yes                    ;
+; c[4]                                                ; Mux1                ; yes                    ;
+; c[5]                                                ; Mux1                ; yes                    ;
+; c[6]                                                ; Mux1                ; yes                    ;
+; b[0]                                                ; Mux1                ; yes                    ;
+; b[2]                                                ; Mux1                ; yes                    ;
+; b[3]                                                ; Mux1                ; yes                    ;
+; b[4]                                                ; Mux1                ; yes                    ;
+; b[5]                                                ; Mux1                ; yes                    ;
+; b[6]                                                ; Mux1                ; yes                    ;
+; a[0]                                                ; Mux1                ; yes                    ;
+; a[1]                                                ; Mux1                ; yes                    ;
+; a[2]                                                ; Mux1                ; yes                    ;
+; a[3]                                                ; Mux1                ; yes                    ;
+; a[4]                                                ; Mux1                ; yes                    ;
+; a[5]                                                ; Mux1                ; yes                    ;
+; a[6]                                                ; Mux1                ; yes                    ;
+; Number of user-specified and inferred latches = 38  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -230,32 +269,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 9     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Total registers                              ; 32    ;
+; Number of registers using Synchronous Clear  ; 29    ;
+; Number of registers using Synchronous Load   ; 1     ;
+; Number of registers using Asynchronous Clear ; 32    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "T_FlipFlop:comb_22"                                                                 ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------+
-; Port Connectivity Checks: "T_FlipFlop:comb_6" ;
-+------+-------+----------+---------------------+
-; Port ; Type  ; Severity ; Details             ;
-+------+-------+----------+---------------------+
-; T    ; Input ; Info     ; Stuck at VCC        ;
-+------+-------+----------+---------------------+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |TextScroller|Mux16        ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |TextScroller|Mux12        ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |TextScroller|Mux32        ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |TextScroller|Mux0         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |TextScroller|Mux25        ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |TextScroller|Mux20        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +-----------------------------------------------------+
@@ -263,18 +298,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 9                           ;
-;     plain             ; 9                           ;
+; arriav_ff             ; 32                          ;
+;     CLR               ; 2                           ;
+;     CLR SCLR          ; 29                          ;
+;     CLR SLD           ; 1                           ;
 ; arriav_io_obuf        ; 1                           ;
-; arriav_lcell_comb     ; 12                          ;
-;     normal            ; 12                          ;
+; arriav_lcell_comb     ; 118                         ;
+;     arith             ; 29                          ;
+;         1 data inputs ; 29                          ;
+;     normal            ; 89                          ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 9                           ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 44                          ;
+;         4 data inputs ; 34                          ;
+;         5 data inputs ; 1                           ;
+;         6 data inputs ; 5                           ;
 ; boundary_port         ; 71                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.83                        ;
+; Max LUT depth         ; 3.80                        ;
+; Average LUT depth     ; 2.13                        ;
 +-----------------------+-----------------------------+
 
 
@@ -283,7 +326,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -293,93 +336,163 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Tue Apr 30 10:59:12 2019
+    Info: Processing started: Tue Apr 30 22:07:33 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TextScroller -c RippleCounter
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Warning (10229): Verilog HDL Expression warning at TextScroller.v(62): truncated literal to match 7 bits File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 62
-Warning (10229): Verilog HDL Expression warning at TextScroller.v(63): truncated literal to match 7 bits File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 63
-Warning (10229): Verilog HDL Expression warning at TextScroller.v(64): truncated literal to match 7 bits File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 64
-Warning (10229): Verilog HDL Expression warning at TextScroller.v(65): truncated literal to match 7 bits File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 65
-Warning (10229): Verilog HDL Expression warning at TextScroller.v(66): truncated literal to match 7 bits File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 66
-Warning (10229): Verilog HDL Expression warning at TextScroller.v(67): truncated literal to match 7 bits File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 67
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file textscroller.v
-    Info (12023): Found entity 1: TextScroller File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file t_flipflop.v
-    Info (12023): Found entity 1: T_FlipFlop File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/T_FlipFlop.v Line: 1
-Critical Warning (10846): Verilog HDL Instantiation warning at TextScroller.v(38): instance has no name File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 38
-Critical Warning (10846): Verilog HDL Instantiation warning at TextScroller.v(39): instance has no name File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 39
-Critical Warning (10846): Verilog HDL Instantiation warning at TextScroller.v(40): instance has no name File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 40
-Critical Warning (10846): Verilog HDL Instantiation warning at TextScroller.v(41): instance has no name File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 41
-Critical Warning (10846): Verilog HDL Instantiation warning at TextScroller.v(42): instance has no name File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 42
-Critical Warning (10846): Verilog HDL Instantiation warning at TextScroller.v(43): instance has no name File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 43
-Critical Warning (10846): Verilog HDL Instantiation warning at TextScroller.v(44): instance has no name File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 44
-Critical Warning (10846): Verilog HDL Instantiation warning at TextScroller.v(45): instance has no name File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 45
-Critical Warning (10846): Verilog HDL Instantiation warning at TextScroller.v(46): instance has no name File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 46
-Critical Warning (10846): Verilog HDL Instantiation warning at TextScroller.v(47): instance has no name File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 47
-Critical Warning (10846): Verilog HDL Instantiation warning at TextScroller.v(48): instance has no name File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 48
-Critical Warning (10846): Verilog HDL Instantiation warning at TextScroller.v(49): instance has no name File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 49
-Critical Warning (10846): Verilog HDL Instantiation warning at TextScroller.v(50): instance has no name File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 50
-Critical Warning (10846): Verilog HDL Instantiation warning at TextScroller.v(51): instance has no name File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 51
-Critical Warning (10846): Verilog HDL Instantiation warning at TextScroller.v(52): instance has no name File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 52
-Critical Warning (10846): Verilog HDL Instantiation warning at TextScroller.v(53): instance has no name File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 53
-Critical Warning (10846): Verilog HDL Instantiation warning at TextScroller.v(54): instance has no name File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 54
+    Info (12023): Found entity 1: TextScroller File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file movecharup.v
+    Info (12023): Found entity 1: moveCharUp File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/moveCharUp.v Line: 1
 Info (12127): Elaborating entity "TextScroller" for the top level hierarchy
-Info (12128): Elaborating entity "T_FlipFlop" for hierarchy "T_FlipFlop:comb_6" File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 38
+Warning (10036): Verilog HDL or VHDL warning at TextScroller.v(34): object "ONE" assigned a value but never read File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 34
+Warning (10036): Verilog HDL or VHDL warning at TextScroller.v(34): object "TWO" assigned a value but never read File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 34
+Warning (10036): Verilog HDL or VHDL warning at TextScroller.v(35): object "UP" assigned a value but never read File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 35
+Warning (10036): Verilog HDL or VHDL warning at TextScroller.v(35): object "DOWN" assigned a value but never read File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 35
+Warning (10230): Verilog HDL assignment warning at TextScroller.v(71): truncated value with size 32 to match size of target (29) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 71
+Warning (10230): Verilog HDL assignment warning at TextScroller.v(81): truncated value with size 32 to match size of target (3) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 81
+Warning (10270): Verilog HDL Case Statement warning at TextScroller.v(89): incomplete case statement has no default case item File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Warning (10240): Verilog HDL Always Construct warning at TextScroller.v(89): inferring latch(es) for variable "a", which holds its previous value in one or more paths through the always construct File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Warning (10240): Verilog HDL Always Construct warning at TextScroller.v(89): inferring latch(es) for variable "b", which holds its previous value in one or more paths through the always construct File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Warning (10240): Verilog HDL Always Construct warning at TextScroller.v(89): inferring latch(es) for variable "c", which holds its previous value in one or more paths through the always construct File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Warning (10240): Verilog HDL Always Construct warning at TextScroller.v(89): inferring latch(es) for variable "d", which holds its previous value in one or more paths through the always construct File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Warning (10240): Verilog HDL Always Construct warning at TextScroller.v(89): inferring latch(es) for variable "e", which holds its previous value in one or more paths through the always construct File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Warning (10240): Verilog HDL Always Construct warning at TextScroller.v(89): inferring latch(es) for variable "f", which holds its previous value in one or more paths through the always construct File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Warning (10034): Output port "LEDR[9]" at TextScroller.v(22) has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 22
+Info (10041): Inferred latch for "f[0]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "f[1]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "f[2]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "f[3]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "f[4]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "f[5]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "f[6]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "e[0]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "e[1]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "e[2]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "e[3]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "e[4]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "e[5]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "e[6]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "d[0]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "d[1]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "d[2]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "d[3]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "d[4]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "d[5]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "d[6]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "c[0]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "c[1]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "c[2]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "c[3]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "c[4]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "c[5]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "c[6]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "b[0]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "b[1]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "b[2]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "b[3]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "b[4]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "b[5]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "b[6]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "a[0]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "a[1]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "a[2]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "a[3]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "a[4]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "a[5]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Info (10041): Inferred latch for "a[6]" at TextScroller.v(89) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
 Warning (13039): The following bidirectional pins have no drivers
-    Warning (13040): bidirectional pin "CLOCK4_50" has no driver File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 7
+    Warning (13040): bidirectional pin "CLOCK4_50" has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 7
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "a[1]" merged with LATCH primitive "d[1]" File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+Warning (13012): Latch f[0] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 78
+Warning (13012): Latch f[2] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 78
+Warning (13012): Latch f[3] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 78
+Warning (13012): Latch f[4] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 78
+Warning (13012): Latch f[5] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[0] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 78
+Warning (13012): Latch f[6] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 78
+Warning (13012): Latch e[0] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 78
+Warning (13012): Latch e[2] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 78
+Warning (13012): Latch e[3] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 78
+Warning (13012): Latch e[4] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[0] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 78
+Warning (13012): Latch e[5] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[2] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 78
+Warning (13012): Latch e[6] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 78
+Warning (13012): Latch d[0] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 78
+Warning (13012): Latch d[1] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[2] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 78
+Warning (13012): Latch d[2] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[2] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 78
+Warning (13012): Latch d[3] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 78
+Warning (13012): Latch d[4] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 78
+Warning (13012): Latch d[5] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[2] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 78
+Warning (13012): Latch d[6] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 78
+Warning (13012): Latch c[0] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[2] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 78
+Warning (13012): Latch c[2] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 78
+Warning (13012): Latch c[3] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 78
+Warning (13012): Latch c[4] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 78
+Warning (13012): Latch c[5] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 78
+Warning (13012): Latch c[6] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 78
+Warning (13012): Latch b[0] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 78
+Warning (13012): Latch b[2] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 78
+Warning (13012): Latch b[3] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 78
+Warning (13012): Latch b[4] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 78
+Warning (13012): Latch b[5] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 78
+Warning (13012): Latch b[6] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[2] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 78
+Warning (13012): Latch a[0] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[2] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 78
+Warning (13012): Latch a[2] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[2] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 78
+Warning (13012): Latch a[3] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 78
+Warning (13012): Latch a[4] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 78
+Warning (13012): Latch a[5] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 78
+Warning (13012): Latch a[6] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[2] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 78
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX0[0]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 10
-    Warning (13410): Pin "HEX0[1]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 10
-    Warning (13410): Pin "HEX0[2]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 10
-    Warning (13410): Pin "HEX0[3]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 10
-    Warning (13410): Pin "HEX0[4]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 10
-    Warning (13410): Pin "HEX0[5]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 10
-    Warning (13410): Pin "HEX0[6]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 10
-    Warning (13410): Pin "HEX1[0]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 11
-    Warning (13410): Pin "HEX1[1]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 11
-    Warning (13410): Pin "HEX1[2]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 11
-    Warning (13410): Pin "HEX1[3]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 11
-    Warning (13410): Pin "HEX1[4]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 11
-    Warning (13410): Pin "HEX1[5]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 11
-    Warning (13410): Pin "HEX1[6]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 11
-    Warning (13410): Pin "HEX2[0]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 12
-    Warning (13410): Pin "HEX2[1]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 12
-    Warning (13410): Pin "HEX2[2]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 12
-    Warning (13410): Pin "HEX2[3]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 12
-    Warning (13410): Pin "HEX2[4]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 12
-    Warning (13410): Pin "HEX2[5]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 12
-    Warning (13410): Pin "HEX2[6]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 12
-    Warning (13410): Pin "HEX3[0]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 13
-    Warning (13410): Pin "HEX3[1]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 13
-    Warning (13410): Pin "HEX3[2]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 13
-    Warning (13410): Pin "HEX3[3]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 13
-    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 13
-    Warning (13410): Pin "HEX3[5]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 13
-    Warning (13410): Pin "HEX3[6]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 13
-    Warning (13410): Pin "HEX4[0]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 14
-    Warning (13410): Pin "HEX4[1]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 14
-    Warning (13410): Pin "HEX4[2]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 14
-    Warning (13410): Pin "HEX4[3]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 14
-    Warning (13410): Pin "HEX4[4]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 14
-    Warning (13410): Pin "HEX4[5]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 14
-    Warning (13410): Pin "HEX4[6]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 14
-    Warning (13410): Pin "HEX5[0]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 15
-    Warning (13410): Pin "HEX5[1]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 15
-    Warning (13410): Pin "HEX5[2]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 15
-    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 15
-    Warning (13410): Pin "HEX5[4]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 15
-    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 15
-    Warning (13410): Pin "HEX5[6]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 15
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 22
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 22
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 22
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 22
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 22
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 22
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 22
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 22
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 22
+    Warning (13410): Pin "HEX0[1]" is stuck at VCC File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 10
+    Warning (13410): Pin "HEX1[1]" is stuck at VCC File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 11
+    Warning (13410): Pin "HEX3[1]" is stuck at VCC File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 13
+    Warning (13410): Pin "HEX4[1]" is stuck at VCC File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 14
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 22
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 22
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 22
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 22
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 22
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 22
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 22
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 22
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 22
 Info (286030): Timing-Driven Synthesis is running
 Warning (20013): Ignored 24 assignments for entity "DE0_CV" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE0_CV -section_id Top was ignored
@@ -406,34 +519,39 @@ Warning (20013): Ignored 24 assignments for entity "DE0_CV" -- entity does not e
     Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity DE0_CV -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity DE0_CV -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity DE0_CV -section_id Top was ignored
+Info (144001): Generated suppressed messages file C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/RippleCounter.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 16 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "CLOCK2_50" File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 5
-    Warning (15610): No output dependent on input pin "CLOCK3_50" File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 6
-    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 18
-    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 18
-    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 18
-    Warning (15610): No output dependent on input pin "RESET_N" File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 19
-    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 26
-    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 26
-    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 26
-    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 26
-    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 26
-    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 26
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 26
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 26
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 26
-    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 26
-Info (21057): Implemented 80 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 14 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLOCK2_50" File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 5
+    Warning (15610): No output dependent on input pin "CLOCK3_50" File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 6
+    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 18
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 18
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 18
+    Warning (15610): No output dependent on input pin "RESET_N" File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 19
+    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 26
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 26
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 26
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 26
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 26
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 26
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 26
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 26
+Info (21057): Implemented 186 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
     Info (21059): Implemented 52 output pins
     Info (21060): Implemented 1 bidirectional pins
-    Info (21061): Implemented 9 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 120 warnings
-    Info: Peak virtual memory: 689 megabytes
-    Info: Processing ended: Tue Apr 30 10:59:26 2019
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:30
+    Info (21061): Implemented 115 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 145 warnings
+    Info: Peak virtual memory: 4850 megabytes
+    Info: Processing ended: Tue Apr 30 22:07:58 2019
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:56
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/RippleCounter.map.smsg.
 
 
