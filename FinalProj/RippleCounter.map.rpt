@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RippleCounter
-Tue Apr 30 22:07:58 2019
+Tue Apr 30 22:18:32 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -46,7 +46,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Apr 30 22:07:58 2019       ;
+; Analysis & Synthesis Status     ; Successful - Tue Apr 30 22:18:32 2019       ;
 ; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                   ; RippleCounter                               ;
 ; Top-level Entity Name           ; TextScroller                                ;
@@ -184,12 +184,12 @@ agreement for further details.
 +---------------------------------------------+---------------+
 ; Resource                                    ; Usage         ;
 +---------------------------------------------+---------------+
-; Estimate of Logic utilization (ALMs needed) ; 60            ;
+; Estimate of Logic utilization (ALMs needed) ; 61            ;
 ;                                             ;               ;
 ; Combinational ALUT usage for logic          ; 115           ;
 ;     -- 7 input functions                    ; 0             ;
-;     -- 6 input functions                    ; 5             ;
-;     -- 5 input functions                    ; 1             ;
+;     -- 6 input functions                    ; 6             ;
+;     -- 5 input functions                    ; 0             ;
 ;     -- 4 input functions                    ; 34            ;
 ;     -- <=3 input functions                  ; 75            ;
 ;                                             ;               ;
@@ -221,44 +221,44 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------+---------------------+------------------------+
 ; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
 +-----------------------------------------------------+---------------------+------------------------+
-; f[0]                                                ; Mux1                ; yes                    ;
-; f[2]                                                ; Mux1                ; yes                    ;
-; f[3]                                                ; Mux1                ; yes                    ;
-; f[4]                                                ; Mux1                ; yes                    ;
-; f[5]                                                ; Mux1                ; yes                    ;
-; f[6]                                                ; Mux1                ; yes                    ;
-; e[0]                                                ; Mux1                ; yes                    ;
-; e[2]                                                ; Mux1                ; yes                    ;
-; e[3]                                                ; Mux1                ; yes                    ;
-; e[4]                                                ; Mux1                ; yes                    ;
-; e[5]                                                ; Mux1                ; yes                    ;
-; e[6]                                                ; Mux1                ; yes                    ;
-; d[0]                                                ; Mux1                ; yes                    ;
-; d[1]                                                ; Mux1                ; yes                    ;
-; d[2]                                                ; Mux1                ; yes                    ;
-; d[3]                                                ; Mux1                ; yes                    ;
-; d[4]                                                ; Mux1                ; yes                    ;
-; d[5]                                                ; Mux1                ; yes                    ;
-; d[6]                                                ; Mux1                ; yes                    ;
-; c[0]                                                ; Mux1                ; yes                    ;
-; c[2]                                                ; Mux1                ; yes                    ;
-; c[3]                                                ; Mux1                ; yes                    ;
-; c[4]                                                ; Mux1                ; yes                    ;
-; c[5]                                                ; Mux1                ; yes                    ;
-; c[6]                                                ; Mux1                ; yes                    ;
-; b[0]                                                ; Mux1                ; yes                    ;
-; b[2]                                                ; Mux1                ; yes                    ;
-; b[3]                                                ; Mux1                ; yes                    ;
-; b[4]                                                ; Mux1                ; yes                    ;
-; b[5]                                                ; Mux1                ; yes                    ;
-; b[6]                                                ; Mux1                ; yes                    ;
-; a[0]                                                ; Mux1                ; yes                    ;
-; a[1]                                                ; Mux1                ; yes                    ;
-; a[2]                                                ; Mux1                ; yes                    ;
-; a[3]                                                ; Mux1                ; yes                    ;
-; a[4]                                                ; Mux1                ; yes                    ;
-; a[5]                                                ; Mux1                ; yes                    ;
-; a[6]                                                ; Mux1                ; yes                    ;
+; f[0]                                                ; Mux0                ; yes                    ;
+; f[2]                                                ; Mux0                ; yes                    ;
+; f[3]                                                ; Mux0                ; yes                    ;
+; f[4]                                                ; Mux0                ; yes                    ;
+; f[5]                                                ; Mux0                ; yes                    ;
+; f[6]                                                ; Mux0                ; yes                    ;
+; e[0]                                                ; Mux0                ; yes                    ;
+; e[2]                                                ; Mux0                ; yes                    ;
+; e[3]                                                ; Mux0                ; yes                    ;
+; e[4]                                                ; Mux0                ; yes                    ;
+; e[5]                                                ; Mux0                ; yes                    ;
+; e[6]                                                ; Mux0                ; yes                    ;
+; d[0]                                                ; Mux0                ; yes                    ;
+; d[1]                                                ; Mux0                ; yes                    ;
+; d[2]                                                ; Mux0                ; yes                    ;
+; d[3]                                                ; Mux0                ; yes                    ;
+; d[4]                                                ; Mux0                ; yes                    ;
+; d[5]                                                ; Mux0                ; yes                    ;
+; d[6]                                                ; Mux0                ; yes                    ;
+; c[0]                                                ; Mux0                ; yes                    ;
+; c[2]                                                ; Mux0                ; yes                    ;
+; c[3]                                                ; Mux0                ; yes                    ;
+; c[4]                                                ; Mux0                ; yes                    ;
+; c[5]                                                ; Mux0                ; yes                    ;
+; c[6]                                                ; Mux0                ; yes                    ;
+; b[0]                                                ; Mux0                ; yes                    ;
+; b[2]                                                ; Mux0                ; yes                    ;
+; b[3]                                                ; Mux0                ; yes                    ;
+; b[4]                                                ; Mux0                ; yes                    ;
+; b[5]                                                ; Mux0                ; yes                    ;
+; b[6]                                                ; Mux0                ; yes                    ;
+; a[0]                                                ; Mux0                ; yes                    ;
+; a[1]                                                ; Mux0                ; yes                    ;
+; a[2]                                                ; Mux0                ; yes                    ;
+; a[3]                                                ; Mux0                ; yes                    ;
+; a[4]                                                ; Mux0                ; yes                    ;
+; a[5]                                                ; Mux0                ; yes                    ;
+; a[6]                                                ; Mux0                ; yes                    ;
 ; Number of user-specified and inferred latches = 38  ;                     ;                        ;
 +-----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -287,7 +287,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |TextScroller|Mux16        ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |TextScroller|Mux12        ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |TextScroller|Mux32        ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |TextScroller|Mux0         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |TextScroller|Mux7         ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |TextScroller|Mux25        ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |TextScroller|Mux20        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
@@ -309,11 +309,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ;     normal            ; 89                          ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 1                           ;
-;         3 data inputs ; 44                          ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 43                          ;
 ;         4 data inputs ; 34                          ;
-;         5 data inputs ; 1                           ;
-;         6 data inputs ; 5                           ;
+;         6 data inputs ; 6                           ;
 ; boundary_port         ; 71                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.80                        ;
@@ -336,7 +335,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Tue Apr 30 22:07:33 2019
+    Info: Processing started: Tue Apr 30 22:18:03 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TextScroller -c RippleCounter
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -544,9 +543,9 @@ Info (21057): Implemented 186 device resources after synthesis - the final resou
     Info (21061): Implemented 115 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 145 warnings
     Info: Peak virtual memory: 4850 megabytes
-    Info: Processing ended: Tue Apr 30 22:07:58 2019
-    Info: Elapsed time: 00:00:25
-    Info: Total CPU time (on all processors): 00:00:56
+    Info: Processing ended: Tue Apr 30 22:18:32 2019
+    Info: Elapsed time: 00:00:29
+    Info: Total CPU time (on all processors): 00:01:09
 
 
 +------------------------------------------+

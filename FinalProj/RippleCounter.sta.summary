@@ -3,147 +3,147 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'clickcount[0]'
-Slack : -6.974
-TNS   : -227.282
+Slack : -7.129
+TNS   : -244.174
 
 Type  : Slow 1100mV 85C Model Setup 'SW[8]'
-Slack : -5.202
-TNS   : -15.112
+Slack : -5.239
+TNS   : -14.720
 
 Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -4.875
-TNS   : -138.759
-
-Type  : Slow 1100mV 85C Model Hold 'clickcount[0]'
-Slack : 0.369
-TNS   : 0.000
+Slack : -4.076
+TNS   : -117.439
 
 Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.443
+Slack : 0.442
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'clickcount[0]'
+Slack : 0.758
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'SW[8]'
-Slack : 0.852
+Slack : 1.041
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'SW[8]'
-Slack : -0.893
-TNS   : -6.144
+Slack : -1.143
+TNS   : -8.736
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -0.538
-TNS   : -22.287
+TNS   : -22.286
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clickcount[0]'
-Slack : 0.095
+Slack : 0.155
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Setup 'clickcount[0]'
-Slack : -6.834
-TNS   : -222.099
+Slack : -6.975
+TNS   : -237.126
 
 Type  : Slow 1100mV 0C Model Setup 'SW[8]'
-Slack : -5.072
-TNS   : -14.773
+Slack : -5.173
+TNS   : -14.402
 
 Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -4.817
-TNS   : -137.163
-
-Type  : Slow 1100mV 0C Model Hold 'clickcount[0]'
-Slack : 0.156
-TNS   : 0.000
+Slack : -4.022
+TNS   : -115.659
 
 Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
-Slack : 0.449
+Slack : 0.448
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'clickcount[0]'
+Slack : 0.692
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'SW[8]'
-Slack : 0.824
+Slack : 0.904
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'SW[8]'
-Slack : -0.955
-TNS   : -6.825
+Slack : -1.196
+TNS   : -9.289
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -0.538
-TNS   : -22.875
+TNS   : -22.989
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clickcount[0]'
-Slack : 0.121
+Slack : 0.134
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'SW[8]'
-Slack : -3.715
-TNS   : -10.195
+Slack : -3.764
+TNS   : -10.455
 
 Type  : Fast 1100mV 85C Model Setup 'clickcount[0]'
-Slack : -3.055
-TNS   : -91.806
+Slack : -3.050
+TNS   : -102.033
 
 Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -2.130
-TNS   : -59.723
-
-Type  : Fast 1100mV 85C Model Hold 'clickcount[0]'
-Slack : 0.176
-TNS   : 0.000
+Slack : -2.000
+TNS   : -57.777
 
 Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
 Slack : 0.200
 TNS   : 0.000
 
+Type  : Fast 1100mV 85C Model Hold 'clickcount[0]'
+Slack : 0.350
+TNS   : 0.000
+
 Type  : Fast 1100mV 85C Model Hold 'SW[8]'
-Slack : 0.352
+Slack : 0.456
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'SW[8]'
-Slack : -0.613
-TNS   : -2.785
+Slack : -0.836
+TNS   : -4.800
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -0.093
-TNS   : -2.669
+TNS   : -2.613
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clickcount[0]'
-Slack : 0.255
+Slack : 0.280
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'SW[8]'
-Slack : -3.096
-TNS   : -8.504
+Slack : -3.145
+TNS   : -8.671
 
 Type  : Fast 1100mV 0C Model Setup 'clickcount[0]'
-Slack : -2.785
-TNS   : -84.602
+Slack : -2.783
+TNS   : -93.393
 
 Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -1.810
-TNS   : -50.747
-
-Type  : Fast 1100mV 0C Model Hold 'clickcount[0]'
-Slack : 0.159
-TNS   : 0.000
+Slack : -1.759
+TNS   : -50.858
 
 Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
 Slack : 0.191
 TNS   : 0.000
 
+Type  : Fast 1100mV 0C Model Hold 'clickcount[0]'
+Slack : 0.314
+TNS   : 0.000
+
 Type  : Fast 1100mV 0C Model Hold 'SW[8]'
-Slack : 0.313
+Slack : 0.400
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'SW[8]'
-Slack : -0.586
-TNS   : -2.645
+Slack : -0.799
+TNS   : -4.520
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.095
-TNS   : -2.727
+Slack : -0.094
+TNS   : -2.698
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clickcount[0]'
-Slack : 0.292
+Slack : 0.305
 TNS   : 0.000
 
 ------------------------------------------------------------

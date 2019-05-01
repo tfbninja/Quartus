@@ -47,12 +47,12 @@ module TextScroller(
 	reg [6:0] a, b, c, d, e, f;
 	assign RESET = ~KEY[3];
 	assign dir = ~SW[9];
-	assign fastmode = ~SW[8];
+	assign fastmode = SW[8];
 	reg [28:0] ticker; //to hold a count of 50M
 	reg [2:0] clickcount; //register to hold the count up to 7.
 
 	
-	assign click = ((ticker == (fastmode ? 10000000 : 20000000))?1'b1:1'b0); //click every second
+	assign click = ((ticker == (fastmode ? 9000000 : 20000000))?1'b1:1'b0);
 	
 	assign HEX5[6:0] = a;
 	assign HEX4[6:0] = b;
@@ -65,7 +65,7 @@ module TextScroller(
 		begin
 			if(RESET)
 				ticker <= 0;
-			else if(ticker == (fastmode ? 10000000 : 20000000)) //reset after 1 second
+			else if(ticker == (fastmode ? 9000000 : 20000000))
 				ticker <= 0;
 			else
 				ticker <= ticker + 1;
