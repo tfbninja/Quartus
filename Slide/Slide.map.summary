@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Wed May 01 15:26:09 2019
+Analysis & Synthesis Status : Successful - Wed May 01 15:55:42 2019
 Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 Revision Name : Slide
 Top-level Entity Name : Slide
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 0
-Total pins : 57
+Total pins : 99
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

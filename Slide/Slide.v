@@ -11,6 +11,14 @@ module Slide(
 
 	//////////// LED //////////
 	output		     [9:0]		LEDR,
+	
+	//////////// SEG7 //////////
+	output		     [6:0]		HEX0,
+	output		     [6:0]		HEX1,
+	output		     [6:0]		HEX2,
+	output		     [6:0]		HEX3,
+	output		     [6:0]		HEX4,
+	output		     [6:0]		HEX5,
 
 	//////////// microSD Card //////////
 	output		          		SD_CLK,
@@ -26,21 +34,29 @@ module Slide(
 //=======================================================
 //  REG/WIRE declarations
 //=======================================================
-	assign LEDR[9] = ~GPIO[3:0];
-	assign LEDR[8] = ~GPIO[7:4];
-	assign LEDR[7] = ~GPIO[11:8];
-	assign LEDR[6] = ~GPIO[15:12];
-	assign LEDR[5] = ~GPIO[19:16];
-	assign LEDR[4] = ~GPIO[23:20];
-	assign LEDR[3] = ~GPIO[27:24];
-	assign LEDR[2] = ~GPIO[31:28];
-	assign LEDR[1] = ~GPIO[35:32];
-
-
-//=======================================================
-//  Structural coding
-//=======================================================
-
-
+	assign LEDR[9] = ~GPIO[3 : 0];
+	assign LEDR[8] = ~GPIO[6 : 4];
+	assign LEDR[7] = ~GPIO[10: 7];
+	assign LEDR[6] = ~GPIO[14:11];
+	assign LEDR[5] = ~GPIO[17:15];
+	assign LEDR[4] = ~GPIO[21:18];
+	assign LEDR[3] = ~GPIO[24:22];
+	assign LEDR[2] = ~GPIO[28:25];
+	assign LEDR[1] = ~GPIO[32:29];
+	assign LEDR[0] = ~GPIO[35:33];
+	
+	assign HEX5[0]   = GPIO[3 : 0];
+	assign HEX4[0]   = GPIO[6 : 4];
+	assign HEX3[0]   = GPIO[10: 7];
+	assign HEX2[0]   = GPIO[14:11];
+	assign HEX1[0]   = GPIO[17:15];
+	assign HEX0[0]   = GPIO[20:18];
+	assign HEX0[2:1] = GPIO[23:21];
+	assign HEX1[3]   = GPIO[26:24];
+	assign HEX2[3]   = GPIO[28:27];
+	assign HEX3[3]   = GPIO[31:29];
+	assign HEX4[3]   = GPIO[31:30];
+	assign HEX5[3]   = GPIO[33:32];
+	assign HEX5[5:4] = GPIO[35:34];
 
 endmodule

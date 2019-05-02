@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Slide
-Wed May 01 15:26:41 2019
+Wed May 01 15:46:26 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -96,15 +96,15 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.3%      ;
+;     Processors 2-4         ;   0.4%      ;
 +----------------------------+-------------+
 
 
@@ -113,7 +113,7 @@ agreement for further details.
 +---------------+--------+--------------------------+
 ; SDC File Path ; Status ; Read at                  ;
 +---------------+--------+--------------------------+
-; Slide.SDC     ; OK     ; Wed May 01 15:26:37 2019 ;
+; Slide.SDC     ; OK     ; Wed May 01 15:46:18 2019 ;
 +---------------+--------+--------------------------+
 
 
@@ -674,10 +674,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 9     ; 9    ;
-; Unconstrained Input Port Paths  ; 9     ; 9    ;
-; Unconstrained Output Ports      ; 9     ; 9    ;
-; Unconstrained Output Port Paths ; 9     ; 9    ;
+; Unconstrained Input Ports       ; 10    ; 10   ;
+; Unconstrained Input Port Paths  ; 10    ; 10   ;
+; Unconstrained Output Ports      ; 10    ; 10   ;
+; Unconstrained Output Port Paths ; 10    ; 10   ;
 +---------------------------------+-------+------+
 
 
@@ -688,13 +688,14 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------+--------------------------------------------------------------------------------------+
 ; GPIO[0]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; GPIO[4]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; GPIO[8]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; GPIO[12]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; GPIO[16]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; GPIO[20]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; GPIO[24]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; GPIO[28]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; GPIO[32]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO[7]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO[11]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO[15]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO[18]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO[22]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO[25]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO[29]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO[33]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
 
@@ -703,6 +704,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
+; LEDR[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -722,13 +724,14 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------+--------------------------------------------------------------------------------------+
 ; GPIO[0]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; GPIO[4]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; GPIO[8]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; GPIO[12]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; GPIO[16]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; GPIO[20]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; GPIO[24]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; GPIO[28]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; GPIO[32]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO[7]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO[11]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO[15]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO[18]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO[22]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO[25]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO[29]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; GPIO[33]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
 
@@ -737,6 +740,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
+; LEDR[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -755,11 +759,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Wed May 01 15:26:36 2019
+    Info: Processing started: Wed May 01 15:46:12 2019
 Info: Command: quartus_sta Slide -c Slide
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (21076): High junction temperature operating condition is not set. Assuming a default value of '85'.
 Info (21076): Low junction temperature operating condition is not set. Assuming a default value of '0'.
 Info (332104): Reading SDC File: 'Slide.SDC'
@@ -815,9 +819,9 @@ Info (332140): No Minimum Pulse Width paths to report
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 893 megabytes
-    Info: Processing ended: Wed May 01 15:26:41 2019
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Peak virtual memory: 5053 megabytes
+    Info: Processing ended: Wed May 01 15:46:26 2019
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:13
 
 
