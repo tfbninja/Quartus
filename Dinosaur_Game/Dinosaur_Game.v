@@ -54,7 +54,6 @@ module Dinosaur_Game(
 	assign LEDR[0] = jump;
 	assign LEDR[1] = jump;
 	assign LEDR[2] = jump;
-	assign LEDR[9] = GPIO_0[0];
 	assign HEX5[6:0] = jump ? player_top : player_bottom;
 	
 	

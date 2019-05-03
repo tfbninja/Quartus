@@ -1,5 +1,5 @@
 Flow report for Dinosaur_Game
-Wed May 01 11:00:30 2019
+Thu May 02 18:25:32 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed May 01 11:00:23 2019       ;
+; Flow Status                     ; Successful - Thu May 02 18:25:03 2019       ;
 ; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                   ; Dinosaur_Game                               ;
 ; Top-level Entity Name           ; Dinosaur_Game                               ;
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/01/2019 10:59:40 ;
+; Start date & time ; 05/02/2019 18:21:53 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Dinosaur_Game       ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 66325080979140.155672998009008         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 264216227693074.155684651263736        ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; DE0_CV      ; Top        ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; DE0_CV      ; Top        ;
@@ -94,11 +94,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 668 MB              ; 00:00:32                           ;
-; Fitter                    ; 00:00:22     ; 1.0                     ; 1770 MB             ; 00:00:30                           ;
-; Assembler                 ; 00:00:04     ; 1.0                     ; 699 MB              ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:06     ; 1.0                     ; 895 MB              ; 00:00:06                           ;
-; Total                     ; 00:00:45     ; --                      ; --                  ; 00:01:12                           ;
+; Analysis & Synthesis      ; 00:01:33     ; 1.0                     ; 4799 MB             ; 00:01:10                           ;
+; Fitter                    ; 00:01:15     ; 1.0                     ; 6292 MB             ; 00:01:21                           ;
+; Assembler                 ; 00:00:13     ; 1.0                     ; 4831 MB             ; 00:00:10                           ;
+; TimeQuest Timing Analyzer ; 00:00:26     ; 1.0                     ; 5055 MB             ; 00:00:20                           ;
+; Total                     ; 00:03:27     ; --                      ; --                  ; 00:03:01                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -107,10 +107,10 @@ agreement for further details.
 +---------------------------+------------------+------------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +---------------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis      ; LCHS-MLAB3-13    ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter                    ; LCHS-MLAB3-13    ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler                 ; LCHS-MLAB3-13    ; Windows 10 ; 10.0       ; x86_64         ;
-; TimeQuest Timing Analyzer ; LCHS-MLAB3-13    ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis      ; DESKTOP-P40D7G8  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter                    ; DESKTOP-P40D7G8  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler                 ; DESKTOP-P40D7G8  ; Windows 10 ; 10.0       ; x86_64         ;
+; TimeQuest Timing Analyzer ; DESKTOP-P40D7G8  ; Windows 10 ; 10.0       ; x86_64         ;
 +---------------------------+------------------+------------+------------+----------------+
 
 

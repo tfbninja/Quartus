@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Dinosaur_Game
-Wed May 01 10:59:54 2019
+Thu May 02 18:23:25 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed May 01 10:59:54 2019       ;
+; Analysis & Synthesis Status     ; Successful - Thu May 02 18:23:25 2019       ;
 ; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                   ; Dinosaur_Game                               ;
 ; Top-level Entity Name           ; Dinosaur_Game                               ;
@@ -155,8 +155,8 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -166,13 +166,13 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                         ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                     ; Library ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------+---------+
-; dinosaur_game.v                  ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v ;         ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                              ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                          ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
+; dinosaur_game.v                  ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------+
@@ -197,8 +197,8 @@ agreement for further details.
 ;                                             ;              ;
 ; Maximum fan-out node                        ; KEY[3]~input ;
 ; Maximum fan-out                             ; 9            ;
-; Total fan-out                               ; 129          ;
-; Average fan-out                             ; 0.56         ;
+; Total fan-out                               ; 128          ;
+; Average fan-out                             ; 0.55         ;
 +---------------------------------------------+--------------+
 
 
@@ -233,14 +233,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; arriav_io_obuf        ; 6                           ;
-; arriav_lcell_comb     ; 3                           ;
-;     normal            ; 3                           ;
-;         0 data inputs ; 2                           ;
+; arriav_lcell_comb     ; 2                           ;
+;     normal            ; 2                           ;
+;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 1                           ;
 ; boundary_port         ; 113                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.18                        ;
+; Average LUT depth     ; 0.22                        ;
 +-----------------------+-----------------------------+
 
 
@@ -249,7 +249,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -259,67 +259,76 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Wed May 01 10:59:40 2019
+    Info: Processing started: Thu May 02 18:21:50 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Dinosaur_Game -c Dinosaur_Game
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Warning (12125): Using design file dinosaur_game.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: Dinosaur_Game File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 1
+    Info (12023): Found entity 1: Dinosaur_Game File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 1
 Info (12127): Elaborating entity "Dinosaur_Game" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at dinosaur_game.v(45): object "random" assigned a value but never read File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 45
-Warning (10034): Output port "LEDR[8..3]" at dinosaur_game.v(25) has no driver File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 25
-Warning (10034): Output port "SD_CLK" at dinosaur_game.v(28) has no driver File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 28
+Warning (10036): Verilog HDL or VHDL warning at dinosaur_game.v(41): object "off" assigned a value but never read File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 41
+Warning (10036): Verilog HDL or VHDL warning at dinosaur_game.v(41): object "cactus" assigned a value but never read File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 41
+Warning (10036): Verilog HDL or VHDL warning at dinosaur_game.v(41): object "bird" assigned a value but never read File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 41
+Warning (10036): Verilog HDL or VHDL warning at dinosaur_game.v(49): object "random" assigned a value but never read File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 49
+Warning (10034): Output port "HEX0" at dinosaur_game.v(10) has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 10
+Warning (10034): Output port "HEX1" at dinosaur_game.v(11) has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 11
+Warning (10034): Output port "HEX2" at dinosaur_game.v(12) has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 12
+Warning (10034): Output port "HEX3" at dinosaur_game.v(13) has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 13
+Warning (10034): Output port "HEX4" at dinosaur_game.v(14) has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 14
+Warning (10034): Output port "LEDR[9..3]" at dinosaur_game.v(25) has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 25
+Warning (10034): Output port "SD_CLK" at dinosaur_game.v(28) has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 28
 Warning (13039): The following bidirectional pins have no drivers
-    Warning (13040): bidirectional pin "CLOCK4_50" has no driver File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 7
-    Warning (13040): bidirectional pin "SD_CMD" has no driver File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 29
-    Warning (13040): bidirectional pin "SD_DATA[0]" has no driver File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 30
-    Warning (13040): bidirectional pin "SD_DATA[1]" has no driver File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 30
-    Warning (13040): bidirectional pin "SD_DATA[2]" has no driver File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 30
-    Warning (13040): bidirectional pin "SD_DATA[3]" has no driver File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 30
+    Warning (13040): bidirectional pin "CLOCK4_50" has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 7
+    Warning (13040): bidirectional pin "SD_CMD" has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 29
+    Warning (13040): bidirectional pin "SD_DATA[0]" has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 30
+    Warning (13040): bidirectional pin "SD_DATA[1]" has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 30
+    Warning (13040): bidirectional pin "SD_DATA[2]" has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 30
+    Warning (13040): bidirectional pin "SD_DATA[3]" has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 30
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX0[0]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 10
-    Warning (13410): Pin "HEX0[1]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 10
-    Warning (13410): Pin "HEX0[2]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 10
-    Warning (13410): Pin "HEX0[3]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 10
-    Warning (13410): Pin "HEX0[4]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 10
-    Warning (13410): Pin "HEX0[5]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 10
-    Warning (13410): Pin "HEX0[6]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 10
-    Warning (13410): Pin "HEX1[0]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 11
-    Warning (13410): Pin "HEX1[1]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 11
-    Warning (13410): Pin "HEX1[2]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 11
-    Warning (13410): Pin "HEX1[3]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 11
-    Warning (13410): Pin "HEX1[4]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 11
-    Warning (13410): Pin "HEX1[5]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 11
-    Warning (13410): Pin "HEX1[6]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 11
-    Warning (13410): Pin "HEX2[0]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 12
-    Warning (13410): Pin "HEX2[1]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 12
-    Warning (13410): Pin "HEX2[2]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 12
-    Warning (13410): Pin "HEX2[3]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 12
-    Warning (13410): Pin "HEX2[4]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 12
-    Warning (13410): Pin "HEX2[5]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 12
-    Warning (13410): Pin "HEX2[6]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 12
-    Warning (13410): Pin "HEX3[0]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 13
-    Warning (13410): Pin "HEX3[1]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 13
-    Warning (13410): Pin "HEX3[2]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 13
-    Warning (13410): Pin "HEX3[3]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 13
-    Warning (13410): Pin "HEX3[4]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 13
-    Warning (13410): Pin "HEX3[5]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 13
-    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 13
-    Warning (13410): Pin "HEX4[0]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 14
-    Warning (13410): Pin "HEX4[1]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 14
-    Warning (13410): Pin "HEX4[2]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 14
-    Warning (13410): Pin "HEX4[3]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 14
-    Warning (13410): Pin "HEX4[4]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 14
-    Warning (13410): Pin "HEX4[5]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 14
-    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 14
-    Warning (13410): Pin "HEX5[6]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 15
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 25
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 25
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 25
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 25
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 25
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 25
-    Warning (13410): Pin "SD_CLK" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 28
+    Warning (13410): Pin "HEX0[0]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 10
+    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 10
+    Warning (13410): Pin "HEX0[2]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 10
+    Warning (13410): Pin "HEX0[3]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 10
+    Warning (13410): Pin "HEX0[4]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 10
+    Warning (13410): Pin "HEX0[5]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 10
+    Warning (13410): Pin "HEX0[6]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 10
+    Warning (13410): Pin "HEX1[0]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 11
+    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 11
+    Warning (13410): Pin "HEX1[2]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 11
+    Warning (13410): Pin "HEX1[3]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 11
+    Warning (13410): Pin "HEX1[4]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 11
+    Warning (13410): Pin "HEX1[5]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 11
+    Warning (13410): Pin "HEX1[6]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 11
+    Warning (13410): Pin "HEX2[0]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 12
+    Warning (13410): Pin "HEX2[1]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 12
+    Warning (13410): Pin "HEX2[2]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 12
+    Warning (13410): Pin "HEX2[3]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 12
+    Warning (13410): Pin "HEX2[4]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 12
+    Warning (13410): Pin "HEX2[5]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 12
+    Warning (13410): Pin "HEX2[6]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 12
+    Warning (13410): Pin "HEX3[0]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 13
+    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 13
+    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 13
+    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 13
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 13
+    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 13
+    Warning (13410): Pin "HEX3[6]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 13
+    Warning (13410): Pin "HEX4[0]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 14
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 14
+    Warning (13410): Pin "HEX4[2]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 14
+    Warning (13410): Pin "HEX4[3]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 14
+    Warning (13410): Pin "HEX4[4]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 14
+    Warning (13410): Pin "HEX4[5]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 14
+    Warning (13410): Pin "HEX4[6]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 14
+    Warning (13410): Pin "HEX5[6]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 15
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 25
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 25
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 25
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 25
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 25
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 25
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 25
+    Warning (13410): Pin "SD_CLK" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 28
 Warning (20013): Ignored 24 assignments for entity "DE0_CV" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE0_CV -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity DE0_CV -section_id Top was ignored
@@ -347,67 +356,68 @@ Warning (20013): Ignored 24 assignments for entity "DE0_CV" -- entity does not e
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity DE0_CV -section_id Top was ignored
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 52 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "CLOCK_50" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 4
-    Warning (15610): No output dependent on input pin "CLOCK2_50" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 5
-    Warning (15610): No output dependent on input pin "CLOCK3_50" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 6
-    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 18
-    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 18
-    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 18
-    Warning (15610): No output dependent on input pin "RESET_N" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 19
-    Warning (15610): No output dependent on input pin "GPIO_0[1]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
-    Warning (15610): No output dependent on input pin "GPIO_0[2]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
-    Warning (15610): No output dependent on input pin "GPIO_0[3]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
-    Warning (15610): No output dependent on input pin "GPIO_0[4]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
-    Warning (15610): No output dependent on input pin "GPIO_0[5]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
-    Warning (15610): No output dependent on input pin "GPIO_0[6]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
-    Warning (15610): No output dependent on input pin "GPIO_0[7]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
-    Warning (15610): No output dependent on input pin "GPIO_0[8]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
-    Warning (15610): No output dependent on input pin "GPIO_0[9]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
-    Warning (15610): No output dependent on input pin "GPIO_0[10]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
-    Warning (15610): No output dependent on input pin "GPIO_0[11]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
-    Warning (15610): No output dependent on input pin "GPIO_0[12]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
-    Warning (15610): No output dependent on input pin "GPIO_0[13]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
-    Warning (15610): No output dependent on input pin "GPIO_0[14]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
-    Warning (15610): No output dependent on input pin "GPIO_0[15]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
-    Warning (15610): No output dependent on input pin "GPIO_0[16]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
-    Warning (15610): No output dependent on input pin "GPIO_0[17]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
-    Warning (15610): No output dependent on input pin "GPIO_0[18]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
-    Warning (15610): No output dependent on input pin "GPIO_0[19]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
-    Warning (15610): No output dependent on input pin "GPIO_0[20]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
-    Warning (15610): No output dependent on input pin "GPIO_0[21]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
-    Warning (15610): No output dependent on input pin "GPIO_0[22]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
-    Warning (15610): No output dependent on input pin "GPIO_0[23]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
-    Warning (15610): No output dependent on input pin "GPIO_0[24]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
-    Warning (15610): No output dependent on input pin "GPIO_0[25]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
-    Warning (15610): No output dependent on input pin "GPIO_0[26]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
-    Warning (15610): No output dependent on input pin "GPIO_0[27]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
-    Warning (15610): No output dependent on input pin "GPIO_0[28]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
-    Warning (15610): No output dependent on input pin "GPIO_0[29]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
-    Warning (15610): No output dependent on input pin "GPIO_0[30]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
-    Warning (15610): No output dependent on input pin "GPIO_0[31]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
-    Warning (15610): No output dependent on input pin "GPIO_0[32]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
-    Warning (15610): No output dependent on input pin "GPIO_0[33]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
-    Warning (15610): No output dependent on input pin "GPIO_0[34]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
-    Warning (15610): No output dependent on input pin "GPIO_0[35]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
-    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 34
-    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 34
-    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 34
-    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 34
-    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 34
-    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 34
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 34
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 34
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 34
-    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 34
+Warning (21074): Design contains 53 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLOCK_50" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 4
+    Warning (15610): No output dependent on input pin "CLOCK2_50" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 5
+    Warning (15610): No output dependent on input pin "CLOCK3_50" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 6
+    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 18
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 18
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 18
+    Warning (15610): No output dependent on input pin "RESET_N" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 19
+    Warning (15610): No output dependent on input pin "GPIO_0[0]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
+    Warning (15610): No output dependent on input pin "GPIO_0[1]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
+    Warning (15610): No output dependent on input pin "GPIO_0[2]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
+    Warning (15610): No output dependent on input pin "GPIO_0[3]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
+    Warning (15610): No output dependent on input pin "GPIO_0[4]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
+    Warning (15610): No output dependent on input pin "GPIO_0[5]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
+    Warning (15610): No output dependent on input pin "GPIO_0[6]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
+    Warning (15610): No output dependent on input pin "GPIO_0[7]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
+    Warning (15610): No output dependent on input pin "GPIO_0[8]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
+    Warning (15610): No output dependent on input pin "GPIO_0[9]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
+    Warning (15610): No output dependent on input pin "GPIO_0[10]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
+    Warning (15610): No output dependent on input pin "GPIO_0[11]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
+    Warning (15610): No output dependent on input pin "GPIO_0[12]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
+    Warning (15610): No output dependent on input pin "GPIO_0[13]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
+    Warning (15610): No output dependent on input pin "GPIO_0[14]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
+    Warning (15610): No output dependent on input pin "GPIO_0[15]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
+    Warning (15610): No output dependent on input pin "GPIO_0[16]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
+    Warning (15610): No output dependent on input pin "GPIO_0[17]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
+    Warning (15610): No output dependent on input pin "GPIO_0[18]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
+    Warning (15610): No output dependent on input pin "GPIO_0[19]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
+    Warning (15610): No output dependent on input pin "GPIO_0[20]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
+    Warning (15610): No output dependent on input pin "GPIO_0[21]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
+    Warning (15610): No output dependent on input pin "GPIO_0[22]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
+    Warning (15610): No output dependent on input pin "GPIO_0[23]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
+    Warning (15610): No output dependent on input pin "GPIO_0[24]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
+    Warning (15610): No output dependent on input pin "GPIO_0[25]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
+    Warning (15610): No output dependent on input pin "GPIO_0[26]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
+    Warning (15610): No output dependent on input pin "GPIO_0[27]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
+    Warning (15610): No output dependent on input pin "GPIO_0[28]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
+    Warning (15610): No output dependent on input pin "GPIO_0[29]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
+    Warning (15610): No output dependent on input pin "GPIO_0[30]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
+    Warning (15610): No output dependent on input pin "GPIO_0[31]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
+    Warning (15610): No output dependent on input pin "GPIO_0[32]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
+    Warning (15610): No output dependent on input pin "GPIO_0[33]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
+    Warning (15610): No output dependent on input pin "GPIO_0[34]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
+    Warning (15610): No output dependent on input pin "GPIO_0[35]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 22
+    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 34
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 34
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 34
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 34
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 34
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 34
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 34
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 34
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 34
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 34
 Info (21057): Implemented 113 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 54 input pins
     Info (21059): Implemented 53 output pins
     Info (21060): Implemented 6 bidirectional pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 134 warnings
-    Info: Peak virtual memory: 683 megabytes
-    Info: Processing ended: Wed May 01 10:59:54 2019
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:32
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 144 warnings
+    Info: Peak virtual memory: 4830 megabytes
+    Info: Processing ended: Thu May 02 18:23:25 2019
+    Info: Elapsed time: 00:01:35
+    Info: Total CPU time (on all processors): 00:01:10
 
 

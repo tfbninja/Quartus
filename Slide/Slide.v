@@ -34,29 +34,54 @@ module Slide(
 //=======================================================
 //  REG/WIRE declarations
 //=======================================================
-	assign LEDR[9] = ~GPIO[3 : 0];
-	assign LEDR[8] = ~GPIO[6 : 4];
-	assign LEDR[7] = ~GPIO[10: 7];
-	assign LEDR[6] = ~GPIO[14:11];
-	assign LEDR[5] = ~GPIO[17:15];
-	assign LEDR[4] = ~GPIO[21:18];
-	assign LEDR[3] = ~GPIO[24:22];
-	assign LEDR[2] = ~GPIO[28:25];
-	assign LEDR[1] = ~GPIO[32:29];
-	assign LEDR[0] = ~GPIO[35:33];
+
+	wire a, b, c, d, e, f, g, h, i, j;
+	wire k, l, m, n, o, p, q, r;
+	assign a = ~GPIO[3 : 0];
+	assign b = ~GPIO[6 : 4];
+	assign c = ~GPIO[10: 7];
+	assign d = ~GPIO[14:11];
+	assign e = ~GPIO[17:15];
+	assign f = ~GPIO[21:18];
+	assign g = ~GPIO[24:22];
+	assign h = ~GPIO[28:25];
+	assign i = ~GPIO[32:29];
+	assign j = ~GPIO[35:33];
+	assign k = GPIO[20:18];
+	assign l = GPIO[23:21];
+	assign m = GPIO[26:24];
+	assign n = GPIO[28:27];
+	assign o = GPIO[31:29];
+	assign p = GPIO[31:30];
+	assign q = GPIO[33] || GPIO[32];
+	assign r = GPIO[35] || GPIO[34];
 	
-	assign HEX5[0]   = GPIO[3 : 0];
-	assign HEX4[0]   = GPIO[6 : 4];
-	assign HEX3[0]   = GPIO[10: 7];
-	assign HEX2[0]   = GPIO[14:11];
-	assign HEX1[0]   = GPIO[17:15];
-	assign HEX0[0]   = GPIO[20:18];
-	assign HEX0[2:1] = GPIO[23:21];
-	assign HEX1[3]   = GPIO[26:24];
-	assign HEX2[3]   = GPIO[28:27];
-	assign HEX3[3]   = GPIO[31:29];
-	assign HEX4[3]   = GPIO[31:30];
-	assign HEX5[3]   = GPIO[33:32];
-	assign HEX5[5:4] = GPIO[35:34];
+	
+	assign LEDR[9] = a;
+	assign LEDR[8] = b;
+	assign LEDR[7] = c;
+	assign LEDR[6] = d;
+	assign LEDR[5] = e;
+	assign LEDR[4] = f;
+	assign LEDR[3] = g;
+	assign LEDR[2] = h;
+	assign LEDR[1] = i;
+	assign LEDR[0] = j;
+	
+	assign HEX5[0] = ~a;
+	assign HEX4[0] = ~b;
+	assign HEX3[0] = ~c;
+	assign HEX2[0] = ~d;
+	assign HEX1[0] = ~e;
+	assign HEX0[0] = k;
+	assign HEX0[1] = l;
+	assign HEX0[2] = l;
+	assign HEX1[3] = m;
+	assign HEX2[3] = n;
+	assign HEX3[3] = o;
+	assign HEX4[3] = p;
+	assign HEX5[3] = q;
+	assign HEX5[4] = r;
+	assign HEX5[5] = r;
 
 endmodule

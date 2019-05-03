@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Slide
-Wed May 01 15:55:42 2019
+Thu May 02 00:58:01 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed May 01 15:55:42 2019       ;
+; Analysis & Synthesis Status     ; Successful - Thu May 02 00:58:01 2019       ;
 ; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                   ; Slide                                       ;
 ; Top-level Entity Name           ; Slide                                       ;
@@ -175,31 +175,31 @@ agreement for further details.
 +----------------------------------+-----------------+------------------------------+-------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                 ;
-+---------------------------------------------+---------------+
-; Resource                                    ; Usage         ;
-+---------------------------------------------+---------------+
-; Estimate of Logic utilization (ALMs needed) ; 0             ;
-;                                             ;               ;
-; Combinational ALUT usage for logic          ; 0             ;
-;     -- 7 input functions                    ; 0             ;
-;     -- 6 input functions                    ; 0             ;
-;     -- 5 input functions                    ; 0             ;
-;     -- 4 input functions                    ; 0             ;
-;     -- <=3 input functions                  ; 0             ;
-;                                             ;               ;
-; Dedicated logic registers                   ; 0             ;
-;                                             ;               ;
-; I/O pins                                    ; 99            ;
-;                                             ;               ;
-; Total DSP Blocks                            ; 0             ;
-;                                             ;               ;
-; Maximum fan-out node                        ; GPIO[0]~input ;
-; Maximum fan-out                             ; 2             ;
-; Total fan-out                               ; 165           ;
-; Average fan-out                             ; 0.69          ;
-+---------------------------------------------+---------------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimate of Logic utilization (ALMs needed) ; 1     ;
+;                                             ;       ;
+; Combinational ALUT usage for logic          ; 2     ;
+;     -- 7 input functions                    ; 0     ;
+;     -- 6 input functions                    ; 0     ;
+;     -- 5 input functions                    ; 0     ;
+;     -- 4 input functions                    ; 0     ;
+;     -- <=3 input functions                  ; 2     ;
+;                                             ;       ;
+; Dedicated logic registers                   ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 99    ;
+;                                             ;       ;
+; Total DSP Blocks                            ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; r~0   ;
+; Maximum fan-out                             ; 2     ;
+; Total fan-out                               ; 169   ;
+; Average fan-out                             ; 0.70  ;
++---------------------------------------------+-------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -207,7 +207,7 @@ agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |Slide                     ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 99   ; 0            ; |Slide              ; Slide       ; work         ;
+; |Slide                     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 99   ; 0            ; |Slide              ; Slide       ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -233,14 +233,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; arriav_io_obuf        ; 41                          ;
-; arriav_lcell_comb     ; 11                          ;
-;     normal            ; 11                          ;
+; arriav_lcell_comb     ; 13                          ;
+;     normal            ; 13                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 10                          ;
+;         2 data inputs ; 2                           ;
 ; boundary_port         ; 99                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.29                        ;
+; Average LUT depth     ; 0.35                        ;
 +-----------------------+-----------------------------+
 
 
@@ -249,7 +250,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -259,35 +260,29 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Wed May 01 15:54:41 2019
+    Info: Processing started: Thu May 02 00:57:35 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Slide -c Slide
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Warning (12125): Using design file slide.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: Slide File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 6
 Info (12127): Elaborating entity "Slide" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at slide.v(37): truncated value with size 4 to match size of target (1) File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 37
-Warning (10230): Verilog HDL assignment warning at slide.v(38): truncated value with size 3 to match size of target (1) File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 38
-Warning (10230): Verilog HDL assignment warning at slide.v(39): truncated value with size 4 to match size of target (1) File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 39
 Warning (10230): Verilog HDL assignment warning at slide.v(40): truncated value with size 4 to match size of target (1) File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 40
 Warning (10230): Verilog HDL assignment warning at slide.v(41): truncated value with size 3 to match size of target (1) File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 41
 Warning (10230): Verilog HDL assignment warning at slide.v(42): truncated value with size 4 to match size of target (1) File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 42
-Warning (10230): Verilog HDL assignment warning at slide.v(43): truncated value with size 3 to match size of target (1) File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 43
-Warning (10230): Verilog HDL assignment warning at slide.v(44): truncated value with size 4 to match size of target (1) File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 44
+Warning (10230): Verilog HDL assignment warning at slide.v(43): truncated value with size 4 to match size of target (1) File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 43
+Warning (10230): Verilog HDL assignment warning at slide.v(44): truncated value with size 3 to match size of target (1) File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 44
 Warning (10230): Verilog HDL assignment warning at slide.v(45): truncated value with size 4 to match size of target (1) File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 45
 Warning (10230): Verilog HDL assignment warning at slide.v(46): truncated value with size 3 to match size of target (1) File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 46
+Warning (10230): Verilog HDL assignment warning at slide.v(47): truncated value with size 4 to match size of target (1) File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 47
 Warning (10230): Verilog HDL assignment warning at slide.v(48): truncated value with size 4 to match size of target (1) File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 48
 Warning (10230): Verilog HDL assignment warning at slide.v(49): truncated value with size 3 to match size of target (1) File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 49
-Warning (10230): Verilog HDL assignment warning at slide.v(50): truncated value with size 4 to match size of target (1) File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 50
-Warning (10230): Verilog HDL assignment warning at slide.v(51): truncated value with size 4 to match size of target (1) File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 51
+Warning (10230): Verilog HDL assignment warning at slide.v(50): truncated value with size 3 to match size of target (1) File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 50
+Warning (10230): Verilog HDL assignment warning at slide.v(51): truncated value with size 3 to match size of target (1) File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 51
 Warning (10230): Verilog HDL assignment warning at slide.v(52): truncated value with size 3 to match size of target (1) File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 52
-Warning (10230): Verilog HDL assignment warning at slide.v(53): truncated value with size 3 to match size of target (1) File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 53
-Warning (10230): Verilog HDL assignment warning at slide.v(54): truncated value with size 3 to match size of target (2) File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 54
-Warning (10230): Verilog HDL assignment warning at slide.v(55): truncated value with size 3 to match size of target (1) File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 55
-Warning (10230): Verilog HDL assignment warning at slide.v(56): truncated value with size 2 to match size of target (1) File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 56
-Warning (10230): Verilog HDL assignment warning at slide.v(57): truncated value with size 3 to match size of target (1) File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 57
-Warning (10230): Verilog HDL assignment warning at slide.v(58): truncated value with size 2 to match size of target (1) File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 58
-Warning (10230): Verilog HDL assignment warning at slide.v(59): truncated value with size 2 to match size of target (1) File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 59
+Warning (10230): Verilog HDL assignment warning at slide.v(53): truncated value with size 2 to match size of target (1) File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 53
+Warning (10230): Verilog HDL assignment warning at slide.v(54): truncated value with size 3 to match size of target (1) File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 54
+Warning (10230): Verilog HDL assignment warning at slide.v(55): truncated value with size 2 to match size of target (1) File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 55
 Warning (10034): Output port "HEX0[6..3]" at slide.v(16) has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 16
 Warning (10034): Output port "HEX1[6..4]" at slide.v(17) has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 17
 Warning (10034): Output port "HEX1[2..1]" at slide.v(17) has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 17
@@ -301,23 +296,23 @@ Warning (10034): Output port "HEX5[6]" at slide.v(21) has no driver File: C:/Use
 Warning (10034): Output port "HEX5[2..1]" at slide.v(21) has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 21
 Warning (10034): Output port "SD_CLK" at slide.v(24) has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 24
 Warning (13039): The following bidirectional pins have no drivers
-    Warning (13040): bidirectional pin "GPIO[35]" has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 30
-    Warning (13040): bidirectional pin "GPIO[34]" has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 30
     Warning (13040): bidirectional pin "GPIO[33]" has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 30
-    Warning (13040): bidirectional pin "GPIO[32]" has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 30
-    Warning (13040): bidirectional pin "GPIO[30]" has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 30
     Warning (13040): bidirectional pin "GPIO[29]" has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 30
-    Warning (13040): bidirectional pin "GPIO[27]" has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 30
     Warning (13040): bidirectional pin "GPIO[25]" has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 30
-    Warning (13040): bidirectional pin "GPIO[24]" has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 30
     Warning (13040): bidirectional pin "GPIO[22]" has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 30
-    Warning (13040): bidirectional pin "GPIO[21]" has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 30
     Warning (13040): bidirectional pin "GPIO[18]" has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 30
     Warning (13040): bidirectional pin "GPIO[15]" has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 30
     Warning (13040): bidirectional pin "GPIO[11]" has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 30
     Warning (13040): bidirectional pin "GPIO[7]" has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 30
     Warning (13040): bidirectional pin "GPIO[4]" has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 30
     Warning (13040): bidirectional pin "GPIO[0]" has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 30
+    Warning (13040): bidirectional pin "GPIO[21]" has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 30
+    Warning (13040): bidirectional pin "GPIO[24]" has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 30
+    Warning (13040): bidirectional pin "GPIO[27]" has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 30
+    Warning (13040): bidirectional pin "GPIO[30]" has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 30
+    Warning (13040): bidirectional pin "GPIO[32]" has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 30
+    Warning (13040): bidirectional pin "GPIO[35]" has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 30
+    Warning (13040): bidirectional pin "GPIO[34]" has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 30
     Warning (13040): bidirectional pin "SD_CMD" has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 25
     Warning (13040): bidirectional pin "SD_DATA[0]" has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 26
     Warning (13040): bidirectional pin "SD_DATA[1]" has no driver File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 26
@@ -371,6 +366,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX5[2]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 21
     Warning (13410): Pin "HEX5[6]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 21
     Warning (13410): Pin "SD_CLK" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 24
+Info (286030): Timing-Driven Synthesis is running
 Warning (14632): Output pin "LEDR[9]" driven by bidirectional pin "GPIO[0]" cannot be tri-stated File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 13
 Warning (14632): Output pin "HEX5[0]" driven by bidirectional pin "GPIO[0]" cannot be tri-stated File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 21
 Warning (14632): Output pin "LEDR[8]" driven by bidirectional pin "GPIO[4]" cannot be tri-stated File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 13
@@ -381,21 +377,18 @@ Warning (14632): Output pin "LEDR[6]" driven by bidirectional pin "GPIO[11]" can
 Warning (14632): Output pin "HEX2[0]" driven by bidirectional pin "GPIO[11]" cannot be tri-stated File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 18
 Warning (14632): Output pin "LEDR[5]" driven by bidirectional pin "GPIO[15]" cannot be tri-stated File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 13
 Warning (14632): Output pin "HEX1[0]" driven by bidirectional pin "GPIO[15]" cannot be tri-stated File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 17
-Warning (14632): Output pin "LEDR[4]" driven by bidirectional pin "GPIO[18]" cannot be tri-stated File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 13
 Warning (14632): Output pin "HEX0[0]" driven by bidirectional pin "GPIO[18]" cannot be tri-stated File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 16
+Warning (14632): Output pin "LEDR[4]" driven by bidirectional pin "GPIO[18]" cannot be tri-stated File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 13
 Warning (14632): Output pin "HEX0[1]" driven by bidirectional pin "GPIO[21]" cannot be tri-stated File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 16
+Warning (14632): Output pin "HEX0[2]" driven by bidirectional pin "GPIO[21]" cannot be tri-stated File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 16
 Warning (14632): Output pin "LEDR[3]" driven by bidirectional pin "GPIO[22]" cannot be tri-stated File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 13
-Warning (14632): Output pin "HEX0[2]" driven by bidirectional pin "GPIO[22]" cannot be tri-stated File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 16
 Warning (14632): Output pin "HEX1[3]" driven by bidirectional pin "GPIO[24]" cannot be tri-stated File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 17
 Warning (14632): Output pin "LEDR[2]" driven by bidirectional pin "GPIO[25]" cannot be tri-stated File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 13
 Warning (14632): Output pin "HEX2[3]" driven by bidirectional pin "GPIO[27]" cannot be tri-stated File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 18
-Warning (14632): Output pin "LEDR[1]" driven by bidirectional pin "GPIO[29]" cannot be tri-stated File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 13
 Warning (14632): Output pin "HEX3[3]" driven by bidirectional pin "GPIO[29]" cannot be tri-stated File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 19
+Warning (14632): Output pin "LEDR[1]" driven by bidirectional pin "GPIO[29]" cannot be tri-stated File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 13
 Warning (14632): Output pin "HEX4[3]" driven by bidirectional pin "GPIO[30]" cannot be tri-stated File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 20
-Warning (14632): Output pin "HEX5[3]" driven by bidirectional pin "GPIO[32]" cannot be tri-stated File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 21
 Warning (14632): Output pin "LEDR[0]" driven by bidirectional pin "GPIO[33]" cannot be tri-stated File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 13
-Warning (14632): Output pin "HEX5[4]" driven by bidirectional pin "GPIO[34]" cannot be tri-stated File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 21
-Warning (14632): Output pin "HEX5[5]" driven by bidirectional pin "GPIO[35]" cannot be tri-stated File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 21
 Warning (20013): Ignored 24 assignments for entity "DE0_CV" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE0_CV -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity DE0_CV -section_id Top was ignored
@@ -429,14 +422,15 @@ Warning (21074): Design contains 5 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 9
     Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 9
     Warning (15610): No output dependent on input pin "RESET_N" File: C:/Users/tfbni/Documents/GitHub/Quartus/Slide/slide.v Line: 10
-Info (21057): Implemented 99 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 101 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 53 output pins
     Info (21060): Implemented 41 bidirectional pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 163 warnings
-    Info: Peak virtual memory: 4830 megabytes
-    Info: Processing ended: Wed May 01 15:55:42 2019
-    Info: Elapsed time: 00:01:01
-    Info: Total CPU time (on all processors): 00:01:01
+    Info (21061): Implemented 2 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 154 warnings
+    Info: Peak virtual memory: 4832 megabytes
+    Info: Processing ended: Thu May 02 00:58:01 2019
+    Info: Elapsed time: 00:00:26
+    Info: Total CPU time (on all processors): 00:01:04
 
 
