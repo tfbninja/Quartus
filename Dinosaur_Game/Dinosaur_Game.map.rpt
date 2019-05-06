@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Dinosaur_Game
-Sun May 05 18:15:37 2019
+Mon May 06 10:55:17 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Sun May 05 18:15:37 2019           ;
+; Analysis & Synthesis Status ; Failed - Mon May 06 10:55:17 2019           ;
 ; Quartus Prime Version       ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name               ; Dinosaur_Game                               ;
 ; Top-level Entity Name       ; Dinosaur_Game                               ;
@@ -144,8 +144,8 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -161,31 +161,31 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Sun May 05 18:15:15 2019
+    Info: Processing started: Mon May 06 10:54:44 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Dinosaur_Game -c Dinosaur_Game
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Warning (12125): Using design file dinosaur_game.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: Dinosaur_Game File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 1
-Error (10137): Verilog HDL Procedural Assignment error at dinosaur_game.v(90): object "HEX0" on left-hand side of assignment must have a variable data type File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 90
-Error (10137): Verilog HDL Procedural Assignment error at dinosaur_game.v(100): object "LEDR" on left-hand side of assignment must have a variable data type File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 100
-Error (10137): Verilog HDL Procedural Assignment error at dinosaur_game.v(103): object "HEX5" on left-hand side of assignment must have a variable data type File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 103
-Error (10137): Verilog HDL Procedural Assignment error at dinosaur_game.v(110): object "LEDR" on left-hand side of assignment must have a variable data type File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 110
-Error (10137): Verilog HDL Procedural Assignment error at dinosaur_game.v(113): object "HEX5" on left-hand side of assignment must have a variable data type File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 113
-Error (10137): Verilog HDL Procedural Assignment error at dinosaur_game.v(115): object "disp4" on left-hand side of assignment must have a variable data type File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 115
-Error (10137): Verilog HDL Procedural Assignment error at dinosaur_game.v(116): object "disp3" on left-hand side of assignment must have a variable data type File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 116
-Error (10137): Verilog HDL Procedural Assignment error at dinosaur_game.v(117): object "disp2" on left-hand side of assignment must have a variable data type File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 117
-Error (10137): Verilog HDL Procedural Assignment error at dinosaur_game.v(118): object "disp1" on left-hand side of assignment must have a variable data type File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 118
-Error (10137): Verilog HDL Procedural Assignment error at dinosaur_game.v(124): object "state5" on left-hand side of assignment must have a variable data type File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 124
-Error (10137): Verilog HDL Procedural Assignment error at dinosaur_game.v(125): object "state4" on left-hand side of assignment must have a variable data type File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 125
-Error (10137): Verilog HDL Procedural Assignment error at dinosaur_game.v(126): object "state3" on left-hand side of assignment must have a variable data type File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 126
-Error (10137): Verilog HDL Procedural Assignment error at dinosaur_game.v(127): object "state2" on left-hand side of assignment must have a variable data type File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 127
-Error (10137): Verilog HDL Procedural Assignment error at dinosaur_game.v(128): object "state1" on left-hand side of assignment must have a variable data type File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 128
-Error (10137): Verilog HDL Procedural Assignment error at dinosaur_game.v(129): object "state0" on left-hand side of assignment must have a variable data type File: C:/Users/tfbni/Documents/GitHub/Quartus/Dinosaur_Game/dinosaur_game.v Line: 129
+    Info (12023): Found entity 1: Dinosaur_Game File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 1
+Error (10137): Verilog HDL Procedural Assignment error at dinosaur_game.v(87): object "HEX0" on left-hand side of assignment must have a variable data type File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 87
+Error (10137): Verilog HDL Procedural Assignment error at dinosaur_game.v(97): object "LEDR" on left-hand side of assignment must have a variable data type File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 97
+Error (10137): Verilog HDL Procedural Assignment error at dinosaur_game.v(100): object "HEX5" on left-hand side of assignment must have a variable data type File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 100
+Error (10137): Verilog HDL Procedural Assignment error at dinosaur_game.v(107): object "LEDR" on left-hand side of assignment must have a variable data type File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 107
+Error (10137): Verilog HDL Procedural Assignment error at dinosaur_game.v(110): object "HEX5" on left-hand side of assignment must have a variable data type File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 110
+Error (10137): Verilog HDL Procedural Assignment error at dinosaur_game.v(112): object "disp4" on left-hand side of assignment must have a variable data type File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 112
+Error (10137): Verilog HDL Procedural Assignment error at dinosaur_game.v(113): object "disp3" on left-hand side of assignment must have a variable data type File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 113
+Error (10137): Verilog HDL Procedural Assignment error at dinosaur_game.v(114): object "disp2" on left-hand side of assignment must have a variable data type File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 114
+Error (10137): Verilog HDL Procedural Assignment error at dinosaur_game.v(115): object "disp1" on left-hand side of assignment must have a variable data type File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 115
+Error (10137): Verilog HDL Procedural Assignment error at dinosaur_game.v(121): object "state5" on left-hand side of assignment must have a variable data type File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 121
+Error (10137): Verilog HDL Procedural Assignment error at dinosaur_game.v(122): object "state4" on left-hand side of assignment must have a variable data type File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 122
+Error (10137): Verilog HDL Procedural Assignment error at dinosaur_game.v(123): object "state3" on left-hand side of assignment must have a variable data type File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 123
+Error (10137): Verilog HDL Procedural Assignment error at dinosaur_game.v(124): object "state2" on left-hand side of assignment must have a variable data type File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 124
+Error (10137): Verilog HDL Procedural Assignment error at dinosaur_game.v(125): object "state1" on left-hand side of assignment must have a variable data type File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 125
+Error (10137): Verilog HDL Procedural Assignment error at dinosaur_game.v(126): object "state0" on left-hand side of assignment must have a variable data type File: C:/Users/barber.timothy20/Documents/Github/Quartus/Dinosaur_Game/dinosaur_game.v Line: 126
 Error: Quartus Prime Analysis & Synthesis was unsuccessful. 15 errors, 2 warnings
-    Error: Peak virtual memory: 4788 megabytes
-    Error: Processing ended: Sun May 05 18:15:37 2019
-    Error: Elapsed time: 00:00:22
-    Error: Total CPU time (on all processors): 00:00:56
+    Error: Peak virtual memory: 667 megabytes
+    Error: Processing ended: Mon May 06 10:55:17 2019
+    Error: Elapsed time: 00:00:33
+    Error: Total CPU time (on all processors): 00:00:27
 
 

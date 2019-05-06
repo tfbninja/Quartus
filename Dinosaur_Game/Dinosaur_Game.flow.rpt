@@ -1,5 +1,5 @@
 Flow report for Dinosaur_Game
-Sun May 05 18:15:37 2019
+Mon May 06 10:55:17 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
-; Flow Status                 ; Flow Failed - Sun May 05 18:15:37 2019      ;
+; Flow Status                 ; Flow Failed - Mon May 06 10:55:17 2019      ;
 ; Quartus Prime Version       ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name               ; Dinosaur_Game                               ;
 ; Top-level Entity Name       ; Dinosaur_Game                               ;
@@ -63,7 +63,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/05/2019 18:15:17 ;
+; Start date & time ; 05/06/2019 10:54:45 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Dinosaur_Game       ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 264216227693074.155710531605368        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 66325080979140.155716168508960         ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; DE0_CV      ; Top        ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; DE0_CV      ; Top        ;
@@ -89,8 +89,8 @@ agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 4788 MB             ; 00:00:56                           ;
-; Total                ; 00:00:22     ; --                      ; --                  ; 00:00:56                           ;
+; Analysis & Synthesis ; 00:00:33     ; 1.0                     ; 667 MB              ; 00:00:26                           ;
+; Total                ; 00:00:33     ; --                      ; --                  ; 00:00:26                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -99,7 +99,7 @@ agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-P40D7G8  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; LCHS-MLAB3-13    ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

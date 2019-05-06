@@ -49,9 +49,6 @@ module Dinosaur_Game(
 	assign bird = 7'b1111110;
 	wire [99:0] score;
 	
-	wire [100:0] random;
-	assign random = 101'b01011001000001111111100000111101100001111101010010011001110011001111101101001001101000100011110010010;
-	
 	wire a, b, c, d, e, f;
 	wire jump = ~KEY[3];
 	assign LEDR[0] = jump;
