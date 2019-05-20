@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Wed May 01 10:34:00 2019
+Analysis & Synthesis Status : Successful - Sun May 19 23:08:59 2019
 Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 Revision Name : RippleCounter
 Top-level Entity Name : TextScroller
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 32
-Total pins : 71
+Total pins : 67
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

@@ -2,9 +2,6 @@ module TextScroller(
 
 	//////////// CLOCK //////////
 	input 		          		CLOCK_50,
-	input 		          		CLOCK2_50,
-	input 		          		CLOCK3_50,
-	inout 		          		CLOCK4_50,
 
 	//////////// SEG7 //////////
 	output		     [6:0]		HEX0,
@@ -16,7 +13,6 @@ module TextScroller(
 
 	//////////// KEY //////////
 	input 		     [3:0]		KEY,
-	input 		          		RESET_N,
 
 	//////////// LED //////////
 	output		     [9:0]		LEDR,
@@ -31,7 +27,7 @@ module TextScroller(
 
 	reg [2:0] clickcount; //register to hold the count up to 7.
 	wire click, RESET, dir, fastmode;
-	reg [28:0] ticker; //to hold a count of 50M
+	reg [28:0] ticker;
 	
 	assign click = ((ticker == (fastmode ? 9000000 : 20000000))?1'b1:1'b0);
 	assign RESET = ~KEY[3];
