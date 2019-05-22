@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RippleCounter
-Wed May 01 10:34:00 2019
+Sun May 19 23:08:59 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -46,14 +46,14 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed May 01 10:34:00 2019       ;
+; Analysis & Synthesis Status     ; Successful - Sun May 19 23:08:59 2019       ;
 ; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                   ; RippleCounter                               ;
 ; Top-level Entity Name           ; TextScroller                                ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 32                                          ;
-; Total pins                      ; 71                                          ;
+; Total pins                      ; 67                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -158,25 +158,26 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                              ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                ; Library ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------+---------+
-; TextScroller.v                   ; yes             ; User Verilog HDL File  ; C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v ;         ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                   ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                     ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------+---------+
+; TextScroller.v                   ; yes             ; User Verilog HDL File  ; C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------+---------+
 
 
 +-------------------------------------------------------------+
@@ -195,14 +196,14 @@ agreement for further details.
 ;                                             ;               ;
 ; Dedicated logic registers                   ; 32            ;
 ;                                             ;               ;
-; I/O pins                                    ; 71            ;
+; I/O pins                                    ; 67            ;
 ;                                             ;               ;
 ; Total DSP Blocks                            ; 0             ;
 ;                                             ;               ;
 ; Maximum fan-out node                        ; clickcount[1] ;
 ; Maximum fan-out                             ; 42            ;
-; Total fan-out                               ; 603           ;
-; Average fan-out                             ; 2.08          ;
+; Total fan-out                               ; 598           ;
+; Average fan-out                             ; 2.13          ;
 +---------------------------------------------+---------------+
 
 
@@ -211,7 +212,7 @@ agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name  ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------+--------------+
-; |TextScroller              ; 115 (115)           ; 32 (32)                   ; 0                 ; 0          ; 71   ; 0            ; |TextScroller       ; TextScroller ; work         ;
+; |TextScroller              ; 115 (115)           ; 32 (32)                   ; 0                 ; 0          ; 67   ; 0            ; |TextScroller       ; TextScroller ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -302,7 +303,6 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ;     CLR               ; 2                           ;
 ;     CLR SCLR          ; 29                          ;
 ;     CLR SLD           ; 1                           ;
-; arriav_io_obuf        ; 1                           ;
 ; arriav_lcell_comb     ; 118                         ;
 ;     arith             ; 29                          ;
 ;         1 data inputs ; 29                          ;
@@ -313,10 +313,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ;         3 data inputs ; 43                          ;
 ;         4 data inputs ; 34                          ;
 ;         6 data inputs ; 6                           ;
-; boundary_port         ; 71                          ;
+; boundary_port         ; 67                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.80                        ;
-; Average LUT depth     ; 2.13                        ;
+; Average LUT depth     ; 2.14                        ;
 +-----------------------+-----------------------------+
 
 
@@ -325,7 +325,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -335,156 +335,154 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Wed May 01 10:33:48 2019
+    Info: Processing started: Sun May 19 23:08:29 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TextScroller -c RippleCounter
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file textscroller.v
-    Info (12023): Found entity 1: TextScroller File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 1
+    Info (12023): Found entity 1: TextScroller File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file movecharup.v
-    Info (12023): Found entity 1: moveCharUp File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/moveCharUp.v Line: 1
+    Info (12023): Found entity 1: moveCharUp File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/moveCharUp.v Line: 1
 Info (12127): Elaborating entity "TextScroller" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at TextScroller.v(76): truncated value with size 32 to match size of target (29) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 76
-Warning (10230): Verilog HDL assignment warning at TextScroller.v(90): truncated value with size 32 to match size of target (3) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 90
-Warning (10270): Verilog HDL Case Statement warning at TextScroller.v(101): incomplete case statement has no default case item File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Warning (10240): Verilog HDL Always Construct warning at TextScroller.v(101): inferring latch(es) for variable "a", which holds its previous value in one or more paths through the always construct File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Warning (10240): Verilog HDL Always Construct warning at TextScroller.v(101): inferring latch(es) for variable "b", which holds its previous value in one or more paths through the always construct File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Warning (10240): Verilog HDL Always Construct warning at TextScroller.v(101): inferring latch(es) for variable "c", which holds its previous value in one or more paths through the always construct File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Warning (10240): Verilog HDL Always Construct warning at TextScroller.v(101): inferring latch(es) for variable "d", which holds its previous value in one or more paths through the always construct File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Warning (10240): Verilog HDL Always Construct warning at TextScroller.v(101): inferring latch(es) for variable "e", which holds its previous value in one or more paths through the always construct File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Warning (10240): Verilog HDL Always Construct warning at TextScroller.v(101): inferring latch(es) for variable "f", which holds its previous value in one or more paths through the always construct File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "f[0]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "f[1]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "f[2]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "f[3]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "f[4]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "f[5]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "f[6]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "e[0]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "e[1]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "e[2]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "e[3]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "e[4]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "e[5]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "e[6]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "d[0]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "d[1]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "d[2]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "d[3]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "d[4]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "d[5]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "d[6]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "c[0]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "c[1]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "c[2]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "c[3]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "c[4]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "c[5]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "c[6]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "b[0]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "b[1]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "b[2]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "b[3]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "b[4]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "b[5]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "b[6]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "a[0]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "a[1]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "a[2]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "a[3]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "a[4]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "a[5]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Info (10041): Inferred latch for "a[6]" at TextScroller.v(101) File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Warning (13039): The following bidirectional pins have no drivers
-    Warning (13040): bidirectional pin "CLOCK4_50" has no driver File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 7
+Warning (10230): Verilog HDL assignment warning at TextScroller.v(72): truncated value with size 32 to match size of target (29) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 72
+Warning (10230): Verilog HDL assignment warning at TextScroller.v(86): truncated value with size 32 to match size of target (3) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 86
+Warning (10270): Verilog HDL Case Statement warning at TextScroller.v(97): incomplete case statement has no default case item File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Warning (10240): Verilog HDL Always Construct warning at TextScroller.v(97): inferring latch(es) for variable "a", which holds its previous value in one or more paths through the always construct File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Warning (10240): Verilog HDL Always Construct warning at TextScroller.v(97): inferring latch(es) for variable "b", which holds its previous value in one or more paths through the always construct File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Warning (10240): Verilog HDL Always Construct warning at TextScroller.v(97): inferring latch(es) for variable "c", which holds its previous value in one or more paths through the always construct File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Warning (10240): Verilog HDL Always Construct warning at TextScroller.v(97): inferring latch(es) for variable "d", which holds its previous value in one or more paths through the always construct File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Warning (10240): Verilog HDL Always Construct warning at TextScroller.v(97): inferring latch(es) for variable "e", which holds its previous value in one or more paths through the always construct File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Warning (10240): Verilog HDL Always Construct warning at TextScroller.v(97): inferring latch(es) for variable "f", which holds its previous value in one or more paths through the always construct File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "f[0]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "f[1]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "f[2]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "f[3]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "f[4]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "f[5]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "f[6]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "e[0]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "e[1]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "e[2]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "e[3]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "e[4]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "e[5]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "e[6]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "d[0]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "d[1]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "d[2]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "d[3]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "d[4]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "d[5]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "d[6]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "c[0]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "c[1]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "c[2]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "c[3]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "c[4]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "c[5]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "c[6]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "b[0]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "b[1]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "b[2]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "b[3]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "b[4]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "b[5]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "b[6]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "a[0]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "a[1]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "a[2]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "a[3]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "a[4]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "a[5]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Info (10041): Inferred latch for "a[6]" at TextScroller.v(97) File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
 Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
-    Info (13026): Duplicate LATCH primitive "a[1]" merged with LATCH primitive "d[1]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-Warning (13012): Latch f[0] has unsafe behavior File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 87
-Warning (13012): Latch f[2] has unsafe behavior File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 87
-Warning (13012): Latch f[3] has unsafe behavior File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 87
-Warning (13012): Latch f[4] has unsafe behavior File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 87
-Warning (13012): Latch f[5] has unsafe behavior File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[0] File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 87
-Warning (13012): Latch f[6] has unsafe behavior File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 87
-Warning (13012): Latch e[0] has unsafe behavior File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 87
-Warning (13012): Latch e[2] has unsafe behavior File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 87
-Warning (13012): Latch e[3] has unsafe behavior File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 87
-Warning (13012): Latch e[4] has unsafe behavior File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[0] File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 87
-Warning (13012): Latch e[5] has unsafe behavior File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[2] File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 87
-Warning (13012): Latch e[6] has unsafe behavior File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 87
-Warning (13012): Latch d[0] has unsafe behavior File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 87
-Warning (13012): Latch d[1] has unsafe behavior File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[2] File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 87
-Warning (13012): Latch d[2] has unsafe behavior File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[2] File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 87
-Warning (13012): Latch d[3] has unsafe behavior File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 87
-Warning (13012): Latch d[4] has unsafe behavior File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 87
-Warning (13012): Latch d[5] has unsafe behavior File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[2] File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 87
-Warning (13012): Latch d[6] has unsafe behavior File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 87
-Warning (13012): Latch c[0] has unsafe behavior File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[2] File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 87
-Warning (13012): Latch c[2] has unsafe behavior File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 87
-Warning (13012): Latch c[3] has unsafe behavior File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 87
-Warning (13012): Latch c[4] has unsafe behavior File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 87
-Warning (13012): Latch c[5] has unsafe behavior File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 87
-Warning (13012): Latch c[6] has unsafe behavior File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 87
-Warning (13012): Latch b[0] has unsafe behavior File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 87
-Warning (13012): Latch b[2] has unsafe behavior File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 87
-Warning (13012): Latch b[3] has unsafe behavior File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 87
-Warning (13012): Latch b[4] has unsafe behavior File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 87
-Warning (13012): Latch b[5] has unsafe behavior File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 87
-Warning (13012): Latch b[6] has unsafe behavior File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[2] File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 87
-Warning (13012): Latch a[0] has unsafe behavior File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[2] File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 87
-Warning (13012): Latch a[2] has unsafe behavior File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[2] File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 87
-Warning (13012): Latch a[3] has unsafe behavior File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 87
-Warning (13012): Latch a[4] has unsafe behavior File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 87
-Warning (13012): Latch a[5] has unsafe behavior File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 87
-Warning (13012): Latch a[6] has unsafe behavior File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 101
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[2] File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 87
+    Info (13026): Duplicate LATCH primitive "a[1]" merged with LATCH primitive "d[1]" File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+Warning (13012): Latch f[0] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 83
+Warning (13012): Latch f[2] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 83
+Warning (13012): Latch f[3] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 83
+Warning (13012): Latch f[4] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 83
+Warning (13012): Latch f[5] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[0] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 83
+Warning (13012): Latch f[6] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 83
+Warning (13012): Latch e[0] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 83
+Warning (13012): Latch e[2] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 83
+Warning (13012): Latch e[3] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 83
+Warning (13012): Latch e[4] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[0] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 83
+Warning (13012): Latch e[5] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[2] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 83
+Warning (13012): Latch e[6] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 83
+Warning (13012): Latch d[0] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 83
+Warning (13012): Latch d[1] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[2] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 83
+Warning (13012): Latch d[2] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[2] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 83
+Warning (13012): Latch d[3] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 83
+Warning (13012): Latch d[4] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 83
+Warning (13012): Latch d[5] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[2] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 83
+Warning (13012): Latch d[6] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 83
+Warning (13012): Latch c[0] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[2] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 83
+Warning (13012): Latch c[2] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 83
+Warning (13012): Latch c[3] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 83
+Warning (13012): Latch c[4] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 83
+Warning (13012): Latch c[5] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 83
+Warning (13012): Latch c[6] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 83
+Warning (13012): Latch b[0] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 83
+Warning (13012): Latch b[2] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 83
+Warning (13012): Latch b[3] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 83
+Warning (13012): Latch b[4] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 83
+Warning (13012): Latch b[5] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 83
+Warning (13012): Latch b[6] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[2] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 83
+Warning (13012): Latch a[0] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[2] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 83
+Warning (13012): Latch a[2] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[2] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 83
+Warning (13012): Latch a[3] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 83
+Warning (13012): Latch a[4] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 83
+Warning (13012): Latch a[5] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[1] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 83
+Warning (13012): Latch a[6] has unsafe behavior File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 97
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clickcount[2] File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 83
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX0[1]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 10
-    Warning (13410): Pin "HEX1[1]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 11
-    Warning (13410): Pin "HEX3[1]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 13
-    Warning (13410): Pin "HEX4[1]" is stuck at VCC File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 14
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 22
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 22
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 22
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 22
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 22
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 22
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 22
+    Warning (13410): Pin "HEX0[1]" is stuck at VCC File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 7
+    Warning (13410): Pin "HEX1[1]" is stuck at VCC File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 8
+    Warning (13410): Pin "HEX3[1]" is stuck at VCC File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 10
+    Warning (13410): Pin "HEX4[1]" is stuck at VCC File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 11
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 18
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 18
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 18
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 18
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 18
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 18
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 18
 Info (286030): Timing-Driven Synthesis is running
 Warning (20013): Ignored 24 assignments for entity "DE0_CV" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE0_CV -section_id Top was ignored
@@ -511,39 +509,35 @@ Warning (20013): Ignored 24 assignments for entity "DE0_CV" -- entity does not e
     Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity DE0_CV -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity DE0_CV -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity DE0_CV -section_id Top was ignored
-Info (144001): Generated suppressed messages file C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/RippleCounter.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/RippleCounter.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 14 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "CLOCK2_50" File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 5
-    Warning (15610): No output dependent on input pin "CLOCK3_50" File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 6
-    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 18
-    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 18
-    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 18
-    Warning (15610): No output dependent on input pin "RESET_N" File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 19
-    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 26
-    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 26
-    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 26
-    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 26
-    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 26
-    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 26
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 26
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/TextScroller.v Line: 26
-Info (21057): Implemented 186 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 18 input pins
+Warning (21074): Design contains 11 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 15
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 15
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 15
+    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 22
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 22
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 22
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 22
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 22
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 22
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 22
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/TextScroller.v Line: 22
+Info (21057): Implemented 182 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 15 input pins
     Info (21059): Implemented 52 output pins
-    Info (21060): Implemented 1 bidirectional pins
     Info (21061): Implemented 115 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 138 warnings
-    Info: Peak virtual memory: 701 megabytes
-    Info: Processing ended: Wed May 01 10:34:00 2019
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:28
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 133 warnings
+    Info: Peak virtual memory: 4866 megabytes
+    Info: Processing ended: Sun May 19 23:08:59 2019
+    Info: Elapsed time: 00:00:30
+    Info: Total CPU time (on all processors): 00:01:04
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/barber.timothy20/Documents/Github/Quartus/FinalProj/RippleCounter.map.smsg.
+The suppressed messages can be found in C:/Users/tfbni/Documents/GitHub/Quartus/FinalProj/RippleCounter.map.smsg.
 
 
